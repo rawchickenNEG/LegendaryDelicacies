@@ -1,0 +1,37 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "item": "minecraft:bowl"
+  },
+  "cookingtime": 400,
+  "experience": 10.0,
+  "ingredients": [
+    [
+      {
+        "item": "legendary_delicacies:blood_clot"
+      },
+      {
+        "item": "legendary_delicacies:possessed_blood_bottle"
+      }
+    ],
+    [
+      {
+        "item": "legendary_delicacies:blood_clot"
+      },
+      {
+        "item": "legendary_delicacies:possessed_blood_bottle"
+      }
+    ],
+    {
+      "item": "minecraft:gunpowder"
+    },
+    {
+      "item": "minecraft:poppy"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "item": "legendary_delicacies:bloodbloom",
+    "count": 1
+  }
+}

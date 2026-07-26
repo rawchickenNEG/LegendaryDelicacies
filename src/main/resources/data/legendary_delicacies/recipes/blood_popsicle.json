@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "-": {
+      "item": "minecraft:stick"
+    },
+    "i": {
+      "item": "minecraft:ice"
+    },
+    "m": [
+      {
+        "item": "legendary_delicacies:blood_clot"
+      },
+      {
+        "item": "legendary_delicacies:possessed_blood_bottle"
+      }
+    ]
+  },
+  "pattern": [
+    " mm",
+    "imm",
+    "-i "
+  ],
+  "result": {
+    "item": "legendary_delicacies:blood_popsicle"
+  }
+}

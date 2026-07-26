@@ -1,0 +1,15 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 200,
+  "experience": 10.0,
+  "ingredients": [
+    {
+      "item": "legendary_delicacies:possessed_blood_bottle"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "item": "legendary_delicacies:blood_clot",
+    "count": 2
+  }
+}

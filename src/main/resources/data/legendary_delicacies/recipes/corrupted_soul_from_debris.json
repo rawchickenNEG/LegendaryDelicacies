@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "legendary_delicacies:haunted_netherite_debris"
+    },
+    {
+      "item": "legendary_delicacies:haunted_netherite_debris"
+    },
+    {
+      "item": "legendary_monsters:bottle_of_annihilation"
+    }
+  ],
+  "result": {
+    "item": "legendary_delicacies:broken_corrupted_soul"
+  }
+}

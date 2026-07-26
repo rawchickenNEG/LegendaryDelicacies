@@ -1,0 +1,33 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "item": "legendary_monsters:portal_shard"
+  },
+  "cookingtime": 400,
+  "experience": 10.0,
+  "ingredients": [
+    {
+      "item": "legendary_monsters:bottle_of_annihilation"
+    },
+    {
+      "item": "minecraft:ender_eye"
+    },
+    {
+      "item": "legendary_monsters:bottle_of_annihilation"
+    },
+    {
+      "item": "minecraft:ender_eye"
+    },
+    {
+      "item": "minecraft:suspicious_stew"
+    },
+    {
+      "item": "minecraft:warped_roots"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "item": "legendary_delicacies:annihilation_stew",
+    "count": 1
+  }
+}

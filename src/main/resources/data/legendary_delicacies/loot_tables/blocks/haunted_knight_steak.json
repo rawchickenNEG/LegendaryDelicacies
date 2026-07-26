@@ -1,0 +1,92 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "name": "pool1",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "legendary_delicacies:haunted_knight_steak"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "legendary_delicacies:haunted_knight_steak",
+          "properties": {
+            "servings": "4",
+            "part": "middle"
+          }
+        }
+      ]
+    },
+    {
+      "name": "pool2",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:soul_soil"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:inverted",
+          "term": {
+            "condition": "minecraft:block_state_property",
+            "block": "legendary_delicacies:haunted_knight_steak",
+            "properties": {
+              "servings": "4"
+            }
+          }
+        },
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "legendary_delicacies:haunted_knight_steak",
+          "properties": {
+            "part": "middle"
+          }
+        }
+      ]
+    },
+    {
+      "name": "pool2",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "legendary_delicacies:haunted_netherite_debris",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 3,
+                "max": 5
+              }
+            }
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:inverted",
+          "term": {
+            "condition": "minecraft:block_state_property",
+            "block": "legendary_delicacies:haunted_knight_steak",
+            "properties": {
+              "servings": "4"
+            }
+          }
+        },
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "legendary_delicacies:haunted_knight_steak",
+          "properties": {
+            "part": "middle"
+          }
+        }
+      ]
+    }
+  ]
+}

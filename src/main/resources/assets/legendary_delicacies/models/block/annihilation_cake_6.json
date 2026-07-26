@@ -1,0 +1,25 @@
+{
+	"format_version": "1.9.0",
+	"credit": "Made with Blockbench",
+	"textures": {
+		"4": "legendary_delicacies:block/annihilation_cake_inner",
+		"top": "legendary_delicacies:block/annihilation_cake_top",
+		"particle": "legendary_delicacies:block/annihilation_cake_side",
+		"side": "legendary_delicacies:block/annihilation_cake_side",
+		"bottom": "legendary_delicacies:block/annihilation_cake_bottom"
+	},
+	"elements": [
+		{
+			"from": [13, 0, 1],
+			"to": [15, 8, 15],
+			"faces": {
+				"north": {"uv": [1, 8, 3, 16], "texture": "#side"},
+				"east": {"uv": [1, 8, 15, 16], "texture": "#side"},
+				"south": {"uv": [13, 8, 15, 16], "texture": "#side"},
+				"west": {"uv": [1, 8, 15, 16], "texture": "#4"},
+				"up": {"uv": [13, 1, 15, 15], "texture": "#top"},
+				"down": {"uv": [13, 1, 15, 15], "texture": "#bottom", "cullface": "down"}
+			}
+		}
+	]
+}

@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "legendary_delicacies:blood_cake_slice"
+    },
+    {
+      "item": "legendary_delicacies:blood_cake_slice"
+    },
+    {
+      "item": "legendary_delicacies:blood_cake_slice"
+    },
+    {
+      "item": "legendary_delicacies:blood_cake_slice"
+    },
+    {
+      "item": "legendary_delicacies:blood_cake_slice"
+    },
+    {
+      "item": "legendary_delicacies:blood_cake_slice"
+    },
+    {
+      "item": "legendary_delicacies:blood_cake_slice"
+    }
+  ],
+  "result": {
+    "item": "legendary_delicacies:blood_cake",
+    "count": 1
+  }
+}

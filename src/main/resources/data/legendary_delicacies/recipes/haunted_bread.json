@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "legendary_delicacies:broken_corrupted_soul"
+    },
+    {
+      "item": "legendary_delicacies:broken_corrupted_soul"
+    },
+    {
+      "item": "minecraft:bread"
+    }
+  ],
+  "result": {
+    "item": "legendary_delicacies:haunted_bread",
+    "count": 1
+  }
+}

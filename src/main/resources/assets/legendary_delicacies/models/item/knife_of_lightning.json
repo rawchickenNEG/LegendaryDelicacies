@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "legendary_delicacies:item/knife_of_lightning"
+  }
+}

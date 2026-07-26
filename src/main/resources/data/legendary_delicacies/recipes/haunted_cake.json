@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "MMM",
+    "SES",
+    "WWW"
+  ],
+  "key": {
+    "M": {
+      "item": "legendary_delicacies:broken_corrupted_soul"
+    },
+    "S": {
+      "item": "minecraft:sugar"
+    },
+    "E": {
+      "tag": "forge:eggs"
+    },
+    "W": {
+      "item": "minecraft:wheat"
+    }
+  },
+  "result": {
+    "item": "legendary_delicacies:haunted_cake",
+    "count": 1
+  }
+}

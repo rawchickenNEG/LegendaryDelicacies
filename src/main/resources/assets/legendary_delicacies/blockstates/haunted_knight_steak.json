@@ -1,0 +1,229 @@
+{
+  "variants": {
+    "facing=south,servings=0,part=left": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_left_4"
+    },
+    "facing=south,servings=0,part=middle": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_middle_4"
+    },
+    "facing=south,servings=0,part=right": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_right_0"
+    },
+    "facing=south,servings=1,part=left": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_left_3"
+    },
+    "facing=south,servings=1,part=middle": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_middle_3"
+    },
+    "facing=south,servings=1,part=right": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_right_0"
+    },
+    "facing=south,servings=2,part=left": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_left_2"
+    },
+    "facing=south,servings=2,part=middle": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_middle_2"
+    },
+    "facing=south,servings=2,part=right": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_right_0"
+    },
+    "facing=south,servings=3,part=left": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_left_1"
+    },
+    "facing=south,servings=3,part=middle": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_middle_1"
+    },
+    "facing=south,servings=3,part=right": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_right_0"
+    },
+    "facing=south,servings=4,part=left": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_left_0"
+    },
+    "facing=south,servings=4,part=middle": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_middle_0"
+    },
+    "facing=south,servings=4,part=right": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_right_0"
+    },
+    "facing=west,servings=0,part=left": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_left_4",
+      "y": 90
+    },
+    "facing=west,servings=0,part=middle": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_middle_4",
+      "y": 90
+    },
+    "facing=west,servings=0,part=right": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_right_0",
+      "y": 90
+    },
+    "facing=west,servings=1,part=left": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_left_3",
+      "y": 90
+    },
+    "facing=west,servings=1,part=middle": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_middle_3",
+      "y": 90
+    },
+    "facing=west,servings=1,part=right": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_right_0",
+      "y": 90
+    },
+    "facing=west,servings=2,part=left": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_left_2",
+      "y": 90
+    },
+    "facing=west,servings=2,part=middle": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_middle_2",
+      "y": 90
+    },
+    "facing=west,servings=2,part=right": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_right_0",
+      "y": 90
+    },
+    "facing=west,servings=3,part=left": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_left_1",
+      "y": 90
+    },
+    "facing=west,servings=3,part=middle": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_middle_1",
+      "y": 90
+    },
+    "facing=west,servings=3,part=right": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_right_0",
+      "y": 90
+    },
+    "facing=west,servings=4,part=left": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_left_0",
+      "y": 90
+    },
+    "facing=west,servings=4,part=middle": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_middle_0",
+      "y": 90
+    },
+    "facing=west,servings=4,part=right": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_right_0",
+      "y": 90
+    },
+    "facing=north,servings=0,part=left": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_left_4",
+      "y": 180
+    },
+    "facing=north,servings=0,part=middle": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_middle_4",
+      "y": 180
+    },
+    "facing=north,servings=0,part=right": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_right_0",
+      "y": 180
+    },
+    "facing=north,servings=1,part=left": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_left_3",
+      "y": 180
+    },
+    "facing=north,servings=1,part=middle": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_middle_3",
+      "y": 180
+    },
+    "facing=north,servings=1,part=right": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_right_0",
+      "y": 180
+    },
+    "facing=north,servings=2,part=left": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_left_2",
+      "y": 180
+    },
+    "facing=north,servings=2,part=middle": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_middle_2",
+      "y": 180
+    },
+    "facing=north,servings=2,part=right": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_right_0",
+      "y": 180
+    },
+    "facing=north,servings=3,part=left": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_left_1",
+      "y": 180
+    },
+    "facing=north,servings=3,part=middle": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_middle_1",
+      "y": 180
+    },
+    "facing=north,servings=3,part=right": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_right_0",
+      "y": 180
+    },
+    "facing=north,servings=4,part=left": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_left_0",
+      "y": 180
+    },
+    "facing=north,servings=4,part=middle": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_middle_0",
+      "y": 180
+    },
+    "facing=north,servings=4,part=right": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_right_0",
+      "y": 180
+    },
+    "facing=east,servings=0,part=left": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_left_4",
+      "y": 270
+    },
+    "facing=east,servings=0,part=middle": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_middle_4",
+      "y": 270
+    },
+    "facing=east,servings=0,part=right": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_right_0",
+      "y": 270
+    },
+    "facing=east,servings=1,part=left": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_left_3",
+      "y": 270
+    },
+    "facing=east,servings=1,part=middle": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_middle_3",
+      "y": 270
+    },
+    "facing=east,servings=1,part=right": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_right_0",
+      "y": 270
+    },
+    "facing=east,servings=2,part=left": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_left_2",
+      "y": 270
+    },
+    "facing=east,servings=2,part=middle": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_middle_2",
+      "y": 270
+    },
+    "facing=east,servings=2,part=right": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_right_0",
+      "y": 270
+    },
+    "facing=east,servings=3,part=left": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_left_1",
+      "y": 270
+    },
+    "facing=east,servings=3,part=middle": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_middle_1",
+      "y": 270
+    },
+    "facing=east,servings=3,part=right": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_right_0",
+      "y": 270
+    },
+    "facing=east,servings=4,part=left": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_left_0",
+      "y": 270
+    },
+    "facing=east,servings=4,part=middle": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_middle_0",
+      "y": 270
+    },
+    "facing=east,servings=4,part=right": {
+      "model": "legendary_delicacies:block/haunted_knight_steak_right_0",
+      "y": 270
+    }
+  }
+}

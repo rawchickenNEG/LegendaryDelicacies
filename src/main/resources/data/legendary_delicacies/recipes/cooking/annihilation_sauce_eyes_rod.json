@@ -1,0 +1,27 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "item": "minecraft:end_rod"
+  },
+  "cookingtime": 400,
+  "experience": 10.0,
+  "ingredients": [
+    {
+      "item": "legendary_monsters:bottle_of_annihilation"
+    },
+    {
+      "tag": "forge:slimeballs"
+    },
+    {
+      "item": "minecraft:ender_eye"
+    },
+    {
+      "item": "minecraft:ender_eye"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "item": "legendary_delicacies:annihilation_sauce_eyes_rod",
+    "count": 1
+  }
+}

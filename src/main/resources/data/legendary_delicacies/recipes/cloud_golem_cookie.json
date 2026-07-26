@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "iii",
+    "iw "
+  ],
+  "key": {
+    "i": {
+      "item": "legendary_delicacies:cloud"
+    },
+    "w": {
+      "item": "minecraft:wheat"
+    }
+  },
+  "result": {
+    "item": "legendary_delicacies:cloud_golem_cookie",
+    "count": 8
+  }
+}

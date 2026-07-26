@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "entries": [
+    "legendary_delicacies:add_soul_to_beheaded_knight",
+    "legendary_delicacies:add_soul_to_fractured_apostle",
+    "legendary_delicacies:add_soul_to_haunted_guard",
+    "legendary_delicacies:add_soul_to_haunted_knight",
+    "legendary_delicacies:add_soul_to_resurrected_knight"
+  ]
+}

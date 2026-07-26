@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "legendary_delicacies:cumulonimbus"
+    },
+    {
+      "item": "legendary_delicacies:cumulonimbus"
+    },
+    {
+      "item": "legendary_delicacies:cumulonimbus"
+    },
+    {
+      "tag": "forge:dough"
+    },
+    {
+      "tag": "forge:milk"
+    }
+  ],
+  "result": {
+    "item": "legendary_delicacies:cumulonimbus_bread",
+    "count": 1
+  }
+}

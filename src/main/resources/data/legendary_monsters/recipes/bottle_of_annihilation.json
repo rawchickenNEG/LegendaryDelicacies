@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#",
+    "i"
+  ],
+  "key": {
+    "#":{ "item": "minecraft:ender_eye"},
+    "i": { "item": "minecraft:glass_bottle"}
+  },
+  "result": {
+    "item": "minecraft:air"
+  }
+}

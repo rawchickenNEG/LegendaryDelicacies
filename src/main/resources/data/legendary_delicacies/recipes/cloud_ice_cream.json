@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "legendary_delicacies:cloud"
+    },
+    {
+      "item": "minecraft:dandelion"
+    },
+    {
+      "item": "legendary_delicacies:cloud"
+    },
+    {
+      "tag": "forge:milk"
+    },
+    {
+      "tag": "legendary_delicacies:ice_ingredients"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:bowl"
+    }
+  ],
+  "result": {
+    "item": "legendary_delicacies:cloud_ice_cream",
+    "count": 1
+  }
+}

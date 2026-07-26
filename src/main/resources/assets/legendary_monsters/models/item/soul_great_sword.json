@@ -1,0 +1,52 @@
+{
+  "loader": "forge:separate_transforms",
+  "gui_light": "front",
+  "base": {
+    "parent": "legendary_monsters:item/soul_great_sword_3d"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "legendary_monsters:item/soul_great_sword_2d"
+    },
+    "ground": {
+      "parent": "legendary_monsters:item/soul_great_sword_2d"
+    },
+    "fixed": {
+      "parent": "legendary_monsters:item/soul_great_sword_2d"
+    }
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "legendary_monsters:parrying": 1.0
+      },
+      "model": "legendary_monsters:item/soul_great_sword_blue_parry"
+    },
+    {
+      "predicate": {
+        "legendary_monsters:summoning": 1.0
+      },
+      "model": "legendary_monsters:item/soul_great_sword_blue_summoning"
+    },
+    {
+      "predicate": {
+        "legendary_delicacies:possessed": 1.0
+      },
+      "model": "legendary_monsters:item/soul_great_sword_red"
+    },
+    {
+      "predicate": {
+        "legendary_monsters:parrying": 1.0,
+        "legendary_delicacies:possessed": 1.0
+      },
+      "model": "legendary_monsters:item/soul_great_sword_red_parry"
+    },
+    {
+      "predicate": {
+        "legendary_monsters:summoning": 1.0,
+        "legendary_delicacies:possessed": 1.0
+      },
+      "model": "legendary_monsters:item/soul_great_sword_red_summoning"
+    }
+  ]
+}

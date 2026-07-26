@@ -1,0 +1,25 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "legendary_monsters:cloud_rod"
+    }
+  ],
+  "result": [
+    {
+      "count": 2,
+      "item": "legendary_delicacies:cloud"
+    },
+    {
+      "chance": 0.5,
+      "item": "legendary_delicacies:cloud"
+    },
+    {
+      "chance": 0.5,
+      "item": "legendary_delicacies:cloud"
+    }
+  ],
+  "tool": {
+    "item": "legendary_monsters:axe_of_lightning"
+  }
+}

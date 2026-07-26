@@ -1,0 +1,126 @@
+{
+	"format_version": "1.9.0",
+	"credit": "Made with Blockbench",
+	"texture_size": [32, 32],
+	"textures": {
+		"2": "legendary_delicacies:block/haunted_knight_steak_block",
+		"particle": "legendary_delicacies:block/haunted_knight_steak_block"
+	},
+	"elements": [
+		{
+			"from": [7, 0, 7],
+			"to": [9, 8, 9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [4, 1, 10]},
+			"faces": {
+				"north": {"uv": [14, 0, 13, 4], "texture": "#2"},
+				"east": {"uv": [14, 0, 13, 4], "texture": "#2"},
+				"south": {"uv": [14, 0, 13, 4], "texture": "#2"},
+				"west": {"uv": [14, 0, 13, 4], "texture": "#2"},
+				"down": {"uv": [13, 4, 14, 5], "texture": "#2"}
+			}
+		},
+		{
+			"from": [6, 8, 6],
+			"to": [10, 9, 10],
+			"rotation": {"angle": 0, "axis": "y", "origin": [4, 1, 10]},
+			"faces": {
+				"north": {"uv": [14, 0, 16, 0.5], "texture": "#2"},
+				"east": {"uv": [14, 0, 16, 0.5], "texture": "#2"},
+				"south": {"uv": [14, 0, 16, 0.5], "texture": "#2"},
+				"west": {"uv": [14, 0, 16, 0.5], "texture": "#2"},
+				"down": {"uv": [14, 0.5, 16, 2.5], "texture": "#2"}
+			}
+		},
+		{
+			"from": [1, 9, 5],
+			"to": [6, 12, 11],
+			"rotation": {"angle": 0, "axis": "y", "origin": [-9, 9, 7]},
+			"faces": {
+				"north": {"uv": [11, 14, 13.5, 15.5], "texture": "#2"},
+				"east": {"uv": [0.5, 14.5, 3.5, 16], "texture": "#2"},
+				"south": {"uv": [11, 14, 13.5, 15.5], "texture": "#2"},
+				"west": {"uv": [0.5, 14.5, 3.5, 16], "texture": "#2"},
+				"up": {"uv": [3.5, 13, 6, 16], "texture": "#2"}
+			}
+		},
+		{
+			"from": [8, 0, 3],
+			"to": [8, 3, 7],
+			"rotation": {"angle": 0, "axis": "y", "origin": [12, 1, 10]},
+			"faces": {
+				"east": {"uv": [16, 6.5, 14, 8], "texture": "#2"},
+				"west": {"uv": [14, 6.5, 16, 8], "texture": "#2"}
+			}
+		},
+		{
+			"from": [8, 0, 9],
+			"to": [8, 3, 13],
+			"rotation": {"angle": 0, "axis": "y", "origin": [12, 1, 6]},
+			"faces": {
+				"east": {"uv": [14, 6.5, 16, 8], "texture": "#2"},
+				"west": {"uv": [16, 6.5, 14, 8], "texture": "#2"}
+			}
+		},
+		{
+			"from": [1, 9.4588, 0.69344],
+			"to": [6, 9.4588, 4.69344],
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [1, 8.4588, 3.69344]},
+			"faces": {
+				"up": {"uv": [12.5, 8, 15, 10], "texture": "#2"},
+				"down": {"uv": [15, 8, 12.5, 10], "rotation": 180, "texture": "#2"}
+			}
+		},
+		{
+			"from": [4, 7.99929, 11.41492],
+			"to": [6, 11.99929, 11.41492],
+			"rotation": {"angle": 45, "axis": "x", "origin": [4, 8.99929, 12.41492]},
+			"faces": {
+				"north": {"uv": [15, 8, 16, 10], "texture": "#2"},
+				"south": {"uv": [16, 8, 15, 10], "texture": "#2"}
+			}
+		},
+		{
+			"from": [1, 9.4588, 11.30656],
+			"to": [6, 9.4588, 15.30656],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [1, 8.4588, 12.30656]},
+			"faces": {
+				"up": {"uv": [16, 12, 13.5, 10], "texture": "#2"},
+				"down": {"uv": [13.5, 12, 16, 10], "rotation": 180, "texture": "#2"}
+			}
+		},
+		{
+			"from": [4, 7.99929, 4.58508],
+			"to": [6, 11.99929, 4.58508],
+			"rotation": {"angle": -45, "axis": "x", "origin": [4, 8.99929, 3.58508]},
+			"faces": {
+				"north": {"uv": [15, 10, 16, 12], "texture": "#2"},
+				"south": {"uv": [16, 10, 15, 12], "texture": "#2"}
+			}
+		},
+		{
+			"from": [-0.04189, 9, 4.501],
+			"to": [15.95611, 9, 11.499],
+			"rotation": {"angle": 0, "axis": "y", "origin": [1.45711, 8.999, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 0, 7.99955], "rotation": 270, "texture": "#2"},
+				"east": {"uv": [0, 3.5, 0, 0], "rotation": 90, "texture": "#2"},
+				"south": {"uv": [0, 0, 0, 7.99955], "rotation": 90, "texture": "#2"},
+				"west": {"uv": [0, 0, 0, 3.5], "rotation": 90, "texture": "#2"},
+				"up": {"uv": [0, 0, 3.5, 7.99955], "rotation": 90, "texture": "#2"},
+				"down": {"uv": [3.5, 0, 0, 7.99955], "rotation": 90, "texture": "#2"}
+			}
+		}
+	],
+	"overrides": [
+		{"predicate": {"legendary_monsters:parrying": 1}, "model": "legendary_monsters:item/soul_great_sword_3d_parry"}
+	],
+	"groups": [
+		{
+			"name": "Left",
+			"origin": [20, 1, 10],
+			"scope": 0,
+			"color": 0,
+			"children": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+		}
+	]
+}

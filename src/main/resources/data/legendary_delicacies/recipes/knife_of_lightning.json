@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " @",
+    "@#",
+    " /"
+  ],
+  "key": {
+    "#": {
+      "item": "legendary_delicacies:cumulonimbus"
+    },
+    "@": {
+      "item": "legendary_delicacies:lightning_bottle"
+    },
+    "/": {
+      "item": "farmersdelight:iron_knife"
+    }
+  },
+  "result": {
+    "item": "legendary_delicacies:knife_of_lightning",
+    "count": 1
+  }
+}

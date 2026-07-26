@@ -1,0 +1,15 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "legendary_delicacies:item/soul_dagger"
+  },
+
+  "overrides": [
+    {
+      "predicate": {
+        "legendary_delicacies:possessed": 1.0
+      },
+      "model": "legendary_delicacies:item/soul_dagger_red"
+    }
+  ]
+}

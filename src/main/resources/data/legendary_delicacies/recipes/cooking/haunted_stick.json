@@ -1,0 +1,33 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "item": "legendary_monsters:long_stick_half"
+  },
+  "cookingtime": 400,
+  "experience": 10.0,
+  "ingredients": [
+    {
+      "item": "legendary_delicacies:broken_corrupted_soul"
+    },
+    {
+      "item": "legendary_delicacies:haunted_soup"
+    },
+    {
+      "item": "legendary_delicacies:broken_corrupted_soul"
+    },
+    {
+      "tag": "forge:slimeballs"
+    },
+    {
+      "item": "minecraft:glow_lichen"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "item": "legendary_delicacies:haunted_stick",
+    "count": 2
+  }
+}

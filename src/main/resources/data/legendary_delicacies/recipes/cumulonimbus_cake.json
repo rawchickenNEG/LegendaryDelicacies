@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "MMM",
+    "SES",
+    "WWW"
+  ],
+  "key": {
+    "M": {
+      "item": "legendary_delicacies:cumulonimbus"
+    },
+    "S": {
+      "item": "minecraft:sugar"
+    },
+    "E": {
+      "tag": "forge:eggs"
+    },
+    "W": {
+      "item": "minecraft:wheat"
+    }
+  },
+  "result": {
+    "item": "legendary_delicacies:cumulonimbus_cake",
+    "count": 1
+  }
+}

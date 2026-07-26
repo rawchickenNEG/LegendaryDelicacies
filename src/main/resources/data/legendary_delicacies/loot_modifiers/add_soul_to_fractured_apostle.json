@@ -1,0 +1,15 @@
+{
+  "type": "legendary_delicacies:add_loot_table",
+  "conditions":
+  [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "legendary_monsters:entities/fractured_apostle"
+    },
+    {
+      "condition": "minecraft:random_chance",
+      "chance": 0.5
+    }
+  ],
+  "lootTable": "legendary_delicacies:broken_corrupted_soul"
+}

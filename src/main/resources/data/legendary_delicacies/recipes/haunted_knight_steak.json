@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BHB",
+    "SGS",
+    "/F/"
+  ],
+  "key": {
+    "B":{ "item": "minecraft:cooked_beef"},
+    "H": { "item": "legendary_delicacies:haunted_soup"},
+    "S": { "item": "minecraft:sweet_berries"},
+    "G": { "item": "legendary_monsters:soul_great_sword"},
+    "/": { "item": "legendary_monsters:long_stick_half"},
+    "F": { "item": "minecraft:soul_campfire"}
+  },
+  "result": {
+    "item": "legendary_delicacies:haunted_knight_steak"
+  }
+}

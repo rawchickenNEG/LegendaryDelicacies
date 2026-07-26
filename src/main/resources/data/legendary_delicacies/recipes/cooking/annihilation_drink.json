@@ -1,0 +1,27 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "item": "minecraft:glass_bottle"
+  },
+  "cookingtime": 400,
+  "experience": 10.0,
+  "ingredients": [
+    {
+      "item": "legendary_monsters:bottle_of_annihilation"
+    },
+    {
+      "item": "legendary_monsters:bottle_of_annihilation"
+    },
+    {
+      "item": "minecraft:ender_eye"
+    },
+    {
+      "item": "legendary_monsters:eye_crystal"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "item": "legendary_delicacies:annihilation_drink",
+    "count": 1
+  }
+}

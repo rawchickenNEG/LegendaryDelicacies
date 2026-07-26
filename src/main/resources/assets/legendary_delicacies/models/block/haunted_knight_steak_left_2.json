@@ -1,0 +1,78 @@
+{
+	"format_version": "1.9.0",
+	"credit": "Made with Blockbench",
+	"texture_size": [32, 32],
+	"textures": {
+		"2": "legendary_delicacies:block/haunted_knight_steak_block",
+		"particle": "legendary_delicacies:block/haunted_knight_steak_block"
+	},
+	"elements": [
+		{
+			"from": [7, 0, 7],
+			"to": [9, 8, 9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [20, 1, 10]},
+			"faces": {
+				"north": {"uv": [14, 0, 13, 4], "texture": "#2"},
+				"east": {"uv": [14, 0, 13, 4], "texture": "#2"},
+				"south": {"uv": [14, 0, 13, 4], "texture": "#2"},
+				"west": {"uv": [14, 0, 13, 4], "texture": "#2"},
+				"down": {"uv": [13, 4, 14, 5], "texture": "#2"}
+			}
+		},
+		{
+			"from": [6, 8, 6],
+			"to": [10, 9, 10],
+			"rotation": {"angle": 0, "axis": "y", "origin": [20, 1, 10]},
+			"faces": {
+				"north": {"uv": [14, 0, 16, 0.5], "texture": "#2"},
+				"east": {"uv": [14, 0, 16, 0.5], "texture": "#2"},
+				"south": {"uv": [14, 0, 16, 0.5], "texture": "#2"},
+				"west": {"uv": [14, 0, 16, 0.5], "texture": "#2"},
+				"down": {"uv": [14, 0.5, 16, 2.5], "texture": "#2"}
+			}
+		},
+		{
+			"from": [8, 0, 3],
+			"to": [8, 3, 7],
+			"rotation": {"angle": 0, "axis": "y", "origin": [28, 1, 10]},
+			"faces": {
+				"east": {"uv": [16, 6.5, 14, 8], "texture": "#2"},
+				"west": {"uv": [14, 6.5, 16, 8], "texture": "#2"}
+			}
+		},
+		{
+			"from": [8, 0, 9],
+			"to": [8, 3, 13],
+			"rotation": {"angle": 0, "axis": "y", "origin": [28, 1, 6]},
+			"faces": {
+				"east": {"uv": [14, 6.5, 16, 8], "texture": "#2"},
+				"west": {"uv": [16, 6.5, 14, 8], "texture": "#2"}
+			}
+		},
+		{
+			"from": [-0.04189, 9, 4.501],
+			"to": [15.95611, 9, 11.499],
+			"rotation": {"angle": 0, "axis": "y", "origin": [17.45711, 8.999, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 0, 7.99955], "rotation": 270, "texture": "#2"},
+				"east": {"uv": [0, 3.5, 0, 0], "rotation": 90, "texture": "#2"},
+				"south": {"uv": [0, 0, 0, 7.99955], "rotation": 90, "texture": "#2"},
+				"west": {"uv": [0, 0, 0, 3.5], "rotation": 90, "texture": "#2"},
+				"up": {"uv": [0, 0, 3.5, 7.99955], "rotation": 90, "texture": "#2"},
+				"down": {"uv": [3.5, 0, 0, 7.99955], "rotation": 90, "texture": "#2"}
+			}
+		}
+	],
+	"overrides": [
+		{"predicate": {"legendary_monsters:parrying": 1}, "model": "legendary_monsters:item/soul_great_sword_3d_parry"}
+	],
+	"groups": [
+		{
+			"name": "Left",
+			"origin": [20, 1, 10],
+			"scope": 0,
+			"color": 0,
+			"children": [0, 1, 2, 3, 4]
+		}
+	]
+}

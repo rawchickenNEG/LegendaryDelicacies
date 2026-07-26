@@ -1,0 +1,33 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "item": "legendary_monsters:portal_shard"
+  },
+  "cookingtime": 400,
+  "experience": 10.0,
+  "ingredients": [
+    {
+      "item": "legendary_monsters:bottle_of_annihilation"
+    },
+    {
+      "item": "minecraft:ender_eye"
+    },
+    {
+      "item": "legendary_monsters:bottle_of_annihilation"
+    },
+    {
+      "item": "farmersdelight:rotten_tomato"
+    },
+    {
+      "item": "minecraft:suspicious_stew"
+    },
+    {
+      "item": "minecraft:cyan_dye"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "item": "legendary_delicacies:annihilation_eye_soup",
+    "count": 1
+  }
+}

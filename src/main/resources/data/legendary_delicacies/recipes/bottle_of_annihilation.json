@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#",
+    "i"
+  ],
+  "key": {
+    "#":{ "item": "legendary_monsters:eye_of_annihilation"},
+    "i": { "item": "minecraft:glass_bottle"}
+  },
+  "result": {
+    "item": "legendary_monsters:bottle_of_annihilation"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "MYM",
+    "SES",
+    "WWW"
+  ],
+  "key": {
+    "M": {
+      "item": "legendary_monsters:bottle_of_annihilation"
+    },
+    "Y": {
+      "item": "minecraft:ender_eye"
+    },
+    "S": {
+      "item": "minecraft:sugar"
+    },
+    "E": {
+      "tag": "forge:eggs"
+    },
+    "W": {
+      "item": "minecraft:wheat"
+    }
+  },
+  "result": {
+    "item": "legendary_delicacies:annihilation_cake",
+    "count": 1
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "MMM",
+    "SES",
+    "WWW"
+  ],
+  "key": {
+    "M": [
+      {
+        "item": "legendary_delicacies:blood_clot"
+      },
+      {
+        "item": "legendary_delicacies:possessed_blood_bottle"
+      }
+    ],
+    "S": {
+      "item": "minecraft:sugar"
+    },
+    "E": {
+      "tag": "forge:eggs"
+    },
+    "W": {
+      "item": "minecraft:wheat"
+    }
+  },
+  "result": {
+    "item": "legendary_delicacies:blood_cake",
+    "count": 1
+  }
+}

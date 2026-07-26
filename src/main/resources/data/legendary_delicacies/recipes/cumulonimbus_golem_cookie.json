@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " wi",
+    "iii"
+  ],
+  "key": {
+    "i": {
+      "item": "legendary_delicacies:cumulonimbus"
+    },
+    "w": {
+      "item": "minecraft:wheat"
+    }
+  },
+  "result": {
+    "item": "legendary_delicacies:cumulonimbus_golem_cookie",
+    "count": 8
+  }
+}

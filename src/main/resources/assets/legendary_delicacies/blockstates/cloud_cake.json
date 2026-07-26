@@ -1,0 +1,25 @@
+{
+  "variants": {
+    "bites=0": {
+      "model": "legendary_delicacies:block/cloud_cake_0"
+    },
+    "bites=1": {
+      "model": "legendary_delicacies:block/cloud_cake_1"
+    },
+    "bites=2": {
+      "model": "legendary_delicacies:block/cloud_cake_2"
+    },
+    "bites=3": {
+      "model": "legendary_delicacies:block/cloud_cake_3"
+    },
+    "bites=4": {
+      "model": "legendary_delicacies:block/cloud_cake_4"
+    },
+    "bites=5": {
+      "model": "legendary_delicacies:block/cloud_cake_5"
+    },
+    "bites=6": {
+      "model": "legendary_delicacies:block/cloud_cake_6"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 400,
+  "experience": 10.0,
+  "ingredients": [
+    {
+      "item": "legendary_delicacies:cumulonimbus"
+    },
+    {
+      "item": "legendary_delicacies:cumulonimbus"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "tag": "forge:milk"
+    },
+    {
+      "tag": "forge:crops/rice"
+    },
+    {
+      "tag": "forge:crops/rice"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "item": "legendary_delicacies:cumulonimbus_sauce_rice_cake",
+    "count": 2
+  }
+}

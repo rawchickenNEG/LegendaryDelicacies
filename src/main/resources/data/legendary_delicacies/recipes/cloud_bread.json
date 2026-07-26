@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "legendary_delicacies:cloud"
+    },
+    {
+      "item": "legendary_delicacies:cloud"
+    },
+    {
+      "item": "legendary_delicacies:cloud"
+    },
+    {
+      "tag": "forge:dough"
+    },
+    {
+      "tag": "forge:milk"
+    }
+  ],
+  "result": {
+    "item": "legendary_delicacies:cloud_bread",
+    "count": 1
+  }
+}

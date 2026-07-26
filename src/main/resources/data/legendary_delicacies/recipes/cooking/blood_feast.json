@@ -1,0 +1,43 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "item": "minecraft:wither_skeleton_skull"
+  },
+  "cookingtime": 400,
+  "experience": 50.0,
+  "ingredients": [
+    [
+      {
+        "item": "legendary_delicacies:blood_clot"
+      },
+      {
+        "item": "legendary_delicacies:possessed_blood_bottle"
+      }
+    ],
+    [
+      {
+        "item": "legendary_delicacies:blood_clot"
+      },
+      {
+        "item": "legendary_delicacies:possessed_blood_bottle"
+      }
+    ],
+    {
+      "item": "minecraft:nether_wart"
+    },
+    {
+      "item": "minecraft:nether_wart"
+    },
+    {
+      "item": "minecraft:poppy"
+    },
+    {
+      "item": "minecraft:beetroot_soup"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "item": "legendary_delicacies:blood_feast",
+    "count": 1
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 10.0,
+  "ingredient": [
+    {
+      "item": "legendary_monsters:soul_great_sword"
+    },
+    {
+      "item": "legendary_delicacies:soul_dagger"
+    }
+  ],
+  "result": "legendary_delicacies:haunted_netherite_debris"
+}

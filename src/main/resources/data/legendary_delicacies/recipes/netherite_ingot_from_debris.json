@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "legendary_delicacies:haunted_netherite_debris"
+    },
+    {
+      "item": "legendary_delicacies:haunted_netherite_debris"
+    },
+    {
+      "item": "minecraft:fire_charge"
+    }
+  ],
+  "result": {
+    "item": "minecraft:netherite_ingot"
+  }
+}

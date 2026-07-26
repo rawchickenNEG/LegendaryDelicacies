@@ -1,0 +1,124 @@
+{
+	"format_version": "1.9.0",
+	"credit": "Made with Blockbench",
+	"texture_size": [32, 32],
+	"textures": {
+		"1": "legendary_delicacies:block/soul_fire",
+		"2": "legendary_delicacies:block/haunted_knight_steak_block",
+		"3": "legendary_delicacies:block/haunted_knight_steak_block_bottom",
+		"4": "legendary_delicacies:block/soul",
+		"particle": "legendary_delicacies:block/haunted_knight_steak_block"
+	},
+	"elements": [
+		{
+			"from": [2.95811, 9, 4.501],
+			"to": [15.95811, 9, 11.499],
+			"rotation": {"angle": 0, "axis": "y", "origin": [17.45711, 8.999, 8]},
+			"faces": {
+				"north": {"uv": [0, 7.99955, 0, 14.5], "rotation": 270, "texture": "#2"},
+				"east": {"uv": [0, 3.5, 0, 0], "rotation": 90, "texture": "#2"},
+				"south": {"uv": [0, 7.99955, 0, 14.5], "rotation": 90, "texture": "#2"},
+				"west": {"uv": [0, 0, 0, 3.5], "rotation": 90, "texture": "#2"},
+				"up": {"uv": [0, 7.99955, 3.5, 14.5], "rotation": 90, "texture": "#2"},
+				"down": {"uv": [3.5, 7.99955, 0, 14.5], "rotation": 90, "texture": "#2"}
+			}
+		},
+		{
+			"from": [-1.88424, 8, 4.88403],
+			"to": [5.11576, 10, 11.88403],
+			"rotation": {"angle": -45, "axis": "y", "origin": [2, 8.99575, 8.0005]},
+			"faces": {
+				"north": {"uv": [7.5, 9, 6.5, 12.5], "rotation": 270, "texture": "#2"},
+				"east": {"uv": [3.5, 13, 4.5, 9.5], "rotation": 90, "texture": "#2"},
+				"south": {"uv": [8.5, 9, 7.5, 12.5], "rotation": 90, "texture": "#2"},
+				"west": {"uv": [4.5, 9.5, 5.5, 13], "rotation": 90, "texture": "#2"},
+				"up": {"uv": [7, 0, 3.5, 3.5], "rotation": 90, "texture": "#2"},
+				"down": {"uv": [3.5, 0, 7, 3.5], "rotation": 90, "texture": "#2"}
+			}
+		},
+		{
+			"from": [-2.04189, 8.0125, 5.0005],
+			"to": [1.95611, 9.9875, 10.9985],
+			"rotation": {"angle": 0, "axis": "y", "origin": [-0.04289, 9, 7.9995]},
+			"faces": {
+				"north": {"uv": [10.5, 12, 9.5, 14], "rotation": 270, "texture": "#2"},
+				"east": {"uv": [5.5, 12.5, 6.5, 9.5], "rotation": 90, "texture": "#2"},
+				"south": {"uv": [11.5, 12, 10.5, 14], "rotation": 90, "texture": "#2"},
+				"west": {"uv": [10.5, 4, 11.5, 7], "rotation": 90, "texture": "#2"},
+				"up": {"uv": [9.5, 5, 6.5, 7], "rotation": 90, "texture": "#2"},
+				"down": {"uv": [10, 0, 7, 2], "rotation": 90, "texture": "#2"}
+			}
+		},
+		{
+			"from": [3, 0, 3],
+			"to": [13, 1, 13],
+			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 10]},
+			"faces": {
+				"north": {"uv": [0, 10, 10, 11], "texture": "#3"},
+				"east": {"uv": [0, 10, 10, 11], "texture": "#3"},
+				"south": {"uv": [0, 10, 10, 11], "texture": "#3"},
+				"west": {"uv": [0, 10, 10, 11], "texture": "#3"},
+				"up": {"uv": [0, 0, 10, 10], "texture": "#3"},
+				"down": {"uv": [0, 0, 10, 10], "texture": "#3"}
+			}
+		},
+		{
+			"from": [8, 1, 0],
+			"to": [8, 9, 16],
+			"rotation": {"angle": -45, "axis": "y", "origin": [8, 2, 8]},
+			"faces": {
+				"east": {"uv": [0, 0, 16, 8], "texture": "#1"},
+				"west": {"uv": [0, 0, 16, 8], "texture": "#1"}
+			},
+			"forge_data": {
+				"block_light": 15,
+				"sky_light": 15,
+				"ambient_occlusion": false
+			}
+		},
+		{
+			"from": [8, 1, 0],
+			"to": [8, 9, 16],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 4, 8]},
+			"faces": {
+				"east": {"uv": [0, 0, 16, 8], "texture": "#1"},
+				"west": {"uv": [0, 0, 16, 8], "texture": "#1"}
+			},
+			"forge_data": {
+				"block_light": 15,
+				"sky_light": 15,
+				"ambient_occlusion": false
+			}
+		},
+		{
+			"from": [-5.83579, 12.01, 0],
+			"to": [10.16421, 12.01, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [2.16421, 13, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 8, 0], "texture": "#4"},
+				"east": {"uv": [0, 0, 8, 0], "texture": "#4"},
+				"south": {"uv": [0, 0, 8, 0], "texture": "#4"},
+				"west": {"uv": [0, 0, 8, 0], "texture": "#4"},
+				"up": {"uv": [7, 0, 11, 4], "texture": "#4"},
+				"down": {"uv": [11, 0, 7, 4], "texture": "#4"}
+			},
+			"forge_data": {
+				"block_light": 15,
+				"sky_light": 15,
+				"ambient_occlusion": false
+			}
+		}
+	],
+	"overrides": [
+		{"predicate": {"legendary_monsters:parrying": 1}, "model": "legendary_monsters:item/soul_great_sword_3d_parry"}
+	],
+	"groups": [
+		{
+			"name": "middle",
+			"origin": [17.45711, 8.999, 8],
+			"scope": 0,
+			"color": 0,
+			"children": [0, 1, 2, 3, 4, 5, 6]
+		}
+	]
+}

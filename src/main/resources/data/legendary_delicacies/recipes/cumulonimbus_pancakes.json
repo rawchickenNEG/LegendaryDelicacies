@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "legendary_delicacies:cumulonimbus"
+    },
+    {
+      "item": "minecraft:glow_berries"
+    },
+    {
+      "item": "legendary_delicacies:cumulonimbus"
+    },
+    {
+      "tag": "forge:dough"
+    },
+    {
+      "tag": "forge:milk"
+    },
+    {
+      "tag": "forge:dough"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:bowl"
+    },
+    {
+      "tag": "forge:eggs"
+    }
+  ],
+  "result": {
+    "item": "legendary_delicacies:cumulonimbus_pancakes",
+    "count": 1
+  }
+}

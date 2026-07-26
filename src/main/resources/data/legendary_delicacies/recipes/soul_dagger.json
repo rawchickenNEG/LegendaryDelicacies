@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " @",
+    "@#",
+    " /"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "@": {
+      "item": "legendary_delicacies:haunted_netherite_debris"
+    },
+    "/": {
+      "item": "farmersdelight:diamond_knife"
+    }
+  },
+  "result": {
+    "item": "legendary_delicacies:soul_dagger",
+    "count": 1
+  }
+}

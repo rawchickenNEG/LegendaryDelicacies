@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " i ",
+    "iNi",
+    " I "
+  ],
+  "key": {
+    "i": {
+      "item": "legendary_delicacies:haunted_netherite_debris"
+    },
+    "I": {
+      "item": "minecraft:diamond_sword"
+    },
+    "N": {
+      "item": "minecraft:netherite_ingot"
+    }
+  },
+  "result": {
+    "item": "legendary_monsters:soul_great_sword",
+    "count": 1
+  }
+}

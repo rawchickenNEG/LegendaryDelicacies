@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "forge:cooked_beef"
+    },
+    {
+      "item": "minecraft:torchflower"
+    },
+    {
+      "item": "legendary_delicacies:haunted_bread"
+    },
+    {
+      "item": "minecraft:soul_sand"
+    }
+  ],
+  "result": {
+    "item": "legendary_delicacies:haunted_sandwich",
+    "count": 1
+  }
+}

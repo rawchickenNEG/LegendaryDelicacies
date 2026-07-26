@@ -1,0 +1,31 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 400,
+  "experience": 10.0,
+  "ingredients": [
+    {
+      "tag": "forge:dough"
+    },
+    [
+      {
+        "item": "legendary_delicacies:blood_clot"
+      },
+      {
+        "item": "legendary_delicacies:possessed_blood_bottle"
+      }
+    ],
+    [
+      {
+        "item": "legendary_delicacies:blood_clot"
+      },
+      {
+        "item": "legendary_delicacies:possessed_blood_bottle"
+      }
+    ]
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "item": "legendary_delicacies:bloody_steamed_bun",
+    "count": 1
+  }
+}

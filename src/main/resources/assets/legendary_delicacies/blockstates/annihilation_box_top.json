@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "facing=east,open=false": {
+      "model": "legendary_delicacies:block/annihilation_box_top_close_3"
+    },
+    "facing=north,open=false": {
+      "model": "legendary_delicacies:block/annihilation_box_top_close_0"
+    },
+    "facing=south,open=false": {
+      "model": "legendary_delicacies:block/annihilation_box_top_close_2"
+    },
+    "facing=west,open=false": {
+      "model": "legendary_delicacies:block/annihilation_box_top_close_1"
+    },
+    "facing=east,open=true": {
+      "model": "legendary_delicacies:block/annihilation_box_top_open_3"
+    },
+    "facing=north,open=true": {
+      "model": "legendary_delicacies:block/annihilation_box_top_open_0"
+    },
+    "facing=south,open=true": {
+      "model": "legendary_delicacies:block/annihilation_box_top_open_2"
+    },
+    "facing=west,open=true": {
+      "model": "legendary_delicacies:block/annihilation_box_top_open_1"
+    }
+  }
+}

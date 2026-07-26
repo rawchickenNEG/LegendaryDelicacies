@@ -1,0 +1,32 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "item": "minecraft:bowl"
+  },
+  "cookingtime": 400,
+  "experience": 10.0,
+  "ingredients": [
+    {
+      "item": "legendary_delicacies:broken_corrupted_soul"
+    },
+    {
+      "item": "legendary_delicacies:broken_corrupted_soul"
+    },
+    {
+      "tag": "forge:milk"
+    },
+    [
+      {
+        "item": "minecraft:soul_sand"
+      },
+      {
+        "item": "minecraft:soul_soil"
+      }
+    ]
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "item": "legendary_delicacies:haunted_soup",
+    "count": 1
+  }
+}

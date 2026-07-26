@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:ender_eye"
+    },
+    "O": {
+      "item": "farmersdelight:pie_crust"
+    },
+    "a": {
+      "item": "legendary_monsters:bottle_of_annihilation"
+    },
+    "x": {
+      "item": "minecraft:end_stone"
+    }
+  },
+  "pattern": [
+    "a#a",
+    "xOx"
+  ],
+  "result": {
+    "item": "legendary_delicacies:annihilation_eye_pie"
+  }
+}
