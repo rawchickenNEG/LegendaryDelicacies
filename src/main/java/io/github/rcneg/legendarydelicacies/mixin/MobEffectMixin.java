@@ -14,8 +14,7 @@ public class MobEffectMixin {
     @Inject(
             method = "applyEffectTick",
             at = @At("HEAD"),
-            cancellable = true,
-            remap = false)
+            cancellable = true)
     private void lmd$overGrowthEffect(LivingEntity living, int p_19468_, CallbackInfo ci) {
         MobEffect effect = (MobEffect)(Object)this;
         if(effect == MobEffects.POISON && living.hasEffect(EffectRegistry.OVER_GROWING.get())){

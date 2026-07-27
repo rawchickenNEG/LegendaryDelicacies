@@ -27,12 +27,11 @@ public class IAnimatedBossMixin {
     }
 
     @Redirect(
-            method = "hurt",
+            method = "hurt(Lnet/minecraft/world/damagesource/DamageSource;F)Z",
             at = @At(
                     value = "INVOKE",
                     target = "Ljava/lang/Math;min(DD)D"
-            ),
-            remap = false
+            )
     )
     //绕过限伤
     private double lmd$bypassDamageCapInHurt(double cap, double amount, DamageSource source, float originalAmount) {
@@ -47,8 +46,7 @@ public class IAnimatedBossMixin {
             at = @At(
                     value = "INVOKE",
                     target = "Lnet/miauczel/legendary_monsters/entity/AnimatedMonster/OriginClasses/IAnimatedBoss;reducedDamage()Z"
-            ),
-            remap = false
+            )
     )
     //绕过适应减伤
     private boolean lmd$bypassReducedDamage(IAnimatedBoss boss, DamageSource source, float amount) {

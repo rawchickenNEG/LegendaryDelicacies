@@ -48,7 +48,7 @@ public class SoulGreatSwordItemMixin extends SwordItem {
     @Inject(
             method = "onUseTick",
             at = @At("HEAD"),
-            remap = false, cancellable = true)
+            cancellable = true)
     public void lmd$changeOnUseTick(Level level, LivingEntity entity, ItemStack stack, int remainingUseDuration, CallbackInfo ci) {
         if(!Config.SWORD_SKILL_CHANGE.get()) return;
         int cooldown;
@@ -92,7 +92,7 @@ public class SoulGreatSwordItemMixin extends SwordItem {
     @Inject(
             method = "releaseUsing",
             at = @At("HEAD"),
-            remap = false, cancellable = true)
+            cancellable = true)
     public void lmd$changeReleaseUsing(ItemStack pStack, Level level, LivingEntity pLivingEntity, int pTimeCharged, CallbackInfo ci) {
         if(!Config.SWORD_SKILL_CHANGE.get()) return;
 
@@ -157,7 +157,7 @@ public class SoulGreatSwordItemMixin extends SwordItem {
     @Inject(
             method = "appendHoverText",
             at = @At("HEAD"),
-            remap = false, cancellable = true)
+            cancellable = true)
     public void lmd$changeAppendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag, CallbackInfo ci) {
         if(!Config.SWORD_SKILL_CHANGE.get()) return;
 

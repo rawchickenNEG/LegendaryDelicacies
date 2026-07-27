@@ -113,7 +113,7 @@ dependencies {
     implementation fg.deobf("curse.maven:farmers-delight-398521:7596353")
     runtimeOnly fg.deobf("curse.maven:just-enough-resources-jer-240630:5057220")
     runtimeOnly fg.deobf("curse.maven:appleskin-248787:4770828")
-    implementation fg.deobf("curse.maven:legendary-monsters-944035:8247001")
+    implementation fg.deobf("curse.maven:legendary-monsters-944035:8444425")
     annotationProcessor "org.spongepowered:mixin:0.8.5:processor"
 }
 

@@ -16,8 +16,7 @@ public class IAnimatedMiniBossMixin {
             at = @At(
                     value = "INVOKE",
                     target = "Ljava/lang/Math;min(DD)D"
-            ),
-            remap = false
+            )
     )
     //绕过限伤
     private double lmd$bypassDamageCapInHurt(double cap, double amount, DamageSource source, float originalAmount) {
