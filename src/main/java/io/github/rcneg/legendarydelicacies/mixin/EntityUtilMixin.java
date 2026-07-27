@@ -22,7 +22,8 @@ public class EntityUtilMixin {
             method = "cancelBuffs",
             at = @At(
                     value = "INVOKE",
-                    target = "Lnet/minecraft/world/item/ItemStack;isEdible()Z"
+                    target = "Lnet/minecraft/world/item/ItemStack;isEdible()Z",
+                    remap = true
             )
             , remap = false
     )
