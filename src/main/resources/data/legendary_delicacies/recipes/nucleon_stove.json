@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:end_stone"
+    },
+    "i": {
+      "item": "legendary_monsters:enderitium_ingot"
+    },
+    "G": { "item": "legendary_monsters:bottle_of_annihilation"},
+    "S": { "item": "legendary_monsters:portal_shard"}
+  },
+  "pattern": [
+    "iSi",
+    "B B",
+    "BGB"
+  ],
+  "result": {
+    "item": "legendary_delicacies:nucleon_stove"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "i": {
+      "item": "legendary_monsters:enderitium_ingot"
+    },
+    "S": { "item": "legendary_monsters:portal_shard"},
+    "B": {
+      "item": "minecraft:end_stone"
+    }
+  },
+  "pattern": [
+    "iSi",
+    "BBB"
+  ],
+  "result": {
+    "item": "legendary_delicacies:reconstructing_board"
+  }
+}

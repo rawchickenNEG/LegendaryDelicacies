@@ -53,7 +53,7 @@ public class LMDFoodValues {
     ).alwaysEat().build();
 
     public static final FoodProperties ANNIHILATION_SAUCE_EYES_ROD = (new FoodProperties.Builder()).nutrition(6).saturationMod(0.65F)
-            .effect(new MobEffectInstance(EffectRegistry.ATOM_ANNIHILATION.get(), 3600), 1F)
+            .effect(new MobEffectInstance(EffectRegistry.ATOM_ANNIHILATION.get(), 1200), 1F)
             .effect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 600), 1F)
             .alwaysEat().build();
     public static final FoodProperties ANNIHILATION_EYE_SOUP = (new FoodProperties.Builder()).nutrition(10).saturationMod(0.65F)
@@ -75,7 +75,6 @@ public class LMDFoodValues {
     public static final FoodProperties ANNIHILATION_BLOOM_EYE = (new FoodProperties.Builder()).nutrition(20).saturationMod(0.85F)
             .effect(new MobEffectInstance(EffectRegistry.ATOM_ANNIHILATION.get(), 9600), 1F)
             .effect(new MobEffectInstance(EffectRegistry.RECONSTRUCTION.get(), 3600, 2), 1F)
-            .effect(new MobEffectInstance(net.miauczel.legendary_monsters.effect.ModEffects.UNBREAKABLE.get(), 200), 1F)
             .effect(new MobEffectInstance(ModEffects.NOURISHMENT.get(), 9600), 1F)
             .alwaysEat().build();
     public static final FoodProperties ANNIHILATION_SUODIU = (new FoodProperties.Builder()).nutrition(1).saturationMod(0.5F)

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "I",
+    "Q"
+  ],
+  "key": {
+    "I": {
+      "item": "legendary_monsters:molten_metal_ingot"
+    },
+    "Q": {
+      "item": "legendary_monsters:anchor_handle"
+    }
+  },
+  "result": {
+    "item": "legendary_delicacies:monstrous_knife",
+    "count": 1
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "legendary_delicacies:block/annihilation_stove",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "legendary_delicacies:block/annihilation_stove"
+    },
+    "facing=south": {
+      "model": "legendary_delicacies:block/annihilation_stove",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "legendary_delicacies:block/annihilation_stove",
+      "y": 270
+    }
+  }
+}

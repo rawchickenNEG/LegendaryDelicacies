@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "legendary_monsters:bottle_of_annihilation"
+    },
+    {
+      "item": "legendary_monsters:portal_shard"
+    },
+    {
+      "item": "legendary_monsters:bottle_of_annihilation"
+    },
+    {
+      "item": "minecraft:ender_eye"
+    },
+    {
+      "item": "minecraft:ender_eye"
+    },
+    {
+      "item": "minecraft:ender_eye"
+    },
+    {
+      "item": "legendary_monsters:enderitium_ingot"
+    },
+    {
+      "item": "legendary_monsters:enderitium_ingot"
+    },
+    {
+      "item": "legendary_monsters:enderitium_ingot"
+    }
+  ],
+  "result": {
+    "item": "legendary_monsters:eye_crystal",
+    "count": 3
+  }
+}

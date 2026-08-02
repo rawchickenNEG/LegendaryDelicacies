@@ -28,6 +28,12 @@ public class ItemRegistry {
     public static final RegistryObject<Item> KNIGHTS_KNIFE = ITEMS.register("knights_knife", KnightKnifeItem::new);
     public static final RegistryObject<Item> KNIFE_OF_LIGHTNING = ITEMS.register("knife_of_lightning", LightningKnifeItem::new);
     public static final RegistryObject<Item> TESSERACT_KNIFE = ITEMS.register("tesseract_knife", TesseractKnifeItem::new);
+    public static final RegistryObject<Item> MONSTROUS_KNIFE = ITEMS.register("monstrous_knife", MonstrousKnifeItem::new);
+
+    //厨具
+    public static final RegistryObject<Item> RECONSTRUCTING_BOARD = ITEMS.register("reconstructing_board", () -> new TippedBlockItems(BlockRegistry.RECONSTRUCTING_BOARD.get(), defaultBuilder().rarity(Rarity.EPIC)));
+    public static final RegistryObject<Item> SYNTHESISING_POT = ITEMS.register("synthesising_pot", () -> new TippedPotItems(BlockRegistry.SYNTHESISING_POT.get(), defaultBuilder().stacksTo(1).rarity(Rarity.EPIC)));
+    public static final RegistryObject<Item> NUCLEON_STOVE = ITEMS.register("nucleon_stove", () -> new TippedBlockItems(BlockRegistry.NUCLEON_STOVE.get(), defaultBuilder().rarity(Rarity.EPIC)));
 
     //云魔系列
     //1

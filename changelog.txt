@@ -1,3 +1,17 @@
+-1.0.2
+    Add Reconstructing Board (a kind of cutting board).
+    Add Synthesis Pot (a kind of cooking pot).
+    Add Nucleon Stove.
+    Add Monstrous Knife.
+    Add heat source tag for Haunted Knight Steak block.
+    Add Neapolitan ice tag compat.
+    Add new Farmers Delight tooltip translation key compat.
+    Change creative tab icon item.
+    Change effect duration of Annihilation Sauce Eyes Rod.
+    Fix Thunderstruck and Frost Avatar effect activting chance.
+    Fix Parry CD config not working issue.
+    Fix Flourish effect incorrect duration effect tick issue.
+    Remove Unbreakable effect in Annihilation Bloom Eye food.
 -1.0.1
     Add recipe for crafting Eye Crystal.
     Fix Annihilation Portal and Animated boss related mixin issues.

@@ -5,6 +5,10 @@
   "minVersion": "0.8",
   "refmap": "legendary_delicacies.refmap.json",
   "mixins": [
+    "BlockEntityTypeAccessor",
+    "CookingPotBlockEntityMixin",
+    "CookingPotMenuMixin",
+    "CuttingBoardBlockEntityMixin",
     "EntityUtilMixin",
     "IAnimatedBossMixin",
     "IAnimatedMiniBossMixin",

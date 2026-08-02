@@ -19,7 +19,7 @@ public class FlourishEffect extends MobEffect {
         if(level instanceof ServerLevel serverLevel){
             BlockPos pos = p_19467_.getOnPos();
             int r = 3 + p_19468_;
-            for (BlockPos tmpPos : BlockPos.withinManhattan(pos, r * 2 + 1, r * 2 + 1, r * 2 + 1)){
+            for (BlockPos tmpPos : BlockPos.withinManhattan(pos, r, r, r)){
                 if(Math.round(getBlockPosDistance(tmpPos, pos)) <= r){
                     BlockState state = serverLevel.getBlockState(tmpPos);
                     if(state.getBlock() instanceof BonemealableBlock plant){
@@ -32,13 +32,7 @@ public class FlourishEffect extends MobEffect {
 
     }
     public boolean isDurationEffectTick(int p_19455_, int p_19456_) {
-        int i;
-        i = 50 >> p_19456_;
-        if (i > 0) {
-            return p_19455_ % i == 0;
-        } else {
-            return true;
-        }
+        return p_19455_ % 50 == 0;
     }
 
     public static float getBlockPosDistance(BlockPos pos1, BlockPos pos2){

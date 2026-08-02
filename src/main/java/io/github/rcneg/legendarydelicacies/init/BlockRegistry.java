@@ -2,6 +2,7 @@ package io.github.rcneg.legendarydelicacies.init;
 
 import io.github.rcneg.legendarydelicacies.LegendaryDelicacies;
 import io.github.rcneg.legendarydelicacies.blocks.*;
+import net.miauczel.legendary_monsters.block.ModBlocks;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
@@ -9,9 +10,15 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import vectorwing.farmersdelight.common.block.CookingPotBlock;
+import vectorwing.farmersdelight.common.block.CuttingBoardBlock;
 
 public class BlockRegistry {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, LegendaryDelicacies.MODID);
+
+    public static final RegistryObject<Block> RECONSTRUCTING_BOARD = BLOCKS.register("reconstructing_board", () -> new CuttingBoardBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).requiresCorrectToolForDrops().strength(15.0F, 1200.0F).sound(SoundType.NETHERITE_BLOCK)));
+    public static final RegistryObject<Block> SYNTHESISING_POT = BLOCKS.register("synthesising_pot", () -> new CookingPotBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).requiresCorrectToolForDrops().strength(15.0F, 1200.0F).sound(SoundType.NETHERITE_BLOCK)));
+    public static final RegistryObject<Block> NUCLEON_STOVE = BLOCKS.register("nucleon_stove", () -> new NucleonStoveBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).requiresCorrectToolForDrops().strength(15.0F, 1200.0F).sound(SoundType.NETHERITE_BLOCK).lightLevel((state) -> 14)));
 
     public static final RegistryObject<Block> ANNIHILATION_EYE_PIE_BLOCK = BLOCKS.register("annihilation_eye_pie", () -> new AnnihilationEyePieBlock(BlockBehaviour.Properties.copy(Blocks.CAKE), ItemRegistry.ANNIHILATION_EYE_PIE_SLICE));
     public static final RegistryObject<Block> ANNIHILATION_CAKE = BLOCKS.register("annihilation_cake", () -> new CommonCakeBlock(Block.Properties.copy(Blocks.CAKE), ItemRegistry.ANNIHILATION_CAKE_SLICE));

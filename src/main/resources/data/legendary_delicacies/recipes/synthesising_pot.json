@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "legendary_monsters:enderitium_ingot"
+    },
+    "E": { "item": "legendary_monsters:bottle_of_annihilation"},
+    "S": { "item": "legendary_monsters:portal_shard"},
+    "G": { "item": "legendary_monsters:enderitium_shovel"}
+
+  },
+  "pattern": [
+    "SGS",
+    "BEB",
+    "BBB"
+  ],
+  "result": {
+    "item": "legendary_delicacies:synthesising_pot"
+  }
+}

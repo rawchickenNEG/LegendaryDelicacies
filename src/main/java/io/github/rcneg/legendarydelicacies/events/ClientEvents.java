@@ -20,5 +20,7 @@ public class ClientEvents {
         ItemBlockRenderTypes.setRenderLayer(BlockRegistry.CUMULONIMBUS_PANCAKES.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlockRegistry.ANNIHILATION_BOX_TOP.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlockRegistry.ANNIHILATION_BOX.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlockRegistry.SYNTHESISING_POT.get(), RenderType.cutout());
+
     }
 }

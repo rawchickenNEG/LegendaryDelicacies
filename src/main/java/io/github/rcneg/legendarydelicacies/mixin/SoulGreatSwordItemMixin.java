@@ -73,10 +73,9 @@ public class SoulGreatSwordItemMixin extends SwordItem {
 
             ++sword.timeUsed;
             if (entity instanceof Player player) {
-                player = (Player)entity;
                 int maxUseDuration = possessed ? Config.PARRY_TIME_POSSESSED.get() : Config.PARRY_TIME.get();
                 if (sword.timeUsed >= maxUseDuration && !player.isShiftKeyDown() && (Boolean) ModConfig.MOB_CONFIG.canSoulGreatSwordUseParry.get()) {
-                    cooldown = sword.parrySucced ? sword.getCooldown() : 20;
+                    cooldown = sword.parrySucced ? sword.getCooldown() : Config.PARRY_CD.get();
                     player.getCooldowns().addCooldown(stack.getItem(), cooldown);
                     sword.parrySucced = false;
                     sword.timeUsed = 0;

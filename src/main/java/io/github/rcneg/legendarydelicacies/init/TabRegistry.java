@@ -22,7 +22,7 @@ public class TabRegistry {
 
     public static final RegistryObject<CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register(LegendaryDelicacies.MODID, () -> CreativeModeTab.builder()
             .title(Component.translatable("itemGroup.legendary_delicacies"))
-            .icon(ItemRegistry.HAUNTED_KNIGHT_STEAK.get()::getDefaultInstance)
+            .icon(ItemRegistry.NUCLEON_STOVE.get()::getDefaultInstance)
             .displayItems((parameters, output) -> {
                 for(RegistryObject<Item> item: ItemRegistry.ITEMS.getEntries()){
                     if(!NO_TAB_ITEMS.contains(item)) output.accept(item.get());

@@ -160,14 +160,14 @@ public class AttackEvents {
         //生成冰刺
         if(attacker != null && attacker.hasEffect(EffectRegistry.FROST_AVATAR.get())){
             int amp = attacker.getEffect(EffectRegistry.FROST_AVATAR.get()).getAmplifier();
-            if(attacker.getRandom().nextInt(5 + amp) > 1 + amp && entity.onGround() && !(damage.is(DamageTypes.INDIRECT_MAGIC))){
+            if(attacker.getRandom().nextInt(5 + amp) < 1 + amp && entity.onGround() && !(damage.is(DamageTypes.INDIRECT_MAGIC))){
                 level.addFreshEntity(new IceSpikeEntity(level, entity.getX(), entity.getOnPos().getY() + 1, entity.getZ(), 0, 0, attacker));
             }
         }
         //生成雷云
         if(attacker != null && attacker.hasEffect(EffectRegistry.LIGHTNING.get())){
             int amp = attacker.getEffect(EffectRegistry.LIGHTNING.get()).getAmplifier();
-            if(attacker.getRandom().nextInt(5 + amp) > 1 + amp && !(damage.is(DamageTypes.INDIRECT_MAGIC))){
+            if(attacker.getRandom().nextInt(5 + amp) < 1 + amp && !(damage.is(DamageTypes.INDIRECT_MAGIC))){
                 entity.playSound(SoundEvents.LIGHTNING_BOLT_THUNDER, 1.0F, 1.0F);
                 level.addFreshEntity(new LightningBoltEntity(level, entity.getX(), entity.getOnPos().getY() + 1, entity.getZ(), 0, 0, attacker, 30, (float)(8.0 * (Double) ModConfig.MOB_CONFIG.AxeOfLightningBoltDamageMultiplier.get())));
             }
