@@ -1,3 +1,7 @@
+-1.0.3
+    Add cutting board compat to 1.3.0+ Farmers Delight.
+    Change Annihilation Stew translation name for zh_cn.
+    Fix Cooking Pot menu not working issue caused by Synthesis Pot menu mixin.
 -1.0.2
     Add Reconstructing Board (a kind of cutting board).
     Add Synthesis Pot (a kind of cooking pot).

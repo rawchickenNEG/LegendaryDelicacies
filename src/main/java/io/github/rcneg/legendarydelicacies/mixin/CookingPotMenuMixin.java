@@ -3,6 +3,7 @@ package io.github.rcneg.legendarydelicacies.mixin;
 import io.github.rcneg.legendarydelicacies.init.BlockRegistry;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.ContainerLevelAccess;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
@@ -27,6 +28,9 @@ public class CookingPotMenuMixin {
             at = @At("HEAD"),
             cancellable = true)
     private void lmd$perseveringSoulEffect(Player playerIn, CallbackInfoReturnable<Boolean> cir) {
-        cir.setReturnValue(stillValid(ContainerLevelAccess.create(blockEntity.getLevel(), blockEntity.getBlockPos()), playerIn, BlockRegistry.SYNTHESISING_POT.get()));
+        CookingPotBlockEntity blockEntity = this.blockEntity;
+        if(blockEntity.getBlockState().is(BlockRegistry.SYNTHESISING_POT.get()) && blockEntity.getLevel() != null){
+            cir.setReturnValue(stillValid(ContainerLevelAccess.create(blockEntity.getLevel(), blockEntity.getBlockPos()), playerIn, BlockRegistry.SYNTHESISING_POT.get()));
+        }
     }
 }

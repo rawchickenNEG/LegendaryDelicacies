@@ -28,10 +28,28 @@ public class CuttingBoardBlockEntityMixin {
                             ")I",
                     remap = true
             ),
-            remap = false
+            remap = false,
+            require = 0
     )
     private int lmd$addCuttingBoardFortuneLevel(Enchantment enchantment, ItemStack toolStack) {
         int originalLevel = EnchantmentHelper.getItemEnchantmentLevel(enchantment, toolStack);
+        CuttingBoardBlockEntity blockEntity = (CuttingBoardBlockEntity)(Object)this;
+        boolean flag = blockEntity.getBlockState().is(BlockRegistry.RECONSTRUCTING_BOARD.get());
+        return flag ? originalLevel + 3 : originalLevel;
+    }
+
+    @Redirect(
+            method = "lambda$processStoredItemUsingTool$2",
+            at = @At(
+                    value = "INVOKE",
+                    target = "Lnet/minecraft/world/item/enchantment/EnchantmentHelper;getTagEnchantmentLevel(Lnet/minecraft/world/item/enchantment/Enchantment;Lnet/minecraft/world/item/ItemStack;)I",
+                    remap = true
+            ),
+            remap = false,
+            require = 0
+    )
+    private int lmd$addCuttingBoardFortuneLevelNew(Enchantment enchantment, ItemStack toolStack) {
+        int originalLevel = EnchantmentHelper.getTagEnchantmentLevel(enchantment, toolStack);
         CuttingBoardBlockEntity blockEntity = (CuttingBoardBlockEntity)(Object)this;
         boolean flag = blockEntity.getBlockState().is(BlockRegistry.RECONSTRUCTING_BOARD.get());
         return flag ? originalLevel + 3 : originalLevel;
