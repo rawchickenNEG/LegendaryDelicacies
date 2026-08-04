@@ -1,5 +1,6 @@
 package io.github.rcneg.legendarydelicacies.events;
 
+import io.github.rcneg.legendarydelicacies.config.Config;
 import io.github.rcneg.legendarydelicacies.effects.LMDImmunityMobEffect;
 import io.github.rcneg.legendarydelicacies.init.EffectRegistry;
 import net.minecraft.world.effect.MobEffect;
@@ -24,7 +25,9 @@ public class EffectEvents {
             }
         }
         if(entity.hasEffect(EffectRegistry.FLAWLESS.get()) && effect.getCategory() == MobEffectCategory.HARMFUL){
-            event.setResult(Event.Result.DENY);
+            if(!Config.flawlessBlacklistEffects.contains(effect)){
+                event.setResult(Event.Result.DENY);
+            }
         }
     }
 }

@@ -1,5 +1,6 @@
 package io.github.rcneg.legendarydelicacies.items;
 
+import io.github.rcneg.legendarydelicacies.config.Config;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
@@ -16,6 +17,7 @@ public class BloodyMarkItem extends DrinkableItem {
 
     public void affectConsumer(ItemStack stack, Level level, LivingEntity consumer) {
         List<MobEffectInstance> list = new ArrayList<>(consumer.getActiveEffects());
+        list.removeIf(effectInstance -> Config.bloodBlacklistEffects.contains(effectInstance.getEffect()));
         int maxDur = 0;
         int maxAmp = 0;
         MobEffectInstance me0 = null;

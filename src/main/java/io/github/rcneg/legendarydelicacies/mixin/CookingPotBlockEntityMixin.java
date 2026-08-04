@@ -50,7 +50,7 @@ public class CookingPotBlockEntityMixin {
         return flag && shouldKeep ? ItemStack.EMPTY : stack;
     }
 
-    //概率增产
+    //概率增产(对厨锅)
     @ModifyVariable(
             method = "processCooking",
             at = @At("STORE"),

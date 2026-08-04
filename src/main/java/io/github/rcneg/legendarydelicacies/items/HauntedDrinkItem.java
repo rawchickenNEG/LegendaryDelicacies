@@ -1,5 +1,6 @@
 package io.github.rcneg.legendarydelicacies.items;
 
+import io.github.rcneg.legendarydelicacies.config.Config;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.Item;
@@ -19,6 +20,8 @@ public class HauntedDrinkItem extends DrinkableItem {
     public void affectConsumer(ItemStack stack, Level level, LivingEntity consumer) {
         List<MobEffectInstance> list = new ArrayList<>(consumer.getActiveEffects());
         List<MobEffectInstance> newEffects = new ArrayList<>();
+        //remove blacklist effects
+        list.removeIf(effectInstance -> Config.hauntedBlacklistEffects.contains(effectInstance.getEffect()));
         int totalDuration = 0;
         List<Integer> ampifierList = new ArrayList<>();
         if(!list.isEmpty()){
