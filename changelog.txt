@@ -1,3 +1,6 @@
+-1.0.5
+    Change Annihilation Cake recipe.
+    Change description for Nucleon Stove.
 -1.0.4
     Add Skillet cooking result increasing ability for Nucleon Stove.
     Add config for Haunted Drink and Blook Mark to define which effects can not be affected by them (ban Unbreakable in default value).

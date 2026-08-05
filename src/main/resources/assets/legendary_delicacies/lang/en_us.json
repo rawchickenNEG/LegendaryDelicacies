@@ -151,7 +151,7 @@
   "tooltip.legendary_delicacies.annihilation_suodiu": "Spit Annihilation Bomb after eat.",
   "tooltip.legendary_delicacies.reconstructing_board": "Increasing all result chance.",
   "tooltip.legendary_delicacies.synthesising_pot": "Has chance of not consuming inputs.",
-  "tooltip.legendary_delicacies.nucleon_stove": "Has chance to increase output by 1.",
+  "tooltip.legendary_delicacies.nucleon_stove": "Has chance to increase output by 1 for Cooking Pot and Skillet.",
 
   "tooltip.legendary_delicacies.tesseract_knife": "§6Special Ability: §7Throwable, release §a§l[Annihilation Catastrophe] §r§7when hitting ground.",
   "tooltip.legendary_delicacies.tesseract_knife_1": "§7Can apply trident enchantments except Riptide and Channelling",
