@@ -1,0 +1,26 @@
+{
+	"format_version": "1.9.0",
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "legendary_delicacies:block/mossy_cobblestone_cake_side",
+		"1": "legendary_delicacies:block/mossy_cobblestone_cake_top",
+		"2": "legendary_delicacies:block/mossy_cobblestone_cake_bottom",
+		"4": "legendary_delicacies:block/mossy_cobblestone_cake_inner",
+		"particle": "legendary_delicacies:block/mossy_cobblestone_cake_side"
+	},
+	"elements": [
+		{
+			"from": [11, 0, 1],
+			"to": [15, 14, 15],
+			"rotation": {"angle": 0, "axis": "y", "origin": [1, 0, 1]},
+			"faces": {
+				"north": {"uv": [1, 2, 5, 16], "texture": "#0"},
+				"east": {"uv": [1, 2, 15, 16], "texture": "#0"},
+				"south": {"uv": [11, 2, 15, 16], "texture": "#0"},
+				"west": {"uv": [1, 2, 15, 16], "texture": "#4"},
+				"up": {"uv": [11, 1, 15, 15], "texture": "#1"},
+				"down": {"uv": [11, 1, 15, 15], "texture": "#2"}
+			}
+		}
+	]
+}

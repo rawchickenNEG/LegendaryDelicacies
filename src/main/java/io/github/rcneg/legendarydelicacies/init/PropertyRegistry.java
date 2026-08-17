@@ -17,5 +17,9 @@ public class PropertyRegistry {
                 itemstack.getTag() != null && itemstack.getTag().getBoolean("LMDPossessed") ? 1.0F : 0.0F);
         ItemProperties.register(ItemRegistry.SOUL_DAGGER.get(), new ResourceLocation(LegendaryDelicacies.MODID, "possessed"), (itemstack, level, entity, number) ->
                 itemstack.getTag() != null && itemstack.getTag().getBoolean("LMDPossessed") ? 1.0F : 0.0F);
+        ItemProperties.register(ItemRegistry.SOUL_SKILLET.get(), new ResourceLocation("parrying"), (itemstack, level, entity, number) ->
+                itemstack.getTag() != null && itemstack.getTag().contains("Parrying") ? 1.0F : 0.0F);
+        ItemProperties.register(ItemRegistry.SOUL_SKILLET.get(), new ResourceLocation("cooking"), (itemstack, level, entity, number) ->
+                itemstack.getTag() != null && itemstack.getTag().contains("Cooking") ? 1.0F : 0.0F);
     }
 }

@@ -1,0 +1,31 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "legendary_monsters:somber_key"
+    }
+  ],
+  "result": [
+    {
+      "count": 2,
+      "item": "legendary_delicacies:somber_metal_chunk"
+    },
+    {
+      "chance": 0.15,
+      "item": "legendary_delicacies:somber_metal_chunk"
+    },
+    {
+      "chance": 0.15,
+      "item": "legendary_delicacies:somber_metal_chunk"
+    }
+  ],
+  "tool": [
+    {
+      "type": "farmersdelight:tool_action",
+      "action": "pickaxe_dig"
+    },
+    {
+      "tag": "minecraft:pickaxes"
+    }
+  ]
+}

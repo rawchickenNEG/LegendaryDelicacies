@@ -1,10 +1,14 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "I",
-    "Q"
+    " I",
+    "IR",
+    " Q"
   ],
   "key": {
+    "R": {
+      "item": "minecraft:iron_ingot"
+    },
     "I": {
       "item": "legendary_monsters:molten_metal_ingot"
     },

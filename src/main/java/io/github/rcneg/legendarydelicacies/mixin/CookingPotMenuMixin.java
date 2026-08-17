@@ -32,5 +32,8 @@ public class CookingPotMenuMixin {
         if(blockEntity.getBlockState().is(BlockRegistry.SYNTHESISING_POT.get()) && blockEntity.getLevel() != null){
             cir.setReturnValue(stillValid(ContainerLevelAccess.create(blockEntity.getLevel(), blockEntity.getBlockPos()), playerIn, BlockRegistry.SYNTHESISING_POT.get()));
         }
+        if(blockEntity.getBlockState().is(BlockRegistry.ANCIENT_CAULDRON.get()) && blockEntity.getLevel() != null){
+            cir.setReturnValue(stillValid(ContainerLevelAccess.create(blockEntity.getLevel(), blockEntity.getBlockPos()), playerIn, BlockRegistry.ANCIENT_CAULDRON.get()));
+        }
     }
 }

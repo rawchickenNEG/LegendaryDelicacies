@@ -21,6 +21,11 @@ public class ClientEvents {
         ItemBlockRenderTypes.setRenderLayer(BlockRegistry.ANNIHILATION_BOX_TOP.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlockRegistry.ANNIHILATION_BOX.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlockRegistry.SYNTHESISING_POT.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlockRegistry.ANCIENT_CAULDRON.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlockRegistry.HERB_SOUP_POT.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlockRegistry.MOSSY_COBBLESTONE_CAKE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlockRegistry.LIFE_VINES.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlockRegistry.LIFE_VINES_PLANT.get(), RenderType.cutout());
 
     }
 }

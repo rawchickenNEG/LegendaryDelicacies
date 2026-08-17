@@ -51,6 +51,16 @@ public class LMDFoodValues {
     public static final FoodProperties CUMULONIMBUS_ICE_CREAM = (new FoodProperties.Builder()).nutrition(6).saturationMod(0.4F).effect(
             new MobEffectInstance(EffectRegistry.LIGHTNING.get(), 3600), 1F
     ).alwaysEat().build();
+    public static final FoodProperties LIFE_MILKSHAKE = (new FoodProperties.Builder()).nutrition(3).saturationMod(0.6F).effect(
+            new MobEffectInstance(EffectRegistry.OVER_GROWING.get(), 3600, 1), 1F
+    ).alwaysEat().build();
+    public static final FoodProperties MOSSY_COBBLESTONE_CAKE_SLICE = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.5F).effect(
+            new MobEffectInstance(EffectRegistry.OVER_GROWING.get(), 1200, 1), 1F
+    ).alwaysEat().build();
+    public static final FoodProperties LIFE_ICE_CREAM = (new FoodProperties.Builder()).nutrition(6).saturationMod(0.4F).effect(
+            new MobEffectInstance(EffectRegistry.OVER_GROWING.get(), 3600, 1), 1F
+    ).alwaysEat().build();
+
 
     public static final FoodProperties ANNIHILATION_SAUCE_EYES_ROD = (new FoodProperties.Builder()).nutrition(6).saturationMod(0.65F)
             .effect(new MobEffectInstance(EffectRegistry.ATOM_ANNIHILATION.get(), 1200), 1F)
@@ -79,6 +89,9 @@ public class LMDFoodValues {
             .alwaysEat().build();
     public static final FoodProperties ANNIHILATION_SUODIU = (new FoodProperties.Builder()).nutrition(1).saturationMod(0.5F)
             .effect(new MobEffectInstance(EffectRegistry.ATOM_ANNIHILATION.get(), 200), 1F)
+            .alwaysEat().build();
+    public static final FoodProperties FISSION_DIPPING = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.5F)
+            .effect(new MobEffectInstance(EffectRegistry.ATOM_ANNIHILATION.get(), 600), 1F)
             .alwaysEat().build();
 
     public static final FoodProperties HAUNTED_STICK = (new FoodProperties.Builder()).nutrition(10).saturationMod(0.65F)
@@ -181,5 +194,41 @@ public class LMDFoodValues {
             .effect(new MobEffectInstance(EffectRegistry.LIGHTNING.get(), 1800, 1), 1F)
             .effect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 1800, 2), 1F)
             .effect(new MobEffectInstance(MobEffects.GLOWING, 1800), 1F)
+            .alwaysEat().build();
+    public static final FoodProperties LIFE_FRUIT = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.6F)
+            .effect(new MobEffectInstance(EffectRegistry.OVER_GROWING.get(), 1200), 1F)
+            .effect(new MobEffectInstance(MobEffects.REGENERATION, 600), 1F)
+            .alwaysEat().build();
+    public static final FoodProperties LIFE_FRUIT_SLICE = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.6F)
+            .effect(new MobEffectInstance(EffectRegistry.OVER_GROWING.get(), 600), 1F)
+            .effect(new MobEffectInstance(MobEffects.REGENERATION, 600), 1F)
+            .alwaysEat().fast().build();
+    public static final FoodProperties JUNGLE_MEDLEY = (new FoodProperties.Builder()).nutrition(6).saturationMod(0.6F)
+            .effect(new MobEffectInstance(EffectRegistry.OVER_GROWING.get(), 1200, 1), 1F)
+            .effect(new MobEffectInstance(MobEffects.REGENERATION, 600, 1), 1F)
+            .alwaysEat().build();
+    public static final FoodProperties LIFE_FRUIT_PUDDING = (new FoodProperties.Builder()).nutrition(8).saturationMod(0.6F)
+            .effect(new MobEffectInstance(EffectRegistry.OVER_GROWING.get(), 3600, 1), 1F)
+            .effect(new MobEffectInstance(MobEffects.REGENERATION, 3600), 1F)
+            .alwaysEat().build();
+    public static final FoodProperties LIFE_SOUP = (new FoodProperties.Builder()).nutrition(10).saturationMod(0.6F)
+            .effect(new MobEffectInstance(EffectRegistry.OVER_GROWING.get(), 6000, 2), 1F)
+            .effect(new MobEffectInstance(MobEffects.REGENERATION, 600, 1), 1F)
+            .effect(new MobEffectInstance(ModEffects.COMFORT.get(), 6000), 1F)
+            .alwaysEat().build();
+    public static final FoodProperties OVERGROWN_WITH_WEEDS = (new FoodProperties.Builder()).nutrition(8).saturationMod(0.6F)
+            .effect(new MobEffectInstance(EffectRegistry.FLOURISH.get(), 600, 2), 1F)
+            .alwaysEat().build();
+    public static final FoodProperties SPROUT_PASTA = (new FoodProperties.Builder()).nutrition(12).saturationMod(0.85F)
+            .effect(new MobEffectInstance(EffectRegistry.FLOURISH.get(), 3600), 1F)
+            .effect(new MobEffectInstance(ModEffects.NOURISHMENT.get(), 6000), 1F)
+            .alwaysEat().build();
+    public static final FoodProperties BOWL_OF_HERB_SOUP = (new FoodProperties.Builder()).nutrition(12).saturationMod(0.85F)
+            .effect(new MobEffectInstance(EffectRegistry.OVER_GROWING.get(), 6000, 4), 1F)
+            .effect(new MobEffectInstance(MobEffects.REGENERATION, 200, 3), 1F)
+            .effect(new MobEffectInstance(ModEffects.COMFORT.get(), 6000), 1F)
+            .alwaysEat().build();
+    public static final FoodProperties LIFE_FRUIT_JAM = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.5F)
+            .effect(new MobEffectInstance(EffectRegistry.OVER_GROWING.get(), 600), 1F)
             .alwaysEat().build();
 }

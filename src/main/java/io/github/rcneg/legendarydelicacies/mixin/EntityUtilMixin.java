@@ -28,7 +28,7 @@ public class EntityUtilMixin {
             , remap = false
     )
     private static boolean lmd$redirectBossFoods(ItemStack stack) {
-        if (stack.is(LMDTags.BOSS_FOODS) && Config.BOSS_FOOD_CANCEL_COOLDOWN.get()) {
+        if ((stack.is(LMDTags.BOSS_FOODS) || (stack.getTag() != null && stack.getTag().getBoolean("LMDHaunted"))) && Config.BOSS_FOOD_CANCEL_COOLDOWN.get()) {
             return false;
         }
         return stack.isEdible();

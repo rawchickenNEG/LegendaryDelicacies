@@ -3,17 +3,16 @@ package io.github.rcneg.legendarydelicacies.mixin;
 import io.github.rcneg.legendarydelicacies.config.Config;
 import io.github.rcneg.legendarydelicacies.init.BlockRegistry;
 import io.github.rcneg.legendarydelicacies.init.ItemRegistry;
+import io.github.rcneg.legendarydelicacies.tags.LMDTags;
 import net.miauczel.legendary_monsters.Particle.ModParticles;
+import net.miauczel.legendary_monsters.block.ModBlocks;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.sounds.SoundEvents;
-import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.items.ItemStackHandler;
 import org.spongepowered.asm.mixin.Mixin;
@@ -24,7 +23,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import vectorwing.farmersdelight.common.block.entity.CookingPotBlockEntity;
-import vectorwing.farmersdelight.common.registry.ModItems;
+import vectorwing.farmersdelight.common.crafting.CookingPotRecipe;
 
 @Mixin(value = CookingPotBlockEntity.class)
 public class CookingPotBlockEntityMixin {
@@ -47,10 +46,12 @@ public class CookingPotBlockEntityMixin {
         Level level = blockEntity.getLevel();
         boolean shouldKeep = level != null && !level.isClientSide() && level.getRandom().nextInt(100) < Config.POT_EXTRA.get();
         boolean flag = blockEntity.getBlockState().is(BlockRegistry.SYNTHESISING_POT.get());
+        if(Config.potBlacklistItems.contains(stack.getItem())){
+            return stack;
+        }
         return flag && shouldKeep ? ItemStack.EMPTY : stack;
     }
 
-    //概率增产(对厨锅)
     @ModifyVariable(
             method = "processCooking",
             at = @At("STORE"),
@@ -60,12 +61,59 @@ public class CookingPotBlockEntityMixin {
         ItemStack result = originalStack.copy();
         CookingPotBlockEntity blockEntity = (CookingPotBlockEntity)(Object)this;
         Level level = blockEntity.getLevel();
-        boolean flag = level != null && level.getBlockState(blockEntity.getBlockPos().below()).is(BlockRegistry.NUCLEON_STOVE.get());
-        boolean shouldAdd = level != null && !level.isClientSide() && level.getRandom().nextInt(100) < Config.STOVE_EXTRA.get();
-        if(flag && shouldAdd){
-            result.grow(1);
+        if(level != null){
+            BlockState potBlock = level.getBlockState(blockEntity.getBlockPos());
+            BlockState stoveBlock = level.getBlockState(blockEntity.getBlockPos().below());
+            //核炉灶概率增产(对厨锅)
+            if(stoveBlock.is(BlockRegistry.NUCLEON_STOVE.get()) && level.getRandom().nextInt(100) < Config.STOVE_EXTRA.get()){
+                if(!Config.stoveBlacklistItems.contains(result.getItem())){
+                    result.grow(1);
+                }
+            }
+            //荒古锅倍产(对厨锅)
+            if(potBlock.is(BlockRegistry.ANCIENT_CAULDRON.get()) && stoveBlock.is(LMDTags.PRIMITIVE_HEAT_SOURCES)){
+                if(result.isEdible() && !result.getFoodProperties(null).getEffects().isEmpty() && Config.ANCIENT_POT_ABILITY.get()){
+                    //效果持续时间翻倍
+                    result.getOrCreateTag().putBoolean("LMDRich", true);
+                }else if(Config.ANCIENT_POT_DOUBLE.get()){
+                    result.grow(originalStack.getCount());
+                }
+            }
         }
         return result;
+    }
+
+    //修改烹饪时间
+    @Redirect(
+            method = "processCooking",
+            at = @At(
+                    value = "INVOKE",
+                    target = "Lvectorwing/farmersdelight/common/crafting/CookingPotRecipe;getCookTime()I",
+                    ordinal = 0,
+                    remap = false
+            ),
+            remap = false
+    )
+    private int lmd$changeCookingSpeed(CookingPotRecipe instance) {
+        CookingPotBlockEntity blockEntity = (CookingPotBlockEntity)(Object)this;
+        Level level = blockEntity.getLevel();
+        if(level != null){
+            BlockState potBlock = level.getBlockState(blockEntity.getBlockPos());
+            BlockState stoveBlock = level.getBlockState(blockEntity.getBlockPos().below());
+            //不破炉灶固定1秒烹饪
+            if(stoveBlock.is(BlockRegistry.INDESTRUCTIBLE_STOVE.get())){
+                return Config.SOUL_STOVE_TIME.get();
+            }
+            //皇家炉灶减半烹饪总时长
+            if(stoveBlock.is(BlockRegistry.ROYAL_STOVE.get())){
+                return (int) Math.round(instance.getCookTime() * Config.ROYAL_STOVE_SPEED.get());
+            }
+            //荒古锅大幅延长烹饪总时长
+            if(potBlock.is(BlockRegistry.ANCIENT_CAULDRON.get()) && stoveBlock.is(LMDTags.PRIMITIVE_HEAT_SOURCES) && Config.ANCIENT_POT_DOUBLE.get()){
+                return (int) Math.round(instance.getCookTime() * Config.ANCIENT_POT_SPEED.get());
+            }
+        }
+        return instance.getCookTime();
     }
 
     //改判断

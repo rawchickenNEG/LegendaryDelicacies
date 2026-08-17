@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "MMM",
+    "SES",
+    "WBW"
+  ],
+  "key": {
+    "M": {
+      "tag": "legendary_delicacies:life_fruits"
+    },
+    "S": {
+      "item": "minecraft:cocoa_beans"
+    },
+    "E": {
+      "tag": "forge:eggs"
+    },
+    "W": {
+      "item": "minecraft:wheat"
+    },
+    "B": {
+      "item": "minecraft:moss_block"
+    }
+  },
+  "result": {
+    "item": "legendary_delicacies:mossy_cobblestone_cake",
+    "count": 1
+  }
+}

@@ -33,6 +33,7 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
@@ -75,7 +76,9 @@ public class SoulGreatSwordItemMixin extends SwordItem {
             if (entity instanceof Player player) {
                 int maxUseDuration = possessed ? Config.PARRY_TIME_POSSESSED.get() : Config.PARRY_TIME.get();
                 if (sword.timeUsed >= maxUseDuration && !player.isShiftKeyDown() && (Boolean) ModConfig.MOB_CONFIG.canSoulGreatSwordUseParry.get()) {
-                    cooldown = sword.parrySucced ? sword.getCooldown() : Config.PARRY_CD.get();
+                    cooldown = sword.parrySucced
+                            ? (possessed ? Config.PARRY_CD_POSSESSED.get() : Config.PARRY_CD.get())
+                            : (possessed ? Config.PARRY_FAILED_CD_POSSESSED.get() : Config.PARRY_FAILED_CD.get());
                     player.getCooldowns().addCooldown(stack.getItem(), cooldown);
                     sword.parrySucced = false;
                     sword.timeUsed = 0;
@@ -98,7 +101,9 @@ public class SoulGreatSwordItemMixin extends SwordItem {
         if (!level.isClientSide) {
             SoulGreatSwordItem sword = (SoulGreatSwordItem)(Object)this;
             boolean possessed = lmd$isPossessed(pStack);
-            int cooldown = sword.parrySucced ? sword.getCooldown() : 20;
+            int cooldown = sword.parrySucced
+                    ? (possessed ? Config.PARRY_CD_POSSESSED.get() : Config.PARRY_CD.get())
+                    : (possessed ? Config.PARRY_FAILED_CD_POSSESSED.get() : Config.PARRY_FAILED_CD.get());
             if (pLivingEntity instanceof Player player) {
                 if (player.isShiftKeyDown()) {
                     if (sword.timeUsed >= 20) {
@@ -183,6 +188,17 @@ public class SoulGreatSwordItemMixin extends SwordItem {
         ci.cancel();
     }
 
+
+    @Inject(
+            method = "maxUseDuration",
+            at = @At("HEAD"),
+            remap = false,
+            cancellable = true)
+    public void lmd$changeMaxUseDuration(CallbackInfoReturnable<Integer> cir) {
+        if(!Config.SWORD_SKILL_CHANGE.get()) return;
+        cir.setReturnValue(72000);
+    }
+
     @Unique
     public void lmd$spawnIceSpikesAdvanced(double x, double z, double minY, double maxY, float rotation, int delay, Player player, boolean isRed) {
         BlockPos blockpos = new BlockPos((int)x, (int)maxY, (int)z);
@@ -246,6 +262,7 @@ public class SoulGreatSwordItemMixin extends SwordItem {
         }
 
     }
+
 
     @Unique
     public boolean lmd$isPossessed(ItemStack weapon){

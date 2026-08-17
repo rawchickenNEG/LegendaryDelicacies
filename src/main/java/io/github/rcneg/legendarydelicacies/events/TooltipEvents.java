@@ -30,5 +30,22 @@ public class TooltipEvents {
                 event.getToolTip().add(2, Component.translatable(string).withStyle(ChatFormatting.GRAY));
             }
         }
+        if(tag != null){
+            if(tag.getBoolean("LMDHaunted")){
+                event.getToolTip().add(1, Component.translatable("tooltip.legendary_delicacies.haunted").withStyle(ChatFormatting.DARK_AQUA));
+            }
+            if(tag.getBoolean("LMDRich")){
+                event.getToolTip().add(1, Component.translatable("tooltip.legendary_delicacies.rich").withStyle(ChatFormatting.GOLD));
+            }
+            if(tag.getBoolean("LMDBreed")){
+                event.getToolTip().add(1, Component.translatable("tooltip.legendary_delicacies.breed").withStyle(ChatFormatting.LIGHT_PURPLE));
+            }
+            if(tag.getBoolean("LMDFission")){
+                event.getToolTip().add(1, Component.translatable("tooltip.legendary_delicacies.fission").withStyle(ChatFormatting.DARK_GREEN));
+            }
+            if(tag.getBoolean("LMDIsOffspring")){
+                event.getToolTip().add(1, Component.translatable("tooltip.legendary_delicacies.is_offspring").withStyle(ChatFormatting.DARK_GRAY).withStyle(ChatFormatting.ITALIC));
+            }
+        }
     }
 }

@@ -50,7 +50,7 @@ public class MonstrousKnifeItem extends KnifeItem {
             public Ingredient getRepairIngredient() {
                 return Ingredient.of(new ItemStack(Items.IRON_INGOT));
             }
-        }, 7.0F-1.0F, -2.6F, (new Properties()));
+        }, 7.0F-1.0F, -2.6F, (new Properties().rarity(Rarity.EPIC)));
     }
 
     public boolean canAttackBlock(BlockState p_43409_, Level p_43410_, BlockPos p_43411_, Player p_43412_) {

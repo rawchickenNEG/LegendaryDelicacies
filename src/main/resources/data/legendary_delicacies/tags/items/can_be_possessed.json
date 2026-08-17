@@ -1,11 +1,16 @@
 {
   "values": [
     "legendary_delicacies:soul_dagger",
+    "legendary_delicacies:knights_knife",
+    "legendary_delicacies:frost_knife",
     "legendary_monsters:soul_great_sword",
     "legendary_monsters:shulker_helmet",
     "legendary_monsters:atmospheric_boots",
     "legendary_monsters:blastproof_helmet",
     "legendary_monsters:fiery_boots",
-    "legendary_monsters:knights_sword"
+    "legendary_monsters:knights_sword",
+    "legendary_monsters:golden_halbert",
+    "legendary_monsters:the_great_frost",
+    "legendary_monsters:monstrous_anchor"
   ]
 }

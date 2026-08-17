@@ -1,0 +1,11 @@
+{
+  "type": "legendary_delicacies:add_loot_table",
+  "conditions":
+  [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "legendary_monsters:entities/ancient_guardian"
+    }
+  ],
+  "lootTable": "legendary_delicacies:molten_metal_ingot"
+}

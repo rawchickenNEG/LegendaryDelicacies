@@ -1,0 +1,21 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 400,
+  "experience": 10.0,
+  "ingredients": [
+    {
+      "item": "legendary_delicacies:somber_metal_chunk"
+    },
+    {
+      "item": "minecraft:golden_apple"
+    },
+    {
+      "item": "legendary_delicacies:somber_metal_chunk"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "item": "minecraft:enchanted_golden_apple",
+    "count": 1
+  }
+}

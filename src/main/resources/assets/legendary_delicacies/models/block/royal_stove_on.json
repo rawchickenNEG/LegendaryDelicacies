@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "bottom": "legendary_delicacies:block/royal_stove_bottom",
+    "front": "legendary_delicacies:block/royal_stove_front_on",
+    "side": "legendary_delicacies:block/royal_stove_side",
+    "top": "legendary_delicacies:block/royal_stove_top_on"
+  }
+}

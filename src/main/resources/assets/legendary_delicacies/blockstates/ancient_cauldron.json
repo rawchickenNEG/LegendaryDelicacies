@@ -1,0 +1,49 @@
+{
+  "variants": {
+    "facing=north,support=none": {
+      "model": "legendary_delicacies:block/ancient_cauldron"
+    },
+    "facing=south,support=none": {
+      "model": "legendary_delicacies:block/ancient_cauldron",
+      "y": 180
+    },
+    "facing=west,support=none": {
+      "model": "legendary_delicacies:block/ancient_cauldron",
+      "y": 270
+    },
+    "facing=east,support=none": {
+      "model": "legendary_delicacies:block/ancient_cauldron",
+      "y": 90
+    },
+    "facing=north,support=tray": {
+      "model": "legendary_delicacies:block/ancient_cauldron_tray"
+    },
+    "facing=south,support=tray": {
+      "model": "legendary_delicacies:block/ancient_cauldron_tray",
+      "y": 180
+    },
+    "facing=west,support=tray": {
+      "model": "legendary_delicacies:block/ancient_cauldron_tray",
+      "y": 270
+    },
+    "facing=east,support=tray": {
+      "model": "legendary_delicacies:block/ancient_cauldron_tray",
+      "y": 90
+    },
+    "facing=north,support=handle": {
+      "model": "legendary_delicacies:block/ancient_cauldron_handle"
+    },
+    "facing=south,support=handle": {
+      "model": "legendary_delicacies:block/ancient_cauldron_handle",
+      "y": 180
+    },
+    "facing=west,support=handle": {
+      "model": "legendary_delicacies:block/ancient_cauldron_handle",
+      "y": 270
+    },
+    "facing=east,support=handle": {
+      "model": "legendary_delicacies:block/ancient_cauldron_handle",
+      "y": 90
+    }
+  }
+}

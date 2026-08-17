@@ -1,0 +1,33 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "item": "minecraft:bowl"
+  },
+  "cookingtime": 400,
+  "experience": 10.0,
+  "ingredients": [
+    {
+      "tag": "legendary_delicacies:life_fruits"
+    },
+    {
+      "item": "minecraft:moss_block"
+    },
+    {
+      "tag": "legendary_delicacies:life_fruits"
+    },
+    {
+      "tag": "forge:slimeballs"
+    },
+    {
+      "item": "minecraft:honey_bottle"
+    },
+    {
+      "tag": "forge:slimeballs"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "item": "legendary_delicacies:life_fruit_pudding",
+    "count": 1
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "item": "minecraft:glass_bottle"
+  },
+  "cookingtime": 200,
+  "experience": 5.0,
+  "ingredients": [
+    {
+      "tag": "legendary_delicacies:life_fruits"
+    },
+    {
+      "tag": "legendary_delicacies:life_fruits"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "item": "legendary_delicacies:life_fruit_jam",
+    "count": 1
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "iIi",
+    " R ",
+    " Q "
+  ],
+  "key": {
+    "i": {
+      "item": "legendary_monsters:molten_metal_ingot"
+    },
+    "R": {
+      "item": "minecraft:iron_ingot"
+    },
+    "I": {
+      "item": "minecraft:iron_block"
+    },
+    "Q": {
+      "item": "legendary_monsters:anchor_handle"
+    }
+  },
+  "result": {
+    "item": "legendary_monsters:monstrous_anchor",
+    "count": 1
+  }
+}

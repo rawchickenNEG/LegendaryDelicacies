@@ -6,6 +6,7 @@
   "refmap": "legendary_delicacies.refmap.json",
   "mixins": [
     "BlockEntityTypeAccessor",
+    "ConsumableItemMixin",
     "CookingPotBlockEntityMixin",
     "CookingPotMenuMixin",
     "CuttingBoardBlockEntityMixin",
@@ -14,8 +15,10 @@
     "IAnimatedMiniBossMixin",
     "IAnimatedMonsterMixin",
     "MobEffectMixin",
+    "MonstrousAnchorItemMixin",
     "SkilletBlockEntityMixin",
-    "SoulGreatSwordItemMixin"
+    "SoulGreatSwordItemMixin",
+    "TheGreatFrostItemMixin"
   ],
   "injectors": {
     "defaultRequire": 1

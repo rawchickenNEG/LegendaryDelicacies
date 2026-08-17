@@ -1,0 +1,27 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "legendary_delicacies:life_fruit"
+    }
+  ],
+  "result": [
+    {
+      "count": 2,
+      "item": "legendary_delicacies:life_fruit_slice"
+    },
+    {
+      "chance": 0.02,
+      "item": "legendary_delicacies:life_fruit_seeds"
+    }
+  ],
+  "tool": [
+    {
+      "type": "farmersdelight:tool_action",
+      "action": "knife_dig"
+    },
+    {
+      "tag": "forge:tools/knives"
+    }
+  ]
+}

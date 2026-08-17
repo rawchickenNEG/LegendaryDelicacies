@@ -1,5 +1,6 @@
 package io.github.rcneg.legendarydelicacies.items.knives;
 
+import io.github.rcneg.legendarydelicacies.init.EffectRegistry;
 import net.miauczel.legendary_monsters.Particle.ModParticles;
 import net.miauczel.legendary_monsters.Particle.custom.Circle;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Projectile.AnnihilationBeamEntity;
@@ -105,7 +106,8 @@ public class FrostKnifeItem extends KnifeItem {
         float yawRadians = (float)Math.toRadians((double)(90.0F + player.getYRot()));
         boolean hasSucceeded = false;
 
-        for(int l = 0; l < 3; ++l) {
+        int count = player.hasEffect(EffectRegistry.POSSESSED_SOUL.get()) ? 8 : 3;
+        for(int l = 0; l < count; ++l) {
             double d2 = 1.25 * (double)(l + 1);
             if (this.spawnFangs(player.getX() + (double)Mth.cos(yawRadians) * d2, headY, player.getZ() + (double)Mth.sin(yawRadians) * d2, standingOnY, yawRadians, l, world, player)) {
                 hasSucceeded = true;

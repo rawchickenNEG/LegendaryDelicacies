@@ -17,8 +17,10 @@ public class TabRegistry {
     private static final List<Supplier<Item>> NO_TAB_ITEMS = Arrays.asList(
             ItemRegistry.FLYING_FOOD,
             ItemRegistry.ANNIHILATION_BOX_BLOCK,
-            ItemRegistry.ANNIHILATION_BOX_BLOCK_TOP
-    );
+            ItemRegistry.ANNIHILATION_BOX_BLOCK_TOP,
+            ItemRegistry.VOID_EXTERMINATOR
+
+            );
 
     public static final RegistryObject<CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register(LegendaryDelicacies.MODID, () -> CreativeModeTab.builder()
             .title(Component.translatable("itemGroup.legendary_delicacies"))

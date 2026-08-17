@@ -1,6 +1,33 @@
+-1.0.6
+    Add Overgrown Golem foods and effects.
+    Add message tip for Indestructible Stove when interacting.
+    Add Ancient Cauldron, Royal Stove and Indestructible Stove.
+    Add Somber Metal Clump item.
+    Add Soul Skillet item.
+    Add kitchen room with Indestructible Stove in Collapsed Kingdom structure.
+    Add boss food tag for Annihilation Bloom Eye and Annihilation Suodiu.
+    Add config to set Soul Great Sword parry CD, possessed parry CD, parry failed CD and possessed parry CD.
+    Add Soul immunity ability on Possessed Soul effect.
+    Add Mossy Knife.
+    Add Void Exterminator. (only obtainable by command)
+    Add blacklist config for Annihilation Pot and Annihilation Stove.
+    Add Flying Food recipe (for testing blacklist config)
+    Add extra Molten Metal Ingot drop into Ancient Guardian loot table.
+    Add can be possessed tag for Frost Knife, The Great Frost, Knight Knife, Monstrous Anchor and Golden Halberd.
+    Change drinks cooking time.
+    Change Monstrous Knife recipe.
+    Change description for Soul Great Sword.
+    Change chance of Possessed Knight Knife applying Bleed effect.
+    Change Monstrous Knife rarity to epic.
+    Remove Persevering Soul effect Soul Fracture immunity.
+    Fix modified Soul Great Sword parrying effective time incorrect issue.
+    Fix Annihilation Pot collision box.
+    Fix Dressing items crafting remains extra item issue.
+    Frost Knife, The Great Frost, Knight Knife, Golden Halberd, Monstrous Anchor are possessedable now.
 -1.0.5
     Change Annihilation Cake recipe.
     Change description for Nucleon Stove.
+    Fix Divine Halo and Red Frame Glasses model animation issue.
 -1.0.4
     Add Skillet cooking result increasing ability for Nucleon Stove.
     Add config for Haunted Drink and Blook Mark to define which effects can not be affected by them (ban Unbreakable in default value).

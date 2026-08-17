@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "legendary_delicacies:haunted_netherite_debris"
+    },
+    "@": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "/": {
+      "item": "legendary_delicacies:somber_metal_chunk"
+    }
+  },
+  "pattern": [
+    " ##",
+    " @#",
+    "/  "
+  ],
+  "result": {
+    "item": "legendary_delicacies:soul_skillet"
+  },
+  "show_notification": true
+}

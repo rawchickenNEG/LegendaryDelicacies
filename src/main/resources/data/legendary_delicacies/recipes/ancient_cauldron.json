@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CHC",
+    "MSM",
+    "IDI"
+  ],
+  "key": {
+    "M": {
+      "item": "legendary_monsters:molten_metal_ingot"
+    },
+    "H": {
+      "item": "legendary_monsters:anchor_handle"
+    },
+    "S": {
+      "item": "minecraft:mushroom_stew"
+    },
+    "D": {
+      "item": "minecraft:cauldron"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "C": {
+      "item": "minecraft:chain"
+    }
+  },
+  "result": {
+    "item": "legendary_delicacies:ancient_cauldron",
+    "count": 1
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "berries=false": {
+      "model": "legendary_delicacies:block/life_vines"
+    },
+    "berries=true": {
+      "model": "legendary_delicacies:block/life_vines_lit"
+    }
+  }
+}

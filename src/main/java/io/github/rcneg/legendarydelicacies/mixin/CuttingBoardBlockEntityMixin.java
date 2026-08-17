@@ -14,7 +14,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import vectorwing.farmersdelight.common.block.entity.CuttingBoardBlockEntity;
 
 import static net.minecraft.world.inventory.AbstractContainerMenu.stillValid;
-
 @Mixin(value = CuttingBoardBlockEntity.class)
 public class CuttingBoardBlockEntityMixin {
     @Redirect(

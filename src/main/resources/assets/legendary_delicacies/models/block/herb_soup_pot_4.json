@@ -1,0 +1,48 @@
+{
+	"format_version": "1.9.0",
+	"credit": "Made with Blockbench",
+	"render_type": "cutout",
+	"textures": {
+		"2": "legendary_delicacies:block/mossy_stone_pot_top",
+		"4": "legendary_delicacies:block/mossy_stone_pot_side",
+		"5": "legendary_delicacies:block/mossy_stone_pot_bottom",
+		"7": "legendary_delicacies:block/mossy_stone_pot_inner",
+		"particle": "legendary_delicacies:block/mossy_stone_pot_inner"
+	},
+	"elements": [
+		{
+			"from": [1, 0, 1],
+			"to": [15, 9, 15],
+			"rotation": {"angle": 0, "axis": "y", "origin": [1, 0, 1]},
+			"faces": {
+				"north": {"uv": [1, 7, 15, 16], "texture": "#4"},
+				"east": {"uv": [1, 7, 15, 16], "texture": "#4"},
+				"south": {"uv": [1, 7, 15, 16], "texture": "#4"},
+				"west": {"uv": [1, 7, 15, 16], "texture": "#4"},
+				"up": {"uv": [1, 1, 15, 15], "texture": "#2"},
+				"down": {"uv": [1, 1, 15, 15], "texture": "#5"}
+			}
+		},
+		{
+			"from": [13, 9, 13],
+			"to": [3, 2, 3],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8, 5.5, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 10, 7], "rotation": 180, "texture": "#7"},
+				"east": {"uv": [0, 0, 10, 7], "rotation": 180, "texture": "#7"},
+				"south": {"uv": [0, 0, 10, 7], "rotation": 180, "texture": "#7"},
+				"west": {"uv": [0, 0, 10, 7], "rotation": 180, "texture": "#7"},
+				"up": {"uv": [0, 6, 10, 16], "texture": "#7"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "pot",
+			"origin": [0, 0, 0],
+			"scope": 0,
+			"color": 0,
+			"children": [0, 1]
+		}
+	]
+}

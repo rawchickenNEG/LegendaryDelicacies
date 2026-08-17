@@ -2,10 +2,14 @@ package io.github.rcneg.legendarydelicacies.init;
 
 import io.github.rcneg.legendarydelicacies.LegendaryDelicacies;
 import io.github.rcneg.legendarydelicacies.items.*;
+import io.github.rcneg.legendarydelicacies.items.dressing.FissionDippingItem;
+import io.github.rcneg.legendarydelicacies.items.dressing.LifeFruitJamItem;
 import io.github.rcneg.legendarydelicacies.items.knives.*;
 import net.miauczel.legendary_monsters.item.ModItems;
 import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.food.Foods;
 import net.minecraft.world.item.*;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -16,11 +20,14 @@ public class ItemRegistry {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, LegendaryDelicacies.MODID);
     //0
     public static final RegistryObject<Item> FLYING_FOOD = ITEMS.register("flying_food", () -> new ConsumableItem(foodBuilder(LMDFoodValues.FLYING_FOOD), true, true));
+    public static final RegistryObject<Item> VOID_EXTERMINATOR = ITEMS.register("void_exterminator", () -> new VoidExterminatorSword(Tiers.NETHERITE, 2, -2.4F, defaultBuilder().rarity(Rarity.EPIC)));
 
     //材料
     public static final RegistryObject<Item> LIGHTNING_BOTTLE = ITEMS.register("lightning_bottle", () -> new TippedItems(defaultBuilder().craftRemainder(Items.GLASS_BOTTLE)));
     public static final RegistryObject<Item> HAUNTED_NETHERITE_DEBRIS = ITEMS.register("haunted_netherite_debris", () -> new TippedItems(defaultBuilder().rarity(Rarity.UNCOMMON)));
     public static final RegistryObject<Item> BROKEN_CORRUPTED_SOUL = ITEMS.register("broken_corrupted_soul", () -> new TippedItems(defaultBuilder()));
+    public static final RegistryObject<Item> SOMBER_METAL_CHUNK = ITEMS.register("somber_metal_chunk", () -> new Item(defaultBuilder().rarity(Rarity.UNCOMMON)));
+    public static final RegistryObject<Item> LIFE_FRUIT_SEEDS = ITEMS.register("life_fruit_seeds", () -> new ItemNameBlockItem(BlockRegistry.LIFE_VINES.get(), defaultBuilder()));
 
     //刀
     public static final RegistryObject<Item> SOUL_DAGGER = ITEMS.register("soul_dagger", SoulKnifeItem::new);
@@ -29,11 +36,19 @@ public class ItemRegistry {
     public static final RegistryObject<Item> KNIFE_OF_LIGHTNING = ITEMS.register("knife_of_lightning", LightningKnifeItem::new);
     public static final RegistryObject<Item> TESSERACT_KNIFE = ITEMS.register("tesseract_knife", TesseractKnifeItem::new);
     public static final RegistryObject<Item> MONSTROUS_KNIFE = ITEMS.register("monstrous_knife", MonstrousKnifeItem::new);
+    public static final RegistryObject<Item> WITHERED_KNIFE = ITEMS.register("withered_knife", WitheredKnifeItem::new);
+    public static final RegistryObject<Item> MOSSY_KNIFE = ITEMS.register("mossy_knife", MossyKnifeItem::new);
 
     //厨具
     public static final RegistryObject<Item> RECONSTRUCTING_BOARD = ITEMS.register("reconstructing_board", () -> new TippedBlockItems(BlockRegistry.RECONSTRUCTING_BOARD.get(), defaultBuilder().rarity(Rarity.EPIC)));
     public static final RegistryObject<Item> SYNTHESISING_POT = ITEMS.register("synthesising_pot", () -> new TippedPotItems(BlockRegistry.SYNTHESISING_POT.get(), defaultBuilder().stacksTo(1).rarity(Rarity.EPIC)));
     public static final RegistryObject<Item> NUCLEON_STOVE = ITEMS.register("nucleon_stove", () -> new TippedBlockItems(BlockRegistry.NUCLEON_STOVE.get(), defaultBuilder().rarity(Rarity.EPIC)));
+
+    public static final RegistryObject<Item> INDESTRUCTIBLE_STOVE = ITEMS.register("indestructible_stove", () -> new TippedBlockItems(BlockRegistry.INDESTRUCTIBLE_STOVE.get(), defaultBuilder().rarity(Rarity.EPIC)));
+    public static final RegistryObject<Item> ROYAL_STOVE = ITEMS.register("royal_stove", () -> new TippedBlockItems(BlockRegistry.ROYAL_STOVE.get(), defaultBuilder().rarity(Rarity.EPIC)));
+    public static final RegistryObject<Item> ANCIENT_CAULDRON = ITEMS.register("ancient_cauldron", () -> new AncientPotItems(BlockRegistry.ANCIENT_CAULDRON.get(), defaultBuilder().stacksTo(1).rarity(Rarity.EPIC)));
+
+    public static final RegistryObject<Item> SOUL_SKILLET = ITEMS.register("soul_skillet", () -> new SoulSkilletItem(BlockRegistry.SOUL_SKILLET.get(), defaultBuilder().stacksTo(1).rarity(Rarity.EPIC)));
 
     //云魔系列
     //1
@@ -80,6 +95,7 @@ public class ItemRegistry {
     public static final RegistryObject<Item> ANNIHILATION_BOX_BLOCK = ITEMS.register("annihilation_box_block", () -> new ItemNameBlockItem(BlockRegistry.ANNIHILATION_BOX.get(), defaultBuilder().rarity(Rarity.EPIC)));
     public static final RegistryObject<Item> ANNIHILATION_BOX_BLOCK_TOP = ITEMS.register("annihilation_box_block_top", () -> new ItemNameBlockItem(BlockRegistry.ANNIHILATION_BOX_TOP.get(), defaultBuilder().rarity(Rarity.EPIC)));
     public static final RegistryObject<Item> ANNIHILATION_SUODIU = ITEMS.register("annihilation_suodiu", () -> new AnnihilationSuodiuItem(customContainerFoodBuilder(LMDFoodValues.ANNIHILATION_SUODIU, ModItems.PORTAL_SHARD.get()).durability(10)));
+    public static final RegistryObject<Item> FISSION_DIPPING = ITEMS.register("fission_dipping", () -> new FissionDippingItem(foodBuilder(LMDFoodValues.FISSION_DIPPING).craftRemainder(Items.GLASS_BOTTLE)));
 
     //风味
     public static final RegistryObject<Item> ANNIHILATION_CAKE = ITEMS.register("annihilation_cake", () -> new ItemNameBlockItem(BlockRegistry.ANNIHILATION_CAKE.get(), defaultBuilder()));
@@ -119,6 +135,26 @@ public class ItemRegistry {
     public static final RegistryObject<Item> BLOOD_CAKE_SLICE = ITEMS.register("blood_cake_slice", () -> new ConsumableItem(foodBuilder(LMDFoodValues.BLOOD_CAKE_SLICE), true));
     public static final RegistryObject<Item> BLOOD_ICE_CREAM = ITEMS.register("blood_ice_cream", () -> new IceCreamItem(bowlFoodBuilder(LMDFoodValues.BLOOD_ICE_CREAM)));
     public static final RegistryObject<Item> BLOOD_MILKSHAKE = ITEMS.register("blood_milkshake", () -> new MilkShakeItem(drinkBuilder(LMDFoodValues.BLOOD_MILKSHAKE)));
+
+    //蔓生系列
+    public static final RegistryObject<Item> LIFE_FRUIT = ITEMS.register("life_fruit", () -> new ConsumableItem(foodBuilder(LMDFoodValues.LIFE_FRUIT), true));
+    public static final RegistryObject<Item> LIFE_FRUIT_SLICE = ITEMS.register("life_fruit_slice", () -> new ConsumableItem(foodBuilder(LMDFoodValues.LIFE_FRUIT_SLICE), true));
+    public static final RegistryObject<Item> JUNGLE_MEDLEY = ITEMS.register("jungle_medley", () -> new ConsumableItem(bowlFoodBuilder(LMDFoodValues.JUNGLE_MEDLEY), true));
+    public static final RegistryObject<Item> LIFE_FRUIT_PUDDING = ITEMS.register("life_fruit_pudding", () -> new ConsumableItem(bowlFoodBuilder(LMDFoodValues.LIFE_FRUIT_PUDDING), true));
+    public static final RegistryObject<Item> LIFE_SOUP = ITEMS.register("life_soup", () -> new ConsumableItem(bowlFoodBuilder(LMDFoodValues.LIFE_SOUP), true));
+    public static final RegistryObject<Item> OVERGROWN_WITH_WEEDS = ITEMS.register("overgrown_with_weeds", () -> new ConsumableItem(customContainerFoodBuilder(LMDFoodValues.OVERGROWN_WITH_WEEDS, Items.FLOWER_POT), true));
+    public static final RegistryObject<Item> SPROUT_DRINK = ITEMS.register("sprout_drink", () -> new SproutDrinkItem(new Item.Properties().craftRemainder(Items.GLASS_BOTTLE).stacksTo(16)));
+    public static final RegistryObject<Item> SPROUT_PASTA = ITEMS.register("sprout_pasta",() -> new ConsumableItem(bowlFoodBuilder(LMDFoodValues.SPROUT_PASTA), true));
+    public static final RegistryObject<Item> BOWL_OF_HERB_SOUP = ITEMS.register("bowl_of_herb_soup", () -> new ConsumableItem(bowlFoodBuilder(LMDFoodValues.BOWL_OF_HERB_SOUP), true));
+    public static final RegistryObject<Item> HERB_SOUP_POT = ITEMS.register("herb_soup_pot", () -> new BlockItem(BlockRegistry.HERB_SOUP_POT.get(), defaultBuilder().stacksTo(1)));
+    public static final RegistryObject<Item> LIFE_FRUIT_JAM = ITEMS.register("life_fruit_jam", () -> new LifeFruitJamItem(foodBuilder(LMDFoodValues.LIFE_FRUIT_JAM).craftRemainder(Items.GLASS_BOTTLE)));
+
+    //风味
+    public static final RegistryObject<Item> MOSSY_COBBLESTONE_CAKE = ITEMS.register("mossy_cobblestone_cake", () -> new ItemNameBlockItem(BlockRegistry.MOSSY_COBBLESTONE_CAKE.get(), defaultBuilder()));
+    public static final RegistryObject<Item> MOSSY_COBBLESTONE_CAKE_SLICE = ITEMS.register("mossy_cobblestone_cake_slice", () -> new ConsumableItem(foodBuilder(LMDFoodValues.MOSSY_COBBLESTONE_CAKE_SLICE), true));
+    public static final RegistryObject<Item> LIFE_FRUIT_ICE_CREAM = ITEMS.register("life_fruit_ice_cream", () -> new IceCreamItem(customContainerFoodBuilder(LMDFoodValues.LIFE_ICE_CREAM, Items.FLOWER_POT)));
+    public static final RegistryObject<Item> LIFE_FRUIT_MILKSHAKE = ITEMS.register("life_fruit_milkshake", () -> new MilkShakeItem(drinkBuilder(LMDFoodValues.LIFE_MILKSHAKE)));
+
 
     private static Item.Properties defaultBuilder() {
         return new Item.Properties();

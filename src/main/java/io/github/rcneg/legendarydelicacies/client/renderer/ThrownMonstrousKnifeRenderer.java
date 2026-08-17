@@ -1,16 +1,14 @@
-package io.github.rcneg.legendarydelicacies.client;
+package io.github.rcneg.legendarydelicacies.client.renderer;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
 import io.github.rcneg.legendarydelicacies.entities.ThrownMonstrousKnifeEntity;
-import io.github.rcneg.legendarydelicacies.entities.ThrownTesseractKnifeEntity;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.ItemRenderer;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.client.renderer.texture.TextureAtlas;
-import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.projectile.ItemSupplier;

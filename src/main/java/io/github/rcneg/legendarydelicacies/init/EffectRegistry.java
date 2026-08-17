@@ -19,7 +19,7 @@ public class EffectRegistry {
 
     public static final DeferredRegister<MobEffect> MOB_EFFECTS = DeferredRegister.create(ForgeRegistries.MOB_EFFECTS, LegendaryDelicacies.MODID);
     public static final DeferredRegister<Potion> POTION = DeferredRegister.create(ForgeRegistries.POTIONS, LegendaryDelicacies.MODID);
-    public static final RegistryObject<MobEffect> PERSEVERING_SOUL = MOB_EFFECTS.register("persevering_soul", () -> new LMDImmunityMobEffect(MobEffectCategory.BENEFICIAL, 0x38BDC4, List.of(ModEffects.SOUL_FRACTURE.get())));
+    public static final RegistryObject<MobEffect> PERSEVERING_SOUL = MOB_EFFECTS.register("persevering_soul", () -> new LMDMobEffect(MobEffectCategory.BENEFICIAL, 0x38BDC4));
     public static final RegistryObject<MobEffect> ATOM_ANNIHILATION = MOB_EFFECTS.register("atom_annihilation", () -> new LMDImmunityMobEffect(MobEffectCategory.BENEFICIAL, 0xB3E35D, List.of(ModEffects.ANNIHILATION.get())));
     public static final RegistryObject<MobEffect> CHORUS_REPEL = MOB_EFFECTS.register("chorus_repel", () -> new LMDImmunityMobEffect(MobEffectCategory.BENEFICIAL, -9999028, List.of(ModEffects.CHORUSINFECTION.get())));
     public static final RegistryObject<MobEffect> WITHER_STRIKE = MOB_EFFECTS.register("wither_strike", () -> new LMDImmunityMobEffect(MobEffectCategory.BENEFICIAL, -9999028, List.of(MobEffects.WITHER)));

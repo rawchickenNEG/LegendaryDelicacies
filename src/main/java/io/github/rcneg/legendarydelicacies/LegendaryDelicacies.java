@@ -35,26 +35,29 @@ public class LegendaryDelicacies
         EntityTypeRegistry.ENTITY_TYPES.register(modEventBus);
         LootModifierRegistry.LOOT_MODIFIER.register(modEventBus);
         TabRegistry.CREATIVE_MODE_TABS.register(modEventBus);
+        RecipeSerializerRegistry.SERIALIZERS.register(modEventBus);
         MinecraftForge.EVENT_BUS.register(this);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
         event.enqueueWork(() -> {
-            BlockEntityType<?> cuttingBoardType = ModBlockEntityTypes.CUTTING_BOARD.get();
-            BlockEntityTypeAccessor accessor = (BlockEntityTypeAccessor) (Object) cuttingBoardType;
-            Set<Block> originalBlocks = accessor.lmd$getValidBlocks();
-            Set<Block> newBlocks = ImmutableSet.<Block>builder().addAll(originalBlocks).add(BlockRegistry.RECONSTRUCTING_BOARD.get()).build();
-            accessor.lmd$setValidBlocks(newBlocks);
-
-            BlockEntityType<?> cookingPotType = ModBlockEntityTypes.COOKING_POT.get();
-            BlockEntityTypeAccessor accessor2 = (BlockEntityTypeAccessor) (Object) cookingPotType;
-            Set<Block> originalBlocks1 = accessor2.lmd$getValidBlocks();
-            Set<Block> newBlocks1 = ImmutableSet.<Block>builder().addAll(originalBlocks1).add(BlockRegistry.SYNTHESISING_POT.get()).build();
-            accessor2.lmd$setValidBlocks(newBlocks1);
+            applyBlockEntity(BlockRegistry.RECONSTRUCTING_BOARD.get(), ModBlockEntityTypes.CUTTING_BOARD.get());
+            applyBlockEntity(BlockRegistry.SYNTHESISING_POT.get(), ModBlockEntityTypes.COOKING_POT.get());
+            applyBlockEntity(BlockRegistry.ANCIENT_CAULDRON.get(), ModBlockEntityTypes.COOKING_POT.get());
+            applyBlockEntity(BlockRegistry.INDESTRUCTIBLE_STOVE.get(), ModBlockEntityTypes.STOVE.get());
+            applyBlockEntity(BlockRegistry.ROYAL_STOVE.get(), ModBlockEntityTypes.STOVE.get());
+            applyBlockEntity(BlockRegistry.SOUL_SKILLET.get(), ModBlockEntityTypes.SKILLET.get());
         });
     }
 
     private void clientSetup(FMLClientSetupEvent event) {
+    }
+
+    public void applyBlockEntity(Block block, BlockEntityType blockEntityType){
+        BlockEntityTypeAccessor accessor = (BlockEntityTypeAccessor) blockEntityType;
+        Set<Block> originalBlocks = accessor.lmd$getValidBlocks();
+        Set<Block> newBlocks = ImmutableSet.<Block>builder().addAll(originalBlocks).add(block).build();
+        accessor.lmd$setValidBlocks(newBlocks);
     }
 }

@@ -1,6 +1,7 @@
 package io.github.rcneg.legendarydelicacies.effects;
 
 import io.github.rcneg.legendarydelicacies.tags.LMDTags;
+import net.miauczel.legendary_monsters.effect.ModEffects;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
@@ -10,9 +11,11 @@ import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.ItemStack;
 
-public class PossessedSoulEffect extends MobEffect {
+import java.util.List;
+
+public class PossessedSoulEffect extends LMDImmunityMobEffect {
     public PossessedSoulEffect(MobEffectCategory p_19451_, int p_19452_) {
-        super(p_19451_, p_19452_);
+        super(p_19451_, p_19452_, List.of(ModEffects.SOUL_FRACTURE.get()));
         this.addAttributeModifier(Attributes.MAX_HEALTH, "b80ac761-4e47-49da-92a1-f6c5d3b8692d", -0.5F, AttributeModifier.Operation.MULTIPLY_TOTAL);
     }
 

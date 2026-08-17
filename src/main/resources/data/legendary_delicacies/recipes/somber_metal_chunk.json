@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "legendary_monsters:somber_key_blade"
+  },
+  "result": "legendary_delicacies:somber_metal_chunk",
+  "experience": 1,
+  "cookingtime": 600
+}
