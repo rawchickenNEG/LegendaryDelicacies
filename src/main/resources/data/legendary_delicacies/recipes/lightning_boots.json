@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "LLL",
+    "LCL",
+    "LLL"
+  ],
+  "key": {
+    "L": {
+      "item": "legendary_delicacies:lightning_bottle"
+    },
+    "C": {
+      "item": "legendary_monsters:atmospheric_boots"
+    }
+  },
+  "result": {
+    "item": "legendary_delicacies:lightning_boots",
+    "count": 1
+  }
+}

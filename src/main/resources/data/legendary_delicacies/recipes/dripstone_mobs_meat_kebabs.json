@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "legendary_delicacies:cooked_dripstone_mobs_meat"
+    },
+    {
+      "item": "minecraft:mushroom_stew"
+    },
+    {
+      "item": "minecraft:red_mushroom"
+    },
+    {
+      "item": "legendary_monsters:anchor_handle"
+    }
+  ],
+  "result": {
+    "item": "legendary_delicacies:dripstone_mobs_meat_kebabs",
+    "count": 1
+  }
+}

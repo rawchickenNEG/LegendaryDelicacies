@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "legendary_delicacies:spiky_bug"
+    },
+    {
+      "item": "legendary_delicacies:spiky_bug"
+    },
+    {
+      "item": "minecraft:glow_lichen"
+    },
+    {
+      "item": "legendary_monsters:anchor_handle"
+    }
+  ],
+  "result": {
+    "item": "legendary_delicacies:spiky_bug_kebabs",
+    "count": 1
+  }
+}

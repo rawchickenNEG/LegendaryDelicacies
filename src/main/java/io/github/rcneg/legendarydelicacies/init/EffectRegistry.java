@@ -37,5 +37,6 @@ public class EffectRegistry {
     public static final RegistryObject<MobEffect> POSSESSED_SOUL = MOB_EFFECTS.register("possessed_soul", () -> new PossessedSoulEffect(MobEffectCategory.NEUTRAL, 0xA02727));
     public static final RegistryObject<MobEffect> RECONSTRUCTION = MOB_EFFECTS.register("reconstruction", () -> new LMDMobEffect(MobEffectCategory.BENEFICIAL, 0x649A7D));
     public static final RegistryObject<MobEffect> LIFE_FRACTURE = MOB_EFFECTS.register("life_fracture", () -> new LifeFractureEffect(MobEffectCategory.HARMFUL, 0x601126));
+    public static final RegistryObject<MobEffect> WORM_LEADER = MOB_EFFECTS.register("worm_leader", () -> new LMDMobEffect(MobEffectCategory.BENEFICIAL, -9999028));
 
 }

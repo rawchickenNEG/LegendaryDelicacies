@@ -1,0 +1,33 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "item": "minecraft:bowl"
+  },
+  "cookingtime": 400,
+  "experience": 3.0,
+  "ingredients": [
+    {
+      "item": "minecraft:glow_lichen"
+    },
+    {
+      "tag": "forge:eggs"
+    },
+    {
+      "tag": "forge:crops/onion"
+    },
+    {
+      "item": "legendary_delicacies:spiky_bug"
+    },
+    {
+      "item": "legendary_delicacies:spiky_bug"
+    },
+    {
+      "item": "legendary_delicacies:spiky_bug"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "item": "legendary_delicacies:fried_spiky_bug",
+    "count": 1
+  }
+}

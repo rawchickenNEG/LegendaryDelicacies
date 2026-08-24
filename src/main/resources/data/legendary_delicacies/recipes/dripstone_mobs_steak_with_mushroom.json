@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "legendary_delicacies:cooked_dripstone_mobs_meat"
+    },
+    {
+      "item": "minecraft:brown_mushroom"
+    },
+    {
+      "item": "minecraft:red_mushroom"
+    },
+    {
+      "tag": "forge:crops/onion"
+    },
+    {
+      "item": "farmersdelight:fried_egg"
+    }
+  ],
+  "result": {
+    "item": "legendary_delicacies:dripstone_mobs_steak_with_mushroom",
+    "count": 1
+  }
+}

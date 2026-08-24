@@ -60,6 +60,15 @@ public class LMDFoodValues {
     public static final FoodProperties LIFE_ICE_CREAM = (new FoodProperties.Builder()).nutrition(6).saturationMod(0.4F).effect(
             new MobEffectInstance(EffectRegistry.OVER_GROWING.get(), 3600, 1), 1F
     ).alwaysEat().build();
+    public static final FoodProperties ANCIENT_MILKSHAKE = (new FoodProperties.Builder()).nutrition(3).saturationMod(0.6F).effect(
+            new MobEffectInstance(EffectRegistry.SPIKY_SKIN.get(), 3600), 1F
+    ).alwaysEat().build();
+    public static final FoodProperties ANCIENT_CAKE_SLICE = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.5F).effect(
+            new MobEffectInstance(EffectRegistry.SPIKY_SKIN.get(), 1200), 1F
+    ).alwaysEat().build();
+    public static final FoodProperties ANCIENT_ICE_CREAM = (new FoodProperties.Builder()).nutrition(6).saturationMod(0.4F).effect(
+            new MobEffectInstance(EffectRegistry.SPIKY_SKIN.get(), 3600), 1F
+    ).alwaysEat().build();
 
 
     public static final FoodProperties ANNIHILATION_SAUCE_EYES_ROD = (new FoodProperties.Builder()).nutrition(6).saturationMod(0.65F)
@@ -231,4 +240,51 @@ public class LMDFoodValues {
     public static final FoodProperties LIFE_FRUIT_JAM = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.5F)
             .effect(new MobEffectInstance(EffectRegistry.OVER_GROWING.get(), 600), 1F)
             .alwaysEat().build();
+    public static final FoodProperties DRIPSTONE_SALT = (new FoodProperties.Builder()).nutrition(1).saturationMod(0.5F)
+            .effect(new MobEffectInstance(MobEffects.HUNGER, 200, 2), 1F)
+            .effect(new MobEffectInstance(MobEffects.CONFUSION, 200, 0), 1F)
+            .alwaysEat().build();
+    public static final FoodProperties SPIKY_BUG_ROLL = (new FoodProperties.Builder()).nutrition(6).saturationMod(0.6F)
+            .effect(new MobEffectInstance(EffectRegistry.WORM_LEADER.get(), 600), 1F)
+            .alwaysEat().build();
+    public static final FoodProperties SPIKY_BUG_SANDWICH = (new FoodProperties.Builder()).nutrition(10).saturationMod(0.6F)
+            .effect(new MobEffectInstance(EffectRegistry.WORM_LEADER.get(), 1800), 1F)
+            .alwaysEat().build();
+    public static final FoodProperties SPIKY_BUG_KEBABS = (new FoodProperties.Builder()).nutrition(12).saturationMod(0.85F)
+            .effect(new MobEffectInstance(EffectRegistry.WORM_LEADER.get(), 1800, 2), 1F)
+            .alwaysEat().build();
+    public static final FoodProperties DRIPSTONE_MOBS_MEAT_WRAP = (new FoodProperties.Builder()).nutrition(11).saturationMod(0.85F)
+            .effect(new MobEffectInstance(EffectRegistry.SPIKY_SKIN.get(), 3600), 1F)
+            .effect(new MobEffectInstance(ModEffects.NOURISHMENT.get(), 3600), 1F)
+            .alwaysEat().build();
+    public static final FoodProperties DRIPSTONE_MOBS_MEAT_KEBABS = (new FoodProperties.Builder()).nutrition(12).saturationMod(0.85F)
+            .effect(new MobEffectInstance(EffectRegistry.SPIKY_SKIN.get(), 1200, 2), 1F)
+            .effect(new MobEffectInstance(ModEffects.NOURISHMENT.get(), 6000), 1F)
+            .alwaysEat().build();
+    public static final FoodProperties FRIED_SPIKY_BUG = (new FoodProperties.Builder()).nutrition(14).saturationMod(0.85F)
+            .effect(new MobEffectInstance(EffectRegistry.WORM_LEADER.get(), 6000), 1F)
+            .effect(new MobEffectInstance(ModEffects.NOURISHMENT.get(), 6000), 1F)
+            .alwaysEat().build();
+    public static final FoodProperties DRIPSTONE_MOBS_STEAK_WITH_MUSHROOM = (new FoodProperties.Builder()).nutrition(14).saturationMod(0.85F)
+            .effect(new MobEffectInstance(EffectRegistry.SPIKY_SKIN.get(), 6000), 1F)
+            .effect(new MobEffectInstance(ModEffects.NOURISHMENT.get(), 6000), 1F)
+            .alwaysEat().build();
+    public static final FoodProperties DRIPSTONE_MOBS_MEAT_STEW = (new FoodProperties.Builder()).nutrition(12).saturationMod(0.85F)
+            .effect(new MobEffectInstance(EffectRegistry.SPIKY_SKIN.get(), 6000), 1F)
+            .effect(new MobEffectInstance(ModEffects.COMFORT.get(), 6000), 1F)
+            .alwaysEat().build();
+    public static final FoodProperties BOWL_OF_ANCIENT_KEBAB_MEAT = (new FoodProperties.Builder()).nutrition(14).saturationMod(0.85F)
+            .effect(new MobEffectInstance(EffectRegistry.WORM_LEADER.get(), 3600, 1), 1F)
+            .effect(new MobEffectInstance(EffectRegistry.SPIKY_SKIN.get(), 3600, 1), 1F)
+            .effect(new MobEffectInstance(ModEffects.NOURISHMENT.get(), 6000), 1F)
+            .alwaysEat().build();
+    public static final FoodProperties RAW_DRIPSTONE_MEAT = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.3F)
+            .effect(new MobEffectInstance(MobEffects.HUNGER, 200, 0), 0.7F)
+            .build();
+    public static final FoodProperties COOKED_DRIPSTONE_MEAT = (new FoodProperties.Builder()).nutrition(8).saturationMod(0.65F)
+            .build();
+    public static final FoodProperties SPIKY_BUG = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.3F)
+            .effect(new MobEffectInstance(MobEffects.HUNGER, 200, 1), 1F)
+            .effect(new MobEffectInstance(MobEffects.CONFUSION, 400, 0), 1F)
+            .build();
 }

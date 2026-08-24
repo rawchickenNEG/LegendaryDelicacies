@@ -1,3 +1,16 @@
+-1.0.7
+    Add Ancient Guardian foods and effects.
+    Add Mossy Cobblestone Cake cutting recipe.
+    Add Lightning Boots.
+    Add Better Combat compat for mod weapons.
+    Add tooltip for Life Fruit Seeds.
+    Change Ancient Cauldron abilities.
+    Change Indestructible Stove interacting result to PASS.
+    Change Indestructible Stove block property same as Indestructible Block.
+    Change Stove blocks item model.
+    Update textures for some materials and weapons.
+    Fix new cooking set blocks missing looting table issue.
+    Fix new cooking set blocks has no compatable mining tools issue.
 -1.0.6
     Add Overgrown Golem foods and effects.
     Add message tip for Indestructible Stove when interacting.

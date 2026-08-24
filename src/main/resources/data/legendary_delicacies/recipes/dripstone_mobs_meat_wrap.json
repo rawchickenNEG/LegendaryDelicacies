@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "legendary_delicacies:cooked_dripstone_mobs_meat"
+    },
+    {
+      "item": "minecraft:brown_mushroom"
+    },
+    {
+      "item": "minecraft:red_mushroom"
+    },
+    {
+      "tag": "forge:crops/onion"
+    },
+    {
+      "item": "legendary_monsters:ancient_spike"
+    },
+    {
+      "tag": "forge:bread"
+    }
+  ],
+  "result": {
+    "item": "legendary_delicacies:dripstone_mobs_meat_wrap",
+    "count": 1
+  }
+}

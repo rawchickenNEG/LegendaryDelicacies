@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "legendary_delicacies:spiky_bug"
+    },
+    {
+      "item": "minecraft:glow_lichen"
+    },
+    {
+      "item": "farmersdelight:cooked_rice"
+    }
+  ],
+  "result": {
+    "item": "legendary_delicacies:spiky_bug_roll",
+    "count": 1
+  }
+}

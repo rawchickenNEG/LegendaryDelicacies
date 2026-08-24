@@ -1,24 +1,32 @@
 package io.github.rcneg.legendarydelicacies.events;
 
+import io.github.rcneg.legendarydelicacies.config.Config;
 import io.github.rcneg.legendarydelicacies.init.EffectRegistry;
 import io.github.rcneg.legendarydelicacies.init.ItemRegistry;
 import io.github.rcneg.legendarydelicacies.items.SoulSkilletItem;
 import net.miauczel.legendary_monsters.config.ModConfig;
 import net.miauczel.legendary_monsters.damagetype.ModDamageTypes;
 import net.miauczel.legendary_monsters.effect.ModEffects;
+import net.miauczel.legendary_monsters.entity.AnimatedMonster.AnimatedEntity.FallingSoulBladeEntity;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Effect.CameraShakeEntity;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.IAnimatedBoss.CloudGolem.Cloud_GolemEntity;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.IAnimatedBoss.PossessedPaladin.PossessedPaladinEntity;
+import net.miauczel.legendary_monsters.entity.AnimatedMonster.Mobs.AncientStronghold.SpikebugEntity;
+import net.miauczel.legendary_monsters.entity.AnimatedMonster.Projectile.ElectricityEntity;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Projectile.IceSpikeEntity;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Projectile.LightningBoltEntity;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Projectile.SoulStrike;
+import net.miauczel.legendary_monsters.entity.ModEntities;
 import net.miauczel.legendary_monsters.event.ForgeEvents;
 import net.miauczel.legendary_monsters.item.ModItems;
 import net.miauczel.legendary_monsters.item.custom.SoulGreatSwordItem;
 import net.miauczel.legendary_monsters.sound.ModSounds;
 import net.miauczel.legendary_monsters.util.BlockUtils;
 import net.miauczel.legendary_monsters.util.MathUtils;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
@@ -46,6 +54,7 @@ import net.minecraft.world.level.storage.loot.LootParams;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
 import net.minecraft.world.phys.AABB;
+import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.event.entity.living.*;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -74,6 +83,10 @@ public class AttackEvents {
         if(entity.hasEffect(EffectRegistry.SPIKY_SKIN.get()) && !(damage.is(DamageTypeTags.BYPASSES_INVULNERABILITY)) && damage.getEntity() instanceof LivingEntity attacker){
             int amp = entity.getEffect(EffectRegistry.SPIKY_SKIN.get()).getAmplifier() + 1;
             attacker.hurt(level.damageSources().thorns(entity), event.getAmount() * amp * 0.25f);
+        }
+        //降低摔落伤害
+        if(entity.getItemBySlot(EquipmentSlot.FEET).is(ItemRegistry.LIGHTNING_BOOTS.get()) && damage.is(DamageTypeTags.IS_FALL)){
+            event.setAmount(event.getAmount() * 0.5f);
         }
         //不毁重构
         if(entity.hasEffect(EffectRegistry.RECONSTRUCTION.get())){
@@ -288,30 +301,50 @@ public class AttackEvents {
 
         }
         //生成冰刺
-        if(attacker != null && attacker.hasEffect(EffectRegistry.FROST_AVATAR.get())){
-            int amp = attacker.getEffect(EffectRegistry.FROST_AVATAR.get()).getAmplifier();
-            if(attacker.getRandom().nextInt(5 + amp) < 1 + amp && entity.onGround() && !(damage.is(DamageTypes.INDIRECT_MAGIC))){
-                level.addFreshEntity(new IceSpikeEntity(level, entity.getX(), entity.getOnPos().getY() + 1, entity.getZ(), 0, 0, attacker));
+        if(attacker != null){
+            if(attacker.hasEffect(EffectRegistry.FROST_AVATAR.get())){
+                int amp = attacker.getEffect(EffectRegistry.FROST_AVATAR.get()).getAmplifier();
+                if(attacker.getRandom().nextInt(5 + amp) < 1 + amp && entity.onGround() && !(damage.is(DamageTypes.INDIRECT_MAGIC))){
+                    level.addFreshEntity(new IceSpikeEntity(level, entity.getX(), entity.getOnPos().getY() + 1, entity.getZ(), 0, 0, attacker));
+                }
             }
-        }
-        //生成雷云
-        if(attacker != null && attacker.hasEffect(EffectRegistry.LIGHTNING.get())){
-            int amp = attacker.getEffect(EffectRegistry.LIGHTNING.get()).getAmplifier();
-            if(attacker.getRandom().nextInt(5 + amp) < 1 + amp && !(damage.is(DamageTypes.INDIRECT_MAGIC))){
-                entity.playSound(SoundEvents.LIGHTNING_BOLT_THUNDER, 1.0F, 1.0F);
-                level.addFreshEntity(new LightningBoltEntity(level, entity.getX(), entity.getOnPos().getY() + 1, entity.getZ(), 0, 0, attacker, 30, (float)(8.0 * (Double) ModConfig.MOB_CONFIG.AxeOfLightningBoltDamageMultiplier.get())));
+            //生成雷云
+            if(attacker.hasEffect(EffectRegistry.LIGHTNING.get())){
+                int amp = attacker.getEffect(EffectRegistry.LIGHTNING.get()).getAmplifier();
+                if(attacker.getRandom().nextInt(5 + amp) < 1 + amp && !(damage.is(DamageTypes.INDIRECT_MAGIC))){
+                    entity.playSound(SoundEvents.LIGHTNING_BOLT_THUNDER, 1.0F, 1.0F);
+                    level.addFreshEntity(new LightningBoltEntity(level, entity.getX(), entity.getOnPos().getY() + 1, entity.getZ(), 0, 0, attacker, 30, (float)(8.0 * (Double) ModConfig.MOB_CONFIG.AxeOfLightningBoltDamageMultiplier.get())));
+                }
             }
-        }
-        //生成毒云
-        if(attacker != null && attacker.getMainHandItem().is(ItemRegistry.MOSSY_KNIFE.get())){
-            AreaEffectCloud areaeffectcloud = new AreaEffectCloud(level, entity.getX(), entity.getY(), entity.getZ());
-            areaeffectcloud.setOwner(attacker);
-            areaeffectcloud.setRadius(1.5F);
-            areaeffectcloud.setDuration(200);
-            areaeffectcloud.setRadiusPerTick(- areaeffectcloud.getRadius() / (float)areaeffectcloud.getDuration());
-            areaeffectcloud.addEffect(new MobEffectInstance(MobEffects.POISON, 100));
-            areaeffectcloud.setFixedColor(8889187);
-            level.addFreshEntity(areaeffectcloud);
+            //生成毒云
+            if(attacker.getMainHandItem().is(ItemRegistry.MOSSY_KNIFE.get())){
+                AreaEffectCloud areaeffectcloud = new AreaEffectCloud(level, entity.getX(), entity.getY(), entity.getZ());
+                areaeffectcloud.setOwner(attacker);
+                areaeffectcloud.setRadius(1.5F);
+                areaeffectcloud.setDuration(200);
+                areaeffectcloud.setRadiusPerTick(- areaeffectcloud.getRadius() / (float)areaeffectcloud.getDuration());
+                areaeffectcloud.addEffect(new MobEffectInstance(MobEffects.POISON, 100));
+                areaeffectcloud.setFixedColor(8889187);
+                level.addFreshEntity(areaeffectcloud);
+            }
+            //设置蠕虫攻击
+            if(attacker.hasEffect(EffectRegistry.WORM_LEADER.get())){
+                setWormTarget(entity, level);
+            }
+            if(entity.hasEffect(EffectRegistry.WORM_LEADER.get())){
+                int amp = entity.getEffect(EffectRegistry.WORM_LEADER.get()).getAmplifier() + 1;
+                int i = (int) level.getEntitiesOfClass(SpikebugEntity.class, entity.getBoundingBox().inflate(16)).stream().count();
+                if(i < amp * 8){
+                    for(int j = 0; j < amp + 2; j++){
+                        SpikebugEntity spikebugEntity = new SpikebugEntity((EntityType) ModEntities.Spiky_bug.get(), level);
+                        spikebugEntity.setPos(entity.getX(), entity.getY(), entity.getZ());
+                        spikebugEntity.setDeltaMovement((double)0.0F, (double)0.0F, (double)0.0F);
+                        spikebugEntity.getPersistentData().putBoolean("LMDSummonedBug", true);
+                        level.addFreshEntity(spikebugEntity);
+                    }
+                }
+                setWormTarget(attacker, level);
+            }
         }
     }
 
@@ -331,8 +364,8 @@ public class AttackEvents {
     @SubscribeEvent
     public static void onEntityLoot(LivingDropsEvent event) {
         if (event.getEntity().level() instanceof ServerLevel level) {
+            LivingEntity entity = event.getEntity();
             if(event.getSource().getEntity() instanceof LivingEntity attacker){
-                LivingEntity entity = event.getEntity();
                 ResourceLocation lootId = entity.getLootTable();
                 LootParams ctx = new LootParams.Builder(level)
                         .withParameter(LootContextParams.THIS_ENTITY, entity)
@@ -344,7 +377,19 @@ public class AttackEvents {
                     Objects.requireNonNull(level.getServer()).getLootData().getLootTable(lootId).getRandomItems(ctx, s -> entity.spawnAtLocation(s, 1.0F));
                 }
             }
+            if(entity instanceof SpikebugEntity worm && worm.getPersistentData().contains("LMDSummonedBug")){
+                event.setCanceled(true);
+            }
+        }
+    }
 
+    @SubscribeEvent
+    public static void onMobSelectTarget(LivingChangeTargetEvent event){
+        LivingEntity entity = event.getEntity();
+        if(entity instanceof SpikebugEntity && event.getNewTarget() != null){
+            if(event.getNewTarget().hasEffect(EffectRegistry.WORM_LEADER.get()) && entity.getLastAttacker() != event.getNewTarget()) {
+                event.setCanceled(true);
+            }
         }
     }
 
@@ -355,6 +400,14 @@ public class AttackEvents {
             }
         }
         return false;
+    }
+
+    public static void setWormTarget(LivingEntity living, Level level){
+        for(SpikebugEntity worm : level.getEntitiesOfClass(SpikebugEntity.class, living.getBoundingBox().inflate(16))) {
+            if (!living.hasEffect(EffectRegistry.WORM_LEADER.get()) && living.isAlive() && worm != living) {
+                worm.setTarget(living);
+            }
+        }
     }
 }
 

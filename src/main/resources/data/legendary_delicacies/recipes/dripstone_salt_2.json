@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:calcite"
+    },
+    {
+      "item": "legendary_monsters:chiseled_ancient_dripstone_shard"
+    },
+    {
+      "item": "minecraft:glass_bottle"
+    },
+    {
+      "item": "minecraft:glass_bottle"
+    }
+  ],
+  "result": {
+    "item": "legendary_delicacies:dripstone_salt",
+    "count": 2
+  }
+}

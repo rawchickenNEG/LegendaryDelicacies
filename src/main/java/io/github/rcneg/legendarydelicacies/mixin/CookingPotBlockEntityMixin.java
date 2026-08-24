@@ -71,12 +71,16 @@ public class CookingPotBlockEntityMixin {
                 }
             }
             //荒古锅倍产(对厨锅)
-            if(potBlock.is(BlockRegistry.ANCIENT_CAULDRON.get()) && stoveBlock.is(LMDTags.PRIMITIVE_HEAT_SOURCES)){
-                if(result.isEdible() && !result.getFoodProperties(null).getEffects().isEmpty() && Config.ANCIENT_POT_ABILITY.get()){
-                    //效果持续时间翻倍
-                    result.getOrCreateTag().putBoolean("LMDRich", true);
-                }else if(Config.ANCIENT_POT_DOUBLE.get()){
-                    result.grow(originalStack.getCount());
+            if(potBlock.is(BlockRegistry.ANCIENT_CAULDRON.get())){
+                if(stoveBlock.is(LMDTags.PRIMITIVE_HEAT_SOURCES)){
+                    if(Config.ANCIENT_POT_DOUBLE.get()){
+                        result.grow(originalStack.getCount());
+                    }
+                }else{
+                    if(result.isEdible() && !result.getFoodProperties(null).getEffects().isEmpty() && Config.ANCIENT_POT_ABILITY.get()){
+                        //效果持续时间翻倍
+                        result.getOrCreateTag().putBoolean("LMDRich", true);
+                    }
                 }
             }
         }

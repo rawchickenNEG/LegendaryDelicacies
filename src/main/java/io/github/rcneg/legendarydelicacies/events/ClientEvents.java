@@ -26,6 +26,7 @@ public class ClientEvents {
         ItemBlockRenderTypes.setRenderLayer(BlockRegistry.MOSSY_COBBLESTONE_CAKE.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlockRegistry.LIFE_VINES.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlockRegistry.LIFE_VINES_PLANT.get(), RenderType.cutout());
-
+        ItemBlockRenderTypes.setRenderLayer(BlockRegistry.SPIKY_CAKE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlockRegistry.ANCIENT_KEBAB_STAND.get(), RenderType.cutout());
     }
 }

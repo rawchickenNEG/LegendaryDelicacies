@@ -1,0 +1,27 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "legendary_delicacies:spiky_bug"
+    }
+  ],
+  "result": [
+    {
+      "count": 1,
+      "item": "legendary_delicacies:raw_dripstone_mobs_meat"
+    },
+    {
+      "count": 1,
+      "item": "legendary_monsters:ancient_spike"
+    }
+  ],
+  "tool": [
+    {
+      "type": "farmersdelight:tool_action",
+      "action": "knife_dig"
+    },
+    {
+      "tag": "forge:tools/knives"
+    }
+  ]
+}

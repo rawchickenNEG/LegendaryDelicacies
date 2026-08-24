@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "legendary_delicacies:cooked_dripstone_mobs_meat"
+    },
+    {
+      "item": "legendary_delicacies:cooked_dripstone_mobs_meat"
+    },
+    {
+      "item": "legendary_delicacies:cooked_dripstone_mobs_meat"
+    },
+    {
+      "item": "legendary_delicacies:cooked_dripstone_mobs_meat"
+    },
+    {
+      "item": "legendary_delicacies:cooked_dripstone_mobs_meat"
+    },
+    {
+      "item": "legendary_delicacies:cooked_dripstone_mobs_meat"
+    },
+    {
+      "item": "minecraft:blaze_powder"
+    },
+    {
+      "item": "legendary_monsters:anchor_handle"
+    },
+    {
+      "item": "farmersdelight:fried_egg"
+    }
+  ],
+  "result": {
+    "item": "legendary_delicacies:ancient_kebab_stand",
+    "count": 1
+  }
+}

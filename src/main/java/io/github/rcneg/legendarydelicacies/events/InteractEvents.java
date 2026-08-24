@@ -9,6 +9,7 @@ import io.github.rcneg.legendarydelicacies.tags.LMDTags;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.IAnimatedBoss.CloudGolem.Cloud_GolemEntity;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.IAnimatedBoss.PossessedPaladin.PossessedPaladinEntity;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Mobs.CollapsedKingdom.PosessedPaladinEntity;
+import net.miauczel.legendary_monsters.entity.AnimatedMonster.Projectile.ElectricityEntity;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Projectile.LightningBoltEntity;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Projectile.ThunderCloud;
 import net.miauczel.legendary_monsters.item.ModItems;
@@ -18,11 +19,19 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.tags.DamageTypeTags;
+import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.ai.attributes.AttributeInstance;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.animal.Pig;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.FireChargeItem;
+import net.minecraft.world.item.FlintAndSteelItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
@@ -32,6 +41,7 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraftforge.event.entity.living.LivingEntityUseItemEvent;
 import net.minecraftforge.event.entity.living.LivingEquipmentChangeEvent;
+import net.minecraftforge.event.entity.living.LivingFallEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -97,13 +107,17 @@ public class InteractEvents {
         Level level = event.getEntity().level();
         if(!level.isClientSide()){
             ItemStack stack = event.getItem();
-            if (event.getDuration() == 1 && stack.isEdible() && stack.getTag() != null){
-                if(stack.getTag().getBoolean("LMDFission")){
+            if (stack.isEdible() && stack.getTag() != null){
+                if(event.getDuration() == 1 && stack.getTag().getBoolean("LMDFission")){
                     if(event.getEntity().getRandom().nextInt(100) < Config.FISSION_CHANCE.get()){
                         stack.getOrCreateTag().putBoolean("LMDShouldFission", true);
                     }
                 }
+                if(level.getGameTime() % 2 == 0L && stack.getTag().getBoolean("LMDSalty")){
+                    event.setDuration(event.getDuration() - 1);
+                }
             }
+
         }
     }
 
@@ -163,7 +177,7 @@ public class InteractEvents {
             }else{
                 player.displayClientMessage(Component.translatable("message.legendary_delicacies.indestructible_stove"), true);
                 event.setCanceled(true);
-                event.setCancellationResult(InteractionResult.sidedSuccess(level.isClientSide));
+                event.setCancellationResult(InteractionResult.PASS);
             }
         }
     }

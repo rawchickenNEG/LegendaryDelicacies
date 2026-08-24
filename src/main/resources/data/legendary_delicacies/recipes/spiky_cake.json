@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "MDM",
+    "SES",
+    "WWW"
+  ],
+  "key": {
+    "M": {
+      "item": "legendary_monsters:ancient_spike"
+    },
+    "D": {
+      "item": "legendary_monsters:chiseled_ancient_dripstone_shard"
+    },
+    "S": {
+      "item": "minecraft:cocoa_beans"
+    },
+    "E": {
+      "tag": "forge:eggs"
+    },
+    "W": {
+      "item": "minecraft:wheat"
+    }
+  },
+  "result": {
+    "item": "legendary_delicacies:spiky_cake",
+    "count": 1
+  }
+}

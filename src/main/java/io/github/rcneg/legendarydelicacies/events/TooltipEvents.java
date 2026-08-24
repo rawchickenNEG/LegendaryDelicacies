@@ -7,13 +7,13 @@ import net.miauczel.legendary_monsters.item.ModItems;
 import net.minecraft.ChatFormatting;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.Style;
+import net.minecraft.network.chat.TextColor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-
-import java.util.List;
 
 @Mod.EventBusSubscriber(modid = LegendaryDelicacies.MODID, value = {Dist.CLIENT})
 public class TooltipEvents {
@@ -45,6 +45,9 @@ public class TooltipEvents {
             }
             if(tag.getBoolean("LMDIsOffspring")){
                 event.getToolTip().add(1, Component.translatable("tooltip.legendary_delicacies.is_offspring").withStyle(ChatFormatting.DARK_GRAY).withStyle(ChatFormatting.ITALIC));
+            }
+            if(tag.getBoolean("LMDSalty")){
+                event.getToolTip().add(1, Component.translatable("tooltip.legendary_delicacies.salty").withStyle(Style.EMPTY.withColor(TextColor.fromRgb(0x7A6868))));
             }
         }
     }

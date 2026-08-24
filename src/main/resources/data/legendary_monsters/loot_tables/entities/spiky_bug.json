@@ -1,0 +1,21 @@
+{
+  "pools": [
+    {
+      "name": "bear_paw",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "legendary_delicacies:spiky_bug",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
