@@ -28,7 +28,7 @@ public class BlockRegistry {
 
     public static final RegistryObject<Block> INDESTRUCTIBLE_STOVE = BLOCKS.register("indestructible_stove", () -> new IndestructibleStove(BlockBehaviour.Properties.copy(ModBlocks.INDESTRUCTIBLE_BLOCK.get()).sound(SoundType.STONE).lightLevel(litBlockEmission(13))));
     public static final RegistryObject<Block> ROYAL_STOVE = BLOCKS.register("royal_stove", () -> new StoveBlock(BlockBehaviour.Properties.copy(Blocks.BRICKS).sound(SoundType.METAL).requiresCorrectToolForDrops().lightLevel(litBlockEmission(13))));
-    public static final RegistryObject<Block> ANCIENT_CAULDRON = BLOCKS.register("ancient_cauldron", () -> new CookingPotBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> ANCIENT_CAULDRON = BLOCKS.register("ancient_cauldron", () -> new AncientCauldronBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> SOUL_SKILLET = BLOCKS.register("soul_skillet", () -> new SkilletBlock(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).strength(0.5F, 6.0F).sound(SoundType.LANTERN)));
 
     public static final RegistryObject<Block> ANNIHILATION_EYE_PIE_BLOCK = BLOCKS.register("annihilation_eye_pie", () -> new AnnihilationEyePieBlock(BlockBehaviour.Properties.copy(Blocks.CAKE), ItemRegistry.ANNIHILATION_EYE_PIE_SLICE));

@@ -29,7 +29,7 @@ public class AncientKebabStandBlock extends FeastBlock {
     public final List<Supplier<Item>> riceRollServings;
 
     public AncientKebabStandBlock(BlockBehaviour.Properties properties) {
-        super(properties, ItemRegistry.BOWL_OF_ANCIENT_KEBAB_MEAT, true, false);
+        super(properties, ItemRegistry.BOWL_OF_ANCIENT_KEBAB_MEAT, true);
         this.riceRollServings = Arrays.asList(ItemRegistry.BOWL_OF_ANCIENT_KEBAB_MEAT, ItemRegistry.BOWL_OF_ANCIENT_KEBAB_MEAT, ItemRegistry.BOWL_OF_ANCIENT_KEBAB_MEAT, ItemRegistry.BOWL_OF_ANCIENT_KEBAB_MEAT, ItemRegistry.BOWL_OF_ANCIENT_KEBAB_MEAT);
     }
 

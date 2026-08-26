@@ -1,3 +1,6 @@
+-1.0.8
+    Fix Ancient Kebab Stand Block constructor issue in FD 1.2.
+    Fix Ancient Cauldron Block collision shape.
 -1.0.7
     Add Ancient Guardian foods and effects.
     Add Mossy Cobblestone Cake cutting recipe.
