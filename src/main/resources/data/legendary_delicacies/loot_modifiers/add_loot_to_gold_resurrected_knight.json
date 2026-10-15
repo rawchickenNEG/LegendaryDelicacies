@@ -1,0 +1,18 @@
+{
+  "type": "legendary_delicacies:add_loot_table",
+  "conditions":
+  [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "legendary_monsters:entities/resurrected_knight"
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "nbt": "{texture_variant:2}"
+      }
+    }
+  ],
+  "lootTable": "legendary_delicacies:gold_knight_rewards"
+}

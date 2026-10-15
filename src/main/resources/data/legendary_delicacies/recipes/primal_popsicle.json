@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "-": {
+      "item": "minecraft:stick"
+    },
+    "i": {
+      "item": "minecraft:ice"
+    },
+    "m": {
+      "item": "legendary_delicacies:primal_ice_chunk"
+    }
+  },
+  "pattern": [
+    " mm",
+    "imm",
+    "-i "
+  ],
+  "result": {
+    "item": "legendary_delicacies:primal_popsicle"
+  }
+}

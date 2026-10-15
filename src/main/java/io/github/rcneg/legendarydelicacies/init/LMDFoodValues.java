@@ -15,6 +15,24 @@ public class LMDFoodValues {
     public static final FoodProperties ANNIHILATION_ICE_CREAM = (new FoodProperties.Builder()).nutrition(6).saturationMod(0.4F).effect(
             new MobEffectInstance(EffectRegistry.ATOM_ANNIHILATION.get(), 3600), 1F
     ).alwaysEat().build();
+    public static final FoodProperties DUNE_MILKSHAKE = (new FoodProperties.Builder()).nutrition(3).saturationMod(0.6F).effect(
+            new MobEffectInstance(EffectRegistry.DUNE_STRIKE.get(), 3600), 1F
+    ).alwaysEat().build();
+    public static final FoodProperties DUNE_CAKE_SLICE = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.5F).effect(
+            new MobEffectInstance(EffectRegistry.DUNE_STRIKE.get(), 1200), 1F
+    ).alwaysEat().build();
+    public static final FoodProperties DUNE_ICE_CREAM = (new FoodProperties.Builder()).nutrition(6).saturationMod(0.4F).effect(
+            new MobEffectInstance(EffectRegistry.DUNE_STRIKE.get(), 3600), 1F
+    ).alwaysEat().build();
+    public static final FoodProperties PRIMAL_ICE_MILKSHAKE = (new FoodProperties.Builder()).nutrition(3).saturationMod(0.6F).effect(
+            new MobEffectInstance(EffectRegistry.FROST_AVATAR.get(), 3600), 1F
+    ).alwaysEat().build();
+    public static final FoodProperties PRIMAL_ICE_CAKE_SLICE = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.5F).effect(
+            new MobEffectInstance(EffectRegistry.FROST_AVATAR.get(), 1200), 1F
+    ).alwaysEat().build();
+    public static final FoodProperties PRIMAL_ICE_CREAM = (new FoodProperties.Builder()).nutrition(6).saturationMod(0.4F).effect(
+            new MobEffectInstance(EffectRegistry.FROST_AVATAR.get(), 3600), 1F
+    ).alwaysEat().build();
     public static final FoodProperties HAUNTED_MILKSHAKE = (new FoodProperties.Builder()).nutrition(3).saturationMod(0.6F).effect(
             new MobEffectInstance(EffectRegistry.PERSEVERING_SOUL.get(), 3600), 1F
     ).alwaysEat().build();
@@ -79,7 +97,7 @@ public class LMDFoodValues {
             .effect(new MobEffectInstance(EffectRegistry.ATOM_ANNIHILATION.get(), 6000), 1F)
             .effect(new MobEffectInstance(EffectRegistry.RECONSTRUCTION.get(), 1800), 1F)
             .effect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 1200, 1), 1F)
-            .effect(new MobEffectInstance(ModEffects.COMFORT.get(), 6000), 1F)
+            .effect(new MobEffectInstance(ModEffects.NOURISHMENT.get(), 6000), 1F)
             .alwaysEat().build();
     public static final FoodProperties ANNIHILATION_STEW = (new FoodProperties.Builder()).nutrition(14).saturationMod(0.85F)
             .effect(new MobEffectInstance(EffectRegistry.ATOM_ANNIHILATION.get(), 3600), 1F)
@@ -109,7 +127,7 @@ public class LMDFoodValues {
             .alwaysEat().build();
     public static final FoodProperties HAUNTED_SOUP = (new FoodProperties.Builder()).nutrition(9).saturationMod(0.65F)
             .effect(new MobEffectInstance(net.miauczel.legendary_monsters.effect.ModEffects.SOUL_RAGE.get(), 3600, 0), 1F)
-            .effect(new MobEffectInstance(ModEffects.COMFORT.get(), 6000), 1F)
+            .effect(new MobEffectInstance(ModEffects.NOURISHMENT.get(), 6000), 1F)
             .alwaysEat().build();
     public static final FoodProperties HAUNTED_BREAD = (new FoodProperties.Builder()).nutrition(6).saturationMod(0.65F)
             .effect(new MobEffectInstance(EffectRegistry.PERSEVERING_SOUL.get(), 1200, 1), 1F)
@@ -144,7 +162,7 @@ public class LMDFoodValues {
     public static final FoodProperties BLOODBLOOM = (new FoodProperties.Builder()).nutrition(12).saturationMod(0.65F)
             .effect(new MobEffectInstance(EffectRegistry.POSSESSED_SOUL.get(), 3600), 1F)
             .effect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 6000, 0), 1F)
-            .effect(new MobEffectInstance(ModEffects.COMFORT.get(), 6000), 1F)
+            .effect(new MobEffectInstance(ModEffects.NOURISHMENT.get(), 6000), 1F)
             .alwaysEat().build();
     public static final FoodProperties BOWL_OF_BLOOD_FEAST = (new FoodProperties.Builder()).nutrition(12).saturationMod(0.65F)
             .effect(new MobEffectInstance(EffectRegistry.POSSESSED_SOUL.get(), 9600), 1F)
@@ -223,7 +241,7 @@ public class LMDFoodValues {
     public static final FoodProperties LIFE_SOUP = (new FoodProperties.Builder()).nutrition(10).saturationMod(0.6F)
             .effect(new MobEffectInstance(EffectRegistry.OVER_GROWING.get(), 6000, 2), 1F)
             .effect(new MobEffectInstance(MobEffects.REGENERATION, 600, 1), 1F)
-            .effect(new MobEffectInstance(ModEffects.COMFORT.get(), 6000), 1F)
+            .effect(new MobEffectInstance(ModEffects.NOURISHMENT.get(), 6000), 1F)
             .alwaysEat().build();
     public static final FoodProperties OVERGROWN_WITH_WEEDS = (new FoodProperties.Builder()).nutrition(8).saturationMod(0.6F)
             .effect(new MobEffectInstance(EffectRegistry.FLOURISH.get(), 600, 2), 1F)
@@ -235,7 +253,7 @@ public class LMDFoodValues {
     public static final FoodProperties BOWL_OF_HERB_SOUP = (new FoodProperties.Builder()).nutrition(12).saturationMod(0.85F)
             .effect(new MobEffectInstance(EffectRegistry.OVER_GROWING.get(), 6000, 4), 1F)
             .effect(new MobEffectInstance(MobEffects.REGENERATION, 200, 3), 1F)
-            .effect(new MobEffectInstance(ModEffects.COMFORT.get(), 6000), 1F)
+            .effect(new MobEffectInstance(ModEffects.NOURISHMENT.get(), 6000), 1F)
             .alwaysEat().build();
     public static final FoodProperties LIFE_FRUIT_JAM = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.5F)
             .effect(new MobEffectInstance(EffectRegistry.OVER_GROWING.get(), 600), 1F)
@@ -271,7 +289,7 @@ public class LMDFoodValues {
             .alwaysEat().build();
     public static final FoodProperties DRIPSTONE_MOBS_MEAT_STEW = (new FoodProperties.Builder()).nutrition(12).saturationMod(0.85F)
             .effect(new MobEffectInstance(EffectRegistry.SPIKY_SKIN.get(), 6000), 1F)
-            .effect(new MobEffectInstance(ModEffects.COMFORT.get(), 6000), 1F)
+            .effect(new MobEffectInstance(ModEffects.NOURISHMENT.get(), 6000), 1F)
             .alwaysEat().build();
     public static final FoodProperties BOWL_OF_ANCIENT_KEBAB_MEAT = (new FoodProperties.Builder()).nutrition(14).saturationMod(0.85F)
             .effect(new MobEffectInstance(EffectRegistry.WORM_LEADER.get(), 3600, 1), 1F)
@@ -287,4 +305,58 @@ public class LMDFoodValues {
             .effect(new MobEffectInstance(MobEffects.HUNGER, 200, 1), 1F)
             .effect(new MobEffectInstance(MobEffects.CONFUSION, 400, 0), 1F)
             .build();
+
+    public static final FoodProperties XUELIAN_ICE_CUBES = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.3F)
+            .effect(new MobEffectInstance(EffectRegistry.FROST_AVATAR.get(), 200), 1F)
+            .alwaysEat().fast().build();
+    public static final FoodProperties WINTER_MELON_SLICE = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.5F)
+            .effect(new MobEffectInstance(EffectRegistry.FROST_AVATAR.get(), 600), 1F)
+            .effect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 600), 1F)
+            .alwaysEat().build();
+    public static final FoodProperties PRIMAL_POPSICLE = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.3F)
+            .effect(new MobEffectInstance(EffectRegistry.FROST_AVATAR.get(), 1800), 1F)
+            .alwaysEat().build();
+    public static final FoodProperties SWEET_SMOOTHIES = (new FoodProperties.Builder()).nutrition(8).saturationMod(0.65F)
+            .effect(new MobEffectInstance(EffectRegistry.FROST_AVATAR.get(), 1800), 1F)
+            .effect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 1800), 1F)
+            .alwaysEat().build();
+    public static final FoodProperties FROZEN_BUCKET = (new FoodProperties.Builder()).nutrition(14).saturationMod(0.65F)
+            .effect(new MobEffectInstance(EffectRegistry.FROST_AVATAR.get(), 3600), 1F)
+            .effect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 1800), 1F)
+            .alwaysEat().build();
+    public static final FoodProperties ICEBERG_DRINK = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.65F)
+            .effect(new MobEffectInstance(EffectRegistry.FROST_AVATAR.get(), 6000), 1F)
+            .alwaysEat().build();
+    public static final FoodProperties BOWL_OF_ICED_RICE_MEDLEY = (new FoodProperties.Builder()).nutrition(12).saturationMod(0.65F)
+            .effect(new MobEffectInstance(EffectRegistry.FROST_AVATAR.get(), 3600, 1), 1F)
+            .effect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 3600), 1F)
+            .alwaysEat().build();
+    public static final FoodProperties CACTUS_RABBIT_ROLL = (new FoodProperties.Builder()).nutrition(10).saturationMod(0.65F)
+            .effect(new MobEffectInstance(EffectRegistry.DUNE_STRIKE.get(), 3600), 1F)
+            .effect(new MobEffectInstance(MobEffects.ABSORPTION, 1800), 1F)
+            .alwaysEat().build();
+    public static final FoodProperties DUNE_ROASTED_RABBIT = (new FoodProperties.Builder()).nutrition(14).saturationMod(0.85F)
+            .effect(new MobEffectInstance(EffectRegistry.DUNE_STRIKE.get(), 3600), 1F)
+            .effect(new MobEffectInstance(ModEffects.NOURISHMENT.get(), 6000), 1F)
+            .alwaysEat().build();
+    public static final FoodProperties DUNE_STUFFED_POTATO = (new FoodProperties.Builder()).nutrition(10).saturationMod(0.85F)
+            .effect(new MobEffectInstance(EffectRegistry.DUNE_STRIKE.get(), 1200), 1F)
+            .effect(new MobEffectInstance(MobEffects.ABSORPTION, 1200, 2), 1F)
+            .alwaysEat().build();
+    public static final FoodProperties DUNE_MEAT_FLATBREAD = (new FoodProperties.Builder()).nutrition(12).saturationMod(0.85F)
+            .effect(new MobEffectInstance(EffectRegistry.DUNE_STRIKE.get(), 600, 1), 1F)
+            .effect(new MobEffectInstance(MobEffects.ABSORPTION, 1800), 1F)
+            .alwaysEat().build();
+    public static final FoodProperties SANDWICH = (new FoodProperties.Builder()).nutrition(6).saturationMod(0.65F)
+            .effect(new MobEffectInstance(MobEffects.ABSORPTION, 600), 1F)
+            .effect(new MobEffectInstance(MobEffects.HUNGER, 600), 1F)
+            .alwaysEat().build();
+    public static final FoodProperties SANDSTORM_CRYSTAL_POPSICLE = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.3F)
+            .effect(new MobEffectInstance(EffectRegistry.DUNE_STRIKE.get(), 1800, 2), 1F)
+            .alwaysEat().build();
+    public static final FoodProperties BOWL_OF_DESERT_FRIED_RICE = (new FoodProperties.Builder()).nutrition(12).saturationMod(0.85F)
+            .effect(new MobEffectInstance(EffectRegistry.DUNE_STRIKE.get(), 3600, 1), 1F)
+            .effect(new MobEffectInstance(ModEffects.NOURISHMENT.get(), 6000), 1F)
+            .effect(new MobEffectInstance(MobEffects.ABSORPTION, 1200, 1), 1F)
+            .alwaysEat().build();
 }

@@ -3,6 +3,7 @@ package io.github.rcneg.legendarydelicacies.init;
 import io.github.rcneg.legendarydelicacies.LegendaryDelicacies;
 import io.github.rcneg.legendarydelicacies.blocks.*;
 import net.miauczel.legendary_monsters.block.ModBlocks;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
@@ -12,10 +13,7 @@ import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import vectorwing.farmersdelight.common.block.CookingPotBlock;
-import vectorwing.farmersdelight.common.block.CuttingBoardBlock;
-import vectorwing.farmersdelight.common.block.SkilletBlock;
-import vectorwing.farmersdelight.common.block.StoveBlock;
+import vectorwing.farmersdelight.common.block.*;
 
 import java.util.function.ToIntFunction;
 
@@ -47,9 +45,15 @@ public class BlockRegistry {
     public static final RegistryObject<Block> HERB_SOUP_POT = BLOCKS.register("herb_soup_pot", () -> new HerbSoupPotBlock(BlockBehaviour.Properties.copy(Blocks.STONE), ItemRegistry.BOWL_OF_HERB_SOUP, true));
     public static final RegistryObject<Block> MOSSY_COBBLESTONE_CAKE = BLOCKS.register("mossy_cobblestone_cake", () -> new MossyCobblestoneCakeBlock(Block.Properties.copy(Blocks.CAKE), ItemRegistry.MOSSY_COBBLESTONE_CAKE_SLICE));
     public static final RegistryObject<Block> ANCIENT_KEBAB_STAND = BLOCKS.register("ancient_kebab_stand", () -> new AncientKebabStandBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
+    public static final RegistryObject<Block> ICED_RICE_MEDLEY = BLOCKS.register("iced_rice_medley", () -> new IcedRiceMedleyBlock(BlockBehaviour.Properties.copy(Blocks.CAKE).sound(SoundType.GLASS), ItemRegistry.BOWL_OF_HERB_SOUP, true));
+    public static final RegistryObject<Block> DUNE_CAKE = BLOCKS.register("dune_cake", () -> new CommonCakeBlock(Block.Properties.copy(Blocks.CAKE), ItemRegistry.DUNE_CAKE_SLICE));
+    public static final RegistryObject<Block> PRIMAL_ICE_CAKE = BLOCKS.register("primal_ice_cake", () -> new CommonCakeBlock(Block.Properties.copy(Blocks.CAKE), ItemRegistry.PRIMAL_ICE_CAKE_SLICE));
+    public static final RegistryObject<Block> DESERT_FRIED_RICE = BLOCKS.register("desert_fried_rice", () -> new DesertFriedRiceBlock(BlockBehaviour.Properties.copy(Blocks.CAKE), ItemRegistry.BOWL_OF_DESERT_FRIED_RICE, false));
 
     public static final RegistryObject<Block> LIFE_VINES = BLOCKS.register("life_vines", () -> new LifeVinesHeadBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).randomTicks().noCollission().instabreak().sound(SoundType.CAVE_VINES).pushReaction(PushReaction.DESTROY)));
     public static final RegistryObject<Block> LIFE_VINES_PLANT = BLOCKS.register("life_vines_plant", () -> new LifeVinesBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.CAVE_VINES).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> GLACIAL_ICE = BLOCKS.register("glacial_ice", () -> new GlacialIceBlock(BlockBehaviour.Properties.of().mapColor(MapColor.ICE).friction(0.98F).randomTicks().strength(1.5F).sound(SoundType.GLASS).noOcclusion()));
 
     private static ToIntFunction<BlockState> litBlockEmission(int lightValue) {
         return (state) -> (Boolean)state.getValue(BlockStateProperties.LIT) ? lightValue : 0;

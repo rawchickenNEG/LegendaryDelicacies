@@ -45,6 +45,7 @@ import net.minecraft.world.entity.ai.attributes.AttributeInstance;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.monster.Spider;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -54,7 +55,9 @@ import net.minecraft.world.level.storage.loot.LootParams;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
 import net.minecraft.world.phys.AABB;
+import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraftforge.event.entity.ProjectileImpactEvent;
 import net.minecraftforge.event.entity.living.*;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -65,6 +68,8 @@ import java.util.Objects;
 
 @Mod.EventBusSubscriber
 public class AttackEvents {
+    private static boolean spikySkinReflect = false;
+
     @SubscribeEvent
     public static void onLivingHurt(LivingHurtEvent event){
         LivingEntity entity = event.getEntity();
@@ -81,21 +86,19 @@ public class AttackEvents {
         }
         //反伤
         if(entity.hasEffect(EffectRegistry.SPIKY_SKIN.get()) && !(damage.is(DamageTypeTags.BYPASSES_INVULNERABILITY)) && damage.getEntity() instanceof LivingEntity attacker){
-            int amp = entity.getEffect(EffectRegistry.SPIKY_SKIN.get()).getAmplifier() + 1;
-            attacker.hurt(level.damageSources().thorns(entity), event.getAmount() * amp * 0.25f);
+            if(!spikySkinReflect){
+                try {
+                    spikySkinReflect = true;
+                    int amp = entity.getEffect(EffectRegistry.SPIKY_SKIN.get()).getAmplifier() + 1;
+                    attacker.hurt(level.damageSources().thorns(entity), event.getAmount() * amp * 0.25f);
+                } finally {
+                    spikySkinReflect = false;
+                }
+            }
         }
         //降低摔落伤害
         if(entity.getItemBySlot(EquipmentSlot.FEET).is(ItemRegistry.LIGHTNING_BOOTS.get()) && damage.is(DamageTypeTags.IS_FALL)){
             event.setAmount(event.getAmount() * 0.5f);
-        }
-        //不毁重构
-        if(entity.hasEffect(EffectRegistry.RECONSTRUCTION.get())){
-            int amp = entity.getEffect(EffectRegistry.RECONSTRUCTION.get()).getAmplifier() + 2;
-            if(event.getAmount() >= entity.getMaxHealth() / amp){
-                entity.playSound(ModSounds.TOTEM_USE, 1, 1);
-                entity.addEffect(new MobEffectInstance(ModEffects.UNBREAKABLE.get(), 60, 0));
-                event.setAmount(entity.getMaxHealth() / amp);
-            }
         }
         if(damage.getEntity() instanceof LivingEntity attacker){
             //堕落狂魂增强
@@ -191,6 +194,18 @@ public class AttackEvents {
         }
     }
 
+    @SubscribeEvent
+    public static void onArrowHit(ProjectileImpactEvent event) {
+        Projectile arrow = event.getProjectile();
+        if(arrow.getOwner() instanceof LivingEntity living && living.hasEffect(EffectRegistry.DUNE_STRIKE.get())){
+            float strength = living.getEffect(EffectRegistry.DUNE_STRIKE.get()).getAmplifier() * 0.5F;
+            if(!arrow.getPersistentData().contains("LMDHasExplodeTag")){
+                living.level().explode(living, arrow.getX(), arrow.getY(), arrow.getZ(), 2f + strength, Level.ExplosionInteraction.NONE);
+                arrow.getPersistentData().putBoolean("LMDHasExplodeTag", true);
+            }
+        }
+    }
+
     //LM的格挡
     @SubscribeEvent
     public static void onLivingAttackedCustomParry(LivingAttackEvent event) {
@@ -259,6 +274,24 @@ public class AttackEvents {
                         }
                     }
                 }
+            }
+        }
+    }
+
+    //不毁重构限伤
+    @SubscribeEvent
+    public static void onLivingDamage(LivingDamageEvent event) {
+        LivingEntity entity = event.getEntity();
+
+        MobEffectInstance reconstruction = entity.getEffect(EffectRegistry.RECONSTRUCTION.get());
+        if (reconstruction != null) {
+            float damageCap = entity.getMaxHealth() / (reconstruction.getAmplifier() + 2);
+
+            if (event.getAmount() > damageCap) {
+                event.setAmount(damageCap);
+                entity.playSound(ModSounds.TOTEM_USE, 1.0F, 1.0F);
+                entity.addEffect(new MobEffectInstance(ModEffects.UNBREAKABLE.get(), 60, 0)
+                );
             }
         }
     }

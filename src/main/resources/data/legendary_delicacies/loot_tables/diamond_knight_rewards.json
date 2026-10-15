@@ -1,0 +1,30 @@
+{
+  "pools": [
+    {
+      "name": "extra_ingots",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "legendary_delicacies:somber_metal_chunk",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "extra_ingots",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "legendary_delicacies:diamond_chunk"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 200,
+  "experience": 10.0,
+  "ingredients": [
+    {
+      "tag": "forge:dough"
+    },
+    {
+      "item": "legendary_delicacies:sand_dust"
+    },
+    {
+      "tag": "forge:crops/onion"
+    },
+    {
+      "item": "minecraft:carrot"
+    },
+    [
+      {
+        "tag": "forge:raw_chicken"
+      },
+      {
+        "tag": "forge:raw_pork"
+      },
+      {
+        "tag": "forge:raw_beef"
+      },
+      {
+        "item": "minecraft:brown_mushroom"
+      }
+    ]
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "item": "legendary_delicacies:dune_meat_flatbread",
+    "count": 1
+  }
+}

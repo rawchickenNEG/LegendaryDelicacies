@@ -28,5 +28,9 @@ public class ClientEvents {
         ItemBlockRenderTypes.setRenderLayer(BlockRegistry.LIFE_VINES_PLANT.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlockRegistry.SPIKY_CAKE.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlockRegistry.ANCIENT_KEBAB_STAND.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlockRegistry.ICED_RICE_MEDLEY.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlockRegistry.GLACIAL_ICE.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(BlockRegistry.DESERT_FRIED_RICE.get(), RenderType.cutout());
+
     }
 }

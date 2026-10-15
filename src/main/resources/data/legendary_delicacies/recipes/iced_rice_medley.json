@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "legendary_delicacies:primal_ice_chunk"
+    },
+    {
+      "item": "farmersdelight:cooked_rice"
+    },
+    {
+      "item": "legendary_delicacies:primal_ice_chunk"
+    },
+    {
+      "item": "minecraft:melon_slice"
+    },
+    {
+      "item": "minecraft:glow_berries"
+    },
+    {
+      "item": "minecraft:chorus_fruit"
+    },
+    {
+      "tag": "forge:milk"
+    },
+    {
+      "item": "minecraft:glass"
+    },
+    {
+      "tag": "forge:milk"
+    }
+  ],
+  "result": {
+    "item": "legendary_delicacies:iced_rice_medley",
+    "count": 1
+  }
+}

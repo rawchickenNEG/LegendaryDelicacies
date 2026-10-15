@@ -52,6 +52,7 @@ public class LegendaryDelicacies
     }
 
     private void clientSetup(FMLClientSetupEvent event) {
+
     }
 
     public void applyBlockEntity(Block block, BlockEntityType blockEntityType){

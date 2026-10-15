@@ -1,0 +1,27 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "legendary_monsters:primal_ice_shard"
+    }
+  ],
+  "result": [
+    {
+      "item": "legendary_delicacies:primal_ice_chunk",
+      "count": 3
+    },
+    {
+      "chance": 0.15,
+      "item": "legendary_delicacies:primal_ice_chunk"
+    }
+  ],
+  "tool": [
+    {
+      "type": "farmersdelight:tool_action",
+      "action": "pickaxe_dig"
+    },
+    {
+      "tag": "minecraft:pickaxes"
+    }
+  ]
+}

@@ -156,29 +156,4 @@ public class InteractEvents {
             }
         }
     }
-
-    @SubscribeEvent
-    public static void onPlayerRightClickBlock(PlayerInteractEvent.RightClickBlock event) {
-        Level level = event.getLevel();
-        BlockPos pos = event.getPos();
-        BlockState state = level.getBlockState(pos);
-        ItemStack stack = event.getItemStack();
-        Player player = event.getEntity();
-
-        if (state.is(BlockRegistry.INDESTRUCTIBLE_STOVE.get()) && state.hasProperty(BlockStateProperties.LIT) && !state.getValue(BlockStateProperties.LIT)) {
-            if(stack.is(ModItems.CORRUPTED_SOUL.get())){
-                level.setBlock(pos, state.setValue(BlockStateProperties.LIT, true), Block.UPDATE_ALL);
-                level.playSound((Player)null, pos, SoundEvents.RESPAWN_ANCHOR_CHARGE, SoundSource.BLOCKS, 1.0F, (MathUtils.RAND.nextFloat() - MathUtils.RAND.nextFloat()) * 0.2F + 1.0F);
-                level.gameEvent(player, GameEvent.BLOCK_CHANGE, pos);
-                player.swing(event.getHand());
-                if (!player.getAbilities().instabuild) {
-                    stack.shrink(1);
-                }
-            }else{
-                player.displayClientMessage(Component.translatable("message.legendary_delicacies.indestructible_stove"), true);
-                event.setCanceled(true);
-                event.setCancellationResult(InteractionResult.PASS);
-            }
-        }
-    }
 }

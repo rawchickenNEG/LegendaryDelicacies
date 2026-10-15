@@ -111,14 +111,12 @@ dependencies {
 
     runtimeOnly fg.deobf("curse.maven:jade-324717:6855440")
     //FD 1.3.0+
-    //implementation fg.deobf("curse.maven:farmers-delight-398521:8083474")
-    //FD 1.2.11
-    implementation fg.deobf("curse.maven:farmers-delight-398521:7801523")
+    implementation fg.deobf("curse.maven:farmers-delight-398521:8083474")
     runtimeOnly fg.deobf("curse.maven:just-enough-resources-jer-240630:5057220")
     runtimeOnly fg.deobf("curse.maven:appleskin-248787:4770828")
     runtimeOnly fg.deobf("curse.maven:construction-wand-399558:4684054")
     runtimeOnly fg.deobf("curse.maven:carry-on-274259:4882500")
-    implementation fg.deobf("curse.maven:legendary-monsters-944035:8657289")
+    implementation fg.deobf("curse.maven:legendary-monsters-944035:8902349")
     annotationProcessor "org.spongepowered:mixin:0.8.5:processor"
 }
 

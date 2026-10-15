@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "legendary_delicacies:primal_ice_chunk"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:sweet_berries"
+    },
+    {
+      "item": "minecraft:powder_snow_bucket"
+    }
+  ],
+  "result": {
+    "item": "legendary_delicacies:frozen_bucket",
+    "count": 1
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "legendary_delicacies:primal_ice_chunk"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:oxeye_daisy"
+    }
+  ],
+  "result": {
+    "item": "legendary_delicacies:xuelian_ice_cubes",
+    "count": 1
+  }
+}

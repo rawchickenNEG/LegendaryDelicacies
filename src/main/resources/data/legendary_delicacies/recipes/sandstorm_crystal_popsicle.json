@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "-": {
+      "item": "minecraft:dead_bush"
+    },
+    "i": {
+      "item": "legendary_delicacies:sand_dust"
+    },
+    "m": {
+      "item": "minecraft:ice"
+    }
+  },
+  "pattern": [
+    " mm",
+    "imm",
+    "-i "
+  ],
+  "result": {
+    "item": "legendary_delicacies:sandstorm_crystal_popsicle"
+  }
+}

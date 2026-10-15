@@ -1,28 +1,44 @@
 package io.github.rcneg.legendarydelicacies.blocks;
 
 import net.miauczel.legendary_monsters.Particle.ModParticles;
+import net.miauczel.legendary_monsters.item.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.CampfireBlock;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.PushReaction;
+import net.minecraft.world.phys.BlockHitResult;
+import org.jetbrains.annotations.Nullable;
+import vectorwing.farmersdelight.common.block.AbstractStoveBlock;
 import vectorwing.farmersdelight.common.block.StoveBlock;
+import vectorwing.farmersdelight.common.block.entity.StoveBlockEntity;
 import vectorwing.farmersdelight.common.registry.ModParticleTypes;
 import vectorwing.farmersdelight.common.registry.ModSounds;
+import vectorwing.farmersdelight.common.utility.MathUtils;
 
-public class IndestructibleStove extends StoveBlock {
+public class IndestructibleStove extends AbstractStoveBlock {
     public IndestructibleStove(Properties pProperties) {
         super(pProperties);
     }
-    //1.3的点燃
-    /*
+
+    public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
+        return new StoveBlockEntity(pos, state);
+    }
+
     @Override
     protected InteractionResult tryToIgnite(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         ItemStack heldStack = player.getItemInHand(hand);
@@ -42,7 +58,6 @@ public class IndestructibleStove extends StoveBlock {
             return InteractionResult.PASS;
         }
     }
-     */
 
     //默认不点燃
     @Override
@@ -74,4 +89,5 @@ public class IndestructibleStove extends StoveBlock {
     public PushReaction getPistonPushReaction(BlockState state) {
         return PushReaction.BLOCK;
     }
+
 }

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:melon_slice"
+    },
+    {
+      "item": "legendary_delicacies:primal_ice_chunk"
+    },
+    {
+      "item": "legendary_delicacies:primal_ice_chunk"
+    }
+  ],
+  "result": {
+    "item": "legendary_delicacies:winter_melon_slice",
+    "count": 1
+  }
+}

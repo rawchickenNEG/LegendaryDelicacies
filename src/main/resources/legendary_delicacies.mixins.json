@@ -10,17 +10,23 @@
     "CookingPotBlockEntityMixin",
     "CookingPotMenuMixin",
     "CuttingBoardBlockEntityMixin",
+    "CuttingBoardBlockMixin",
     "EntityUtilMixin",
     "IAnimatedBossMixin",
     "IAnimatedMiniBossMixin",
     "IAnimatedMonsterMixin",
+    "LivingEntityMixin",
     "MobEffectMixin",
     "MonstrousAnchorItemMixin",
     "SkilletBlockEntityMixin",
     "SoulGreatSwordItemMixin",
+    "StunTickMixin",
     "TheGreatFrostItemMixin"
   ],
   "injectors": {
     "defaultRequire": 1
-  }
+  },
+  "client": [
+    "ModBlockEntityWithoutLevelRendererMixin"
+  ]
 }

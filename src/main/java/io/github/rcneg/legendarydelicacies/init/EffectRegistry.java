@@ -26,6 +26,7 @@ public class EffectRegistry {
     public static final RegistryObject<MobEffect> FROST_AVATAR = MOB_EFFECTS.register("frost_avatar", () -> new LMDImmunityMobEffect(MobEffectCategory.BENEFICIAL, -9999028, List.of(MobEffects.MOVEMENT_SLOWDOWN, ModEffects.FREEZE.get())));
     public static final RegistryObject<MobEffect> MIMIC_SHELL = MOB_EFFECTS.register("mimic_shell", () -> new LMDImmunityMobEffect(MobEffectCategory.BENEFICIAL, -9999028, List.of(MobEffects.LEVITATION, ModEffects.GRAVITY_PULL.get())));
     public static final RegistryObject<MobEffect> DUNE_SHIELD = MOB_EFFECTS.register("dune_shield", () -> new LMDImmunityMobEffect(MobEffectCategory.BENEFICIAL, -9999028, List.of(ModEffects.PHARAONS_CURSE.get())));
+    public static final RegistryObject<MobEffect> DUNE_STRIKE = MOB_EFFECTS.register("dune_strike", () -> new LMDImmunityMobEffect(MobEffectCategory.BENEFICIAL, -9999028, List.of(ModEffects.PHARAONS_CURSE.get())));
 
     public static final RegistryObject<MobEffect> LIGHTNING = MOB_EFFECTS.register("thunderstruck", () -> new LMDMobEffect(MobEffectCategory.BENEFICIAL, 0xA6A6A6));
     public static final RegistryObject<MobEffect> FLAWLESS = MOB_EFFECTS.register("flawless", () -> new FlawlessEffect(MobEffectCategory.BENEFICIAL, 0xE3F6FF));

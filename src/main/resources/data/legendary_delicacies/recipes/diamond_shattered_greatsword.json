@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": { "item": "legendary_delicacies:diamond_chunk" },
+  "base": { "item": "legendary_delicacies:gold_shattered_greatsword" },
+  "addition": { "item": "legendary_delicacies:diamond_chunk" },
+  "result": { "item": "legendary_delicacies:diamond_shattered_greatsword" }
+}

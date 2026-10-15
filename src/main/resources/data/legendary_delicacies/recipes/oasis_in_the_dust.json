@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "legendary_delicacies:sand_dust"
+    },
+    {
+      "item": "minecraft:sugar_cane"
+    },
+    {
+      "tag": "minecraft:saplings"
+    },
+    {
+      "item": "minecraft:water_bucket"
+    },
+    {
+      "item": "legendary_monsters:ancient_sandstone_shard"
+    }
+  ],
+  "result": {
+    "item": "legendary_delicacies:oasis_in_the_dust",
+    "count": 1
+  }
+}

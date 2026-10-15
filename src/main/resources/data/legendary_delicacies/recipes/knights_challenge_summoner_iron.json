@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CBC",
+    "DAD",
+    "CBC"
+  ],
+  "key": {
+    "A": {
+      "item": "legendary_monsters:somber_key"
+    },
+    "B": {
+      "item": "minecraft:iron_block"
+    },
+    "C": {
+      "item": "minecraft:iron_ingot"
+    },
+    "D": {
+      "item": "legendary_monsters:metal_debris"
+    }
+  },
+  "result": {
+    "item": "legendary_delicacies:knights_challenge_summoner_iron",
+    "count": 1
+  }
+}

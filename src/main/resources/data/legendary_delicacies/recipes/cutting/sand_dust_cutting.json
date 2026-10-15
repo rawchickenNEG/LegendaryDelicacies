@@ -1,0 +1,28 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "legendary_monsters:crystal_of_sandstorm"
+    }
+  ],
+  "result": [
+    {
+      "item": "legendary_delicacies:sand_dust",
+      "count": 4
+    },
+    {
+      "chance": 0.15,
+      "item": "legendary_delicacies:sand_dust",
+      "count": 2
+    }
+  ],
+  "tool": [
+    {
+      "type": "farmersdelight:tool_action",
+      "action": "pickaxe_dig"
+    },
+    {
+      "tag": "minecraft:pickaxes"
+    }
+  ]
+}

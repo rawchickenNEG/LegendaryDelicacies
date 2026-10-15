@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:cactus"
+    },
+    {
+      "item": "legendary_delicacies:sand_dust"
+    },
+    {
+      "item": "minecraft:cooked_rabbit"
+    },
+    {
+      "item": "farmersdelight:tomato_sauce"
+    }
+  ],
+  "result": {
+    "item": "legendary_delicacies:cactus_rabbit_roll",
+    "count": 1
+  }
+}

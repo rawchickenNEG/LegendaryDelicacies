@@ -1,6 +1,5 @@
 package io.github.rcneg.legendarydelicacies.items;
 
-import io.github.rcneg.legendarydelicacies.config.Config;
 import io.github.rcneg.legendarydelicacies.init.EffectRegistry;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;

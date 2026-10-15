@@ -1,0 +1,38 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "item": "farmersdelight:stuffed_potato"
+  },
+  "cookingtime": 200,
+  "experience": 10.0,
+  "ingredients": [
+    {
+      "item": "legendary_delicacies:sand_dust"
+    },
+    {
+      "tag": "forge:crops/tomato"
+    },
+    {
+      "tag": "forge:milk"
+    },
+    [
+      {
+        "tag": "forge:raw_chicken"
+      },
+      {
+        "tag": "forge:raw_pork"
+      },
+      {
+        "tag": "forge:raw_beef"
+      },
+      {
+        "item": "minecraft:brown_mushroom"
+      }
+    ]
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "item": "legendary_delicacies:dune_stuffed_potato",
+    "count": 1
+  }
+}

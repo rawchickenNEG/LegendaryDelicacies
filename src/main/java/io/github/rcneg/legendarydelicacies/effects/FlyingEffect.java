@@ -15,13 +15,4 @@ public class FlyingEffect extends LMDMobEffect {
             player.getAbilities().mayfly = true;
         }
     }
-
-    public void removeAttributeModifiers(LivingEntity p_19469_, AttributeMap p_19470_, int p_19471_) {
-        super.removeAttributeModifiers(p_19469_, p_19470_, p_19471_);
-        if(p_19469_ instanceof Player player && !player.getAbilities().instabuild){
-            player.getAbilities().mayfly = false;
-            player.getAbilities().flying = false;
-            player.onUpdateAbilities();
-        }
-    }
 }

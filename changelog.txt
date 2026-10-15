@@ -1,3 +1,22 @@
+-1.0.9
+    Note: Legendary Delicacies will not support Farmer's Delight below 1.3 after this update.
+    Add Knights Challenge Summoner items.
+    Add Somber Metal Chunk in golden Beheaded Knight and Resurrected Knight loot table.
+    Add new ability to Tesseract Knife.
+    Add Frostbitten Golem and Dune Sentinel foods.
+    Add golden and diamond Shattered Greatsword and Resurrected Javelin
+    Change Dripstone Steak food recipe.
+    Change Somber Metal Chunk texture.
+    Change all Comfort effect to Norishment effect.
+    Change Persevering Soul effect and Atom Annihilation effect.
+    Change Fission Dipping and Annihilation Sauce Eyes Rod recipe.
+    Change Reconstruction effect triggering after damage final settlement.
+    Fix Life Fruit Seeds tooltip issue.
+    Fix Spiky Skin reflect damage caused stack overflow issue.
+    Fix Cloud Golem Cookie incorrect translation in zh_cn.
+    Fix Spiky Cake and Mossy Cobblestone Cake have no loot issue.
+    Modify Flying effect.
+    Haunted foods or Boss foods can be eating during stun effect.
 -1.0.8
     Fix Ancient Kebab Stand Block constructor issue in FD 1.2.
     Fix Ancient Cauldron Block collision shape.

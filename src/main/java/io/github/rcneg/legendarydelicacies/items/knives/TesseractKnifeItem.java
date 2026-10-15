@@ -117,6 +117,7 @@ public class TesseractKnifeItem extends KnifeItem {
     @OnlyIn(Dist.CLIENT)
     public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
         super.appendHoverText(itemstack, world, list, flag);
+        list.add(Component.translatable("tooltip.legendary_delicacies.tesseract_knife_0").withStyle(ChatFormatting.GRAY));
         list.add(Component.translatable("tooltip.legendary_delicacies.tesseract_knife").withStyle(ChatFormatting.GRAY));
         list.add(Component.translatable("tooltip.legendary_delicacies.tesseract_knife_1").withStyle(ChatFormatting.GRAY));
     }
