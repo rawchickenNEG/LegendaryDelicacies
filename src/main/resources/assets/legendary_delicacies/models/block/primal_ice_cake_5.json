@@ -3,8 +3,9 @@
 	"credit": "Made with Blockbench",
 	"textures": {
 		"top": "legendary_delicacies:block/primal_ice_cake_top",
-		"particle": "legendary_delicacies:block/primal_ice_cake_inner",
-		"side": "legendary_delicacies:block/primal_ice_cake_inner",
+		"3": "legendary_delicacies:block/primal_ice_cake_inner",
+		"particle": "legendary_delicacies:block/primal_ice_cake_side",
+		"side": "legendary_delicacies:block/primal_ice_cake_side",
 		"bottom": "legendary_delicacies:block/primal_ice_cake_bottom"
 	},
 	"elements": [
@@ -15,7 +16,7 @@
 				"north": {"uv": [1, 8, 5, 16], "texture": "#side"},
 				"east": {"uv": [1, 8, 15, 16], "texture": "#side"},
 				"south": {"uv": [11, 8, 15, 16], "texture": "#side"},
-				"west": {"uv": [1, 8, 15, 16], "texture": "#side"},
+				"west": {"uv": [1, 8, 15, 16], "texture": "#3"},
 				"up": {"uv": [11, 1, 15, 15], "texture": "#top"},
 				"down": {"uv": [11, 1, 15, 15], "texture": "#bottom", "cullface": "down"}
 			}

@@ -45,7 +45,7 @@ public class BlockRegistry {
     public static final RegistryObject<Block> HERB_SOUP_POT = BLOCKS.register("herb_soup_pot", () -> new HerbSoupPotBlock(BlockBehaviour.Properties.copy(Blocks.STONE), ItemRegistry.BOWL_OF_HERB_SOUP, true));
     public static final RegistryObject<Block> MOSSY_COBBLESTONE_CAKE = BLOCKS.register("mossy_cobblestone_cake", () -> new MossyCobblestoneCakeBlock(Block.Properties.copy(Blocks.CAKE), ItemRegistry.MOSSY_COBBLESTONE_CAKE_SLICE));
     public static final RegistryObject<Block> ANCIENT_KEBAB_STAND = BLOCKS.register("ancient_kebab_stand", () -> new AncientKebabStandBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
-    public static final RegistryObject<Block> ICED_RICE_MEDLEY = BLOCKS.register("iced_rice_medley", () -> new IcedRiceMedleyBlock(BlockBehaviour.Properties.copy(Blocks.CAKE).sound(SoundType.GLASS), ItemRegistry.BOWL_OF_HERB_SOUP, true));
+    public static final RegistryObject<Block> ICED_RICE_MEDLEY = BLOCKS.register("iced_rice_medley", () -> new IcedRiceMedleyBlock(BlockBehaviour.Properties.copy(Blocks.CAKE).sound(SoundType.GLASS), ItemRegistry.BOWL_OF_ICED_RICE_MEDLEY, true));
     public static final RegistryObject<Block> DUNE_CAKE = BLOCKS.register("dune_cake", () -> new CommonCakeBlock(Block.Properties.copy(Blocks.CAKE), ItemRegistry.DUNE_CAKE_SLICE));
     public static final RegistryObject<Block> PRIMAL_ICE_CAKE = BLOCKS.register("primal_ice_cake", () -> new CommonCakeBlock(Block.Properties.copy(Blocks.CAKE), ItemRegistry.PRIMAL_ICE_CAKE_SLICE));
     public static final RegistryObject<Block> DESERT_FRIED_RICE = BLOCKS.register("desert_fried_rice", () -> new DesertFriedRiceBlock(BlockBehaviour.Properties.copy(Blocks.CAKE), ItemRegistry.BOWL_OF_DESERT_FRIED_RICE, false));
