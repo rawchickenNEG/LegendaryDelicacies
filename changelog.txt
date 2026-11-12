@@ -1,3 +1,7 @@
+-1.1.1
+    Change Bloody Mark effect.
+    Change effect editing drinks, now they will keep effect visual properties.
+    Fix Diamond and Golden Resurrected Javelin recipe issue.
 -1.1.0
     Fix Dune Cake and Primal Ice Cake model issue.
     Fix Iced Rice Medley has incorrect serving item issue.

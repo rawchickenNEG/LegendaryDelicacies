@@ -34,7 +34,8 @@ public class HauntedDrinkItem extends DrinkableItem {
                 ampifierList.add(effectInstance.getAmplifier());
             }
             for(int i = 0; i < list.size(); ++i){
-                newEffects.add(new MobEffectInstance(list.get(i).getEffect(), totalDuration / list.size(), ampifierList.get(i)));
+                MobEffectInstance effectE = list.get(i);
+                newEffects.add(new MobEffectInstance(effectE.getEffect(), totalDuration / list.size(), ampifierList.get(i), effectE.isAmbient(), effectE.isVisible(), effectE.showIcon()));
             }
             consumer.getActiveEffectsMap().clear();
             for(MobEffectInstance newEffect : newEffects){

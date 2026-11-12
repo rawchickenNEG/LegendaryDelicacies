@@ -242,15 +242,8 @@
   "item.legendary_delicacies.sandstorm_milkshake": "Sandstorm Milkshake",
   "item.legendary_delicacies.sandwich": "Sandwich",
 
-  "farmersdelight.tooltip.annihilation_drink": "Clear all effects and provide the total level of all cleared effects seconds Unbreaking effect after consumption.",
-  "farmersdelight.tooltip.bloody_mark": "The most duration effect will possesses the most effective effect after consumption.",
-  "farmersdelight.tooltip.haunted_drink": "All effects duration will be averaged after consumption.",
-  "farmersdelight.tooltip.flying_food": "How did you get here?",
-  "farmersdelight.tooltip.possessed_blood_bottle": "Right click dying Posessed Paladin to get this item.",
-  "farmersdelight.tooltip.sprout_drink": "Apply Flourish effect, this effect duration and level will equals to other effects you have.",
-  "farmersdelight.tooltip.ancient_drink": "Double all effects duration (max to 8 minutes)",
   "tooltip.farmersdelight.annihilation_drink": "Clear all effects and provide the total level of all cleared effects seconds Unbreaking effect after consumption.",
-  "tooltip.farmersdelight.bloody_mark": "The most duration effect will possesses the most effective effect after consumption.",
+  "tooltip.farmersdelight.bloody_mark": "You will possesses all effects of the nearest entity which has effects.",
   "tooltip.farmersdelight.haunted_drink": "All effects duration will be averaged after consumption.",
   "tooltip.farmersdelight.flying_food": "How did you get here?",
   "tooltip.farmersdelight.possessed_blood_bottle": "Right click dying Posessed Paladin to get this item.",
@@ -259,11 +252,8 @@
   "tooltip.farmersdelight.oasis_in_the_dust": "Remove effects for you and all mobs nearby you after consumption.",
   "tooltip.farmersdelight.glacial_meltwater": "Freeze yourself into Glacial Ice for blocking enemies after consumption, Glacial ice will melt for a period of time",
 
-  "farmersdelight.tooltip.life_fruit_jam": "Crafting with foods to apply Breed ability to it",
   "tooltip.farmersdelight.life_fruit_jam": "Crafting with foods to apply Breed ability to it",
-  "farmersdelight.tooltip.fission_dipping": "Crafting with foods to apply Fission ability to it",
   "tooltip.farmersdelight.fission_dipping": "Crafting with foods to apply Fission ability to it",
-  "farmersdelight.tooltip.dripstone_salt": "Crafting with foods to apply Salty ability to it",
   "tooltip.farmersdelight.dripstone_salt": "Crafting with foods to apply Salty ability to it",
 
   "tooltip.legendary_delicacies.lightning_bottle": "Hold glass bottle and take magic damage from Cloud Golem to get this item.",
