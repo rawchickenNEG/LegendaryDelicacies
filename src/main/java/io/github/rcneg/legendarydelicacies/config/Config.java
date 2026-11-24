@@ -69,13 +69,19 @@ public class Config
         STOVE_EXTRA = COMMON_BUILDER.comment("Define the chance of increase output by 1 in Annihilation Stove (Nucleon Stove)")
                 .defineInRange("AnnihilationStoveExtra", 25, 0, 100);
         STOVE_EXTRA_BLACKLIST = COMMON_BUILDER
-                .comment("Define which items can not apply the ability of increase output by 1 in Annihilation Stove")
-                .defineListAllowEmpty("AnnihilationStoveBlacklist", List.of("legendary_delicacies:flying_food"), Config::validateItemName);
+                .comment("Define which items can not apply the ability of increase output by 1 in Annihilation Stove (and Ancient Cauldron)")
+                .defineListAllowEmpty("AnnihilationStoveBlacklist", List.of(
+                        "legendary_delicacies:flying_food",
+                        "enigmaticdelicacy:abyssal_stew"
+                ), Config::validateItemName);
         POT_EXTRA = COMMON_BUILDER.comment("Define the chance of not consuming inputs in Annihilation Cooking Pot (Molecule Synthesising Pot)")
                 .defineInRange("AnnihilationPotExtra", 45, 0, 100);
         POT_EXTRA_BLACKLIST = COMMON_BUILDER
                 .comment("Define which items can not apply the ability of not consuming inputs in Annihilation Cooking Pot")
-                .defineListAllowEmpty("AnnihilationPotBlacklist", List.of("minecraft:barrier"), Config::validateItemName);
+                .defineListAllowEmpty("AnnihilationPotBlacklist", List.of(
+                        "minecraft:barrier",
+                        "enigmaticlegacy:abyssal_heart"
+                ), Config::validateItemName);
         SOUL_STOVE_TIME = COMMON_BUILDER.comment("Define the cooking time of Indestructible Stove (in tick).")
                 .defineInRange("IndestructibleStoveTime", 20, 0, Integer.MAX_VALUE);
         ROYAL_STOVE_SPEED = COMMON_BUILDER.comment("Define the cooking time multiplier of Royal Stove.")

@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "MDM",
+    "SES",
+    "WWW"
+  ],
+  "key": {
+    "M": {
+      "item": "minecraft:warped_fungus"
+    },
+    "D": {
+      "item": "legendary_monsters:warped_mushroom_cap_part"
+    },
+    "S": {
+      "item": "minecraft:sugar"
+    },
+    "E": {
+      "tag": "forge:eggs"
+    },
+    "W": {
+      "item": "minecraft:wheat"
+    }
+  },
+  "result": {
+    "item": "legendary_delicacies:warped_mushroom_cake",
+    "count": 1
+  }
+}

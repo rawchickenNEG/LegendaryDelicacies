@@ -15,18 +15,6 @@ public class LMDImmunityMobEffect extends LMDMobEffect {
         this.immuneEffects = immuneEffects;
     }
 
-    public void applyEffectTick(LivingEntity entity, int amplifier) {
-        List<MobEffectInstance> list = new ArrayList<>(entity.getActiveEffects());
-        for (MobEffectInstance ins : list) {
-            if(this.immuneEffects.contains(ins.getEffect())){
-                entity.removeEffect(ins.getEffect());
-                if (entity.hasEffect(ins.getEffect())) {
-                    entity.getActiveEffectsMap().remove(ins.getEffect());
-                }
-            }
-        }
-    }
-
     public List<MobEffect> getImmuneEffects(){
         return immuneEffects;
     }

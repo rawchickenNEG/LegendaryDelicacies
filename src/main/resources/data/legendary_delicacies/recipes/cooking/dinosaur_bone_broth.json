@@ -1,0 +1,27 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "item": "minecraft:minecart"
+  },
+  "cookingtime": 200,
+  "experience": 3.0,
+  "ingredients": [
+    {
+      "item": "legendary_monsters:dinosaur_bone"
+    },
+    {
+      "item": "minecraft:brown_mushroom"
+    },
+    {
+      "item": "minecraft:brown_mushroom"
+    },
+    {
+      "item": "minecraft:brown_mushroom"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "item": "legendary_delicacies:dinosaur_bone_broth",
+    "count": 1
+  }
+}

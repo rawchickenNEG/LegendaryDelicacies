@@ -31,6 +31,9 @@ public class ClientEvents {
         ItemBlockRenderTypes.setRenderLayer(BlockRegistry.ICED_RICE_MEDLEY.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlockRegistry.GLACIAL_ICE.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(BlockRegistry.DESERT_FRIED_RICE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlockRegistry.STUFFED_SKELETOSAURUS_EGG.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlockRegistry.DEVILS_PALM.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlockRegistry.TEAR_SAUCED_LAVA_EATERS_LEG.get(), RenderType.cutout());
 
     }
 }

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "TMT",
+    "WLW",
+    "RBR"
+  ],
+  "key": {
+    "W":{ "item": "minecraft:nether_wart"},
+    "T": { "item": "minecraft:ghast_tear"},
+    "M": { "item": "minecraft:magma_cream"},
+    "L": { "item": "legendary_delicacies:lava_eaters_claw"},
+    "R": { "item": "minecraft:warped_roots"},
+    "B": { "item": "minecraft:bowl"}
+  },
+  "result": {
+    "item": "legendary_delicacies:tear_sauced_lava_eaters_leg"
+  }
+}

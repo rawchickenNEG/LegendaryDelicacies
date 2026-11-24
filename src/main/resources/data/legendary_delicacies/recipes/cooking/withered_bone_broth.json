@@ -1,0 +1,27 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "item": "minecraft:minecart"
+  },
+  "cookingtime": 200,
+  "experience": 3.0,
+  "ingredients": [
+    {
+      "item": "legendary_monsters:withered_bone"
+    },
+    {
+      "item": "minecraft:nether_wart"
+    },
+    {
+      "item": "minecraft:nether_wart"
+    },
+    {
+      "item": "minecraft:nether_wart"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "item": "legendary_delicacies:withered_bone_broth",
+    "count": 1
+  }
+}

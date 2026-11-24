@@ -1,6 +1,5 @@
 package io.github.rcneg.legendarydelicacies.events;
 
-import com.mojang.blaze3d.shaders.Effect;
 import io.github.rcneg.legendarydelicacies.config.Config;
 import io.github.rcneg.legendarydelicacies.effects.LMDImmunityMobEffect;
 import io.github.rcneg.legendarydelicacies.init.EffectRegistry;
@@ -8,6 +7,7 @@ import net.miauczel.legendary_monsters.entity.AnimatedMonster.Mobs.CollapsedKing
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Mobs.CollapsedKingdom.ResurrectedKnight.ResurrectedKnightEntity;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.event.entity.living.MobEffectEvent;
@@ -28,9 +28,28 @@ public class EffectEvents {
                 }
             }
         }
+        if(effect instanceof LMDImmunityMobEffect immEffect){
+            for(MobEffect removing : immEffect.getImmuneEffects()){
+                entity.removeEffect(removing);
+                if (entity.hasEffect(removing)) {
+                    entity.getActiveEffectsMap().remove(removing);
+                }
+            }
+        }
         if(entity.hasEffect(EffectRegistry.FLAWLESS.get()) && effect.getCategory() == MobEffectCategory.HARMFUL){
             if(!Config.flawlessBlacklistEffects.contains(effect)){
                 event.setResult(Event.Result.DENY);
+            }
+        }
+        if(effect == EffectRegistry.FLAWLESS.get()){
+            for(MobEffectInstance removingIns : entity.getActiveEffects()){
+                MobEffect removing = removingIns.getEffect();
+                if(removing.getCategory() == MobEffectCategory.HARMFUL && !Config.flawlessBlacklistEffects.contains(removing)){
+                    entity.removeEffect(removing);
+                    if (entity.hasEffect(removing)) {
+                        entity.getActiveEffectsMap().remove(removing);
+                    }
+                }
             }
         }
         if(entity instanceof ResurrectedKnightEntity knight1 && knight1.getTextureVariant() == 3){

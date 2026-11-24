@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "legendary_monsters:warped_mushroom_cap_part"
+    },
+    {
+      "item": "farmersdelight:cooked_rice"
+    }
+  ],
+  "result": {
+    "item": "legendary_delicacies:warped_mushroom_cap_roll",
+    "count": 2
+  }
+}

@@ -19,8 +19,8 @@ public class TabRegistry {
             ItemRegistry.FLYING_FOOD,
             ItemRegistry.ANNIHILATION_BOX_BLOCK,
             ItemRegistry.ANNIHILATION_BOX_BLOCK_TOP,
-            ItemRegistry.VOID_EXTERMINATOR
-
+            ItemRegistry.VOID_EXTERMINATOR,
+            ItemRegistry.VOID_KNIFE
             );
 
     public static final RegistryObject<CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register(LegendaryDelicacies.MODID, () -> CreativeModeTab.builder()

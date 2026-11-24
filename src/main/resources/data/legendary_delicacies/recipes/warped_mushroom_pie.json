@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "MEM",
+    "WOW"
+  ],
+  "key": {
+    "M": {
+      "item": "legendary_monsters:warped_mushroom_cap_part"
+    },
+    "E": {
+      "item": "minecraft:ender_pearl"
+    },
+    "W": {
+      "item": "minecraft:shroomlight"
+    },
+    "O": {
+      "item": "farmersdelight:pie_crust"
+    }
+  },
+  "result": {
+    "item": "legendary_delicacies:warped_mushroom_pie",
+    "count": 1
+  }
+}

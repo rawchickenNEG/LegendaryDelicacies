@@ -12,10 +12,8 @@ import net.miauczel.legendary_monsters.entity.AnimatedMonster.Effect.CameraShake
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.IAnimatedBoss.CloudGolem.Cloud_GolemEntity;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.IAnimatedBoss.PossessedPaladin.PossessedPaladinEntity;
 import net.miauczel.legendary_monsters.entity.AnimatedMonster.Mobs.AncientStronghold.SpikebugEntity;
-import net.miauczel.legendary_monsters.entity.AnimatedMonster.Projectile.ElectricityEntity;
-import net.miauczel.legendary_monsters.entity.AnimatedMonster.Projectile.IceSpikeEntity;
-import net.miauczel.legendary_monsters.entity.AnimatedMonster.Projectile.LightningBoltEntity;
-import net.miauczel.legendary_monsters.entity.AnimatedMonster.Projectile.SoulStrike;
+import net.miauczel.legendary_monsters.entity.AnimatedMonster.Mobs.Lava_eaterEntity;
+import net.miauczel.legendary_monsters.entity.AnimatedMonster.Projectile.*;
 import net.miauczel.legendary_monsters.entity.ModEntities;
 import net.miauczel.legendary_monsters.event.ForgeEvents;
 import net.miauczel.legendary_monsters.item.ModItems;
@@ -43,6 +41,7 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeInstance;
 import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.monster.EnderMan;
 import net.minecraft.world.entity.monster.Spider;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.Projectile;
@@ -56,6 +55,7 @@ import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.EntityHitResult;
+import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.event.entity.ProjectileImpactEvent;
 import net.minecraftforge.event.entity.living.*;
@@ -63,8 +63,10 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import vectorwing.farmersdelight.common.registry.ModBlocks;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
+import java.util.UUID;
 
 @Mod.EventBusSubscriber
 public class AttackEvents {
@@ -161,7 +163,8 @@ public class AttackEvents {
                 }
                 entity.hurt(level.damageSources().fellOutOfWorld(), entity.getMaxHealth() * 2);
             }
-            if(attacker instanceof Cloud_GolemEntity && damage.is(DamageTypes.INDIRECT_MAGIC)){
+            //雷电瓶
+            if(attacker instanceof Cloud_GolemEntity && (damage.is(DamageTypes.INDIRECT_MAGIC) || damage.is(ModDamageTypes.ENERGY_BEAM))){
                 if(entity instanceof Player player){
                     ItemStack result = new ItemStack(ItemRegistry.LIGHTNING_BOTTLE.get());
                     boolean flag = false;
@@ -182,6 +185,43 @@ public class AttackEvents {
                             player.drop(result, false);
                         }
                     }
+                }
+            }
+            //火焰瓶
+            if(attacker instanceof Lava_eaterEntity && entity.getRemainingFireTicks() > 0){
+                if(entity instanceof Player player){
+                    ItemStack result = new ItemStack(ItemRegistry.BURNING_BOTTLE.get());
+                    boolean flag = false;
+                    if(player.getMainHandItem().is(Items.GLASS_BOTTLE)){
+                        flag = true;
+                        if (!player.getAbilities().instabuild) {
+                            player.getMainHandItem().shrink(1);
+                        }
+                    }
+                    if(player.getOffhandItem().is(Items.GLASS_BOTTLE)){
+                        flag = true;
+                        if (!player.getAbilities().instabuild) {
+                            player.getOffhandItem().shrink(1);
+                        }
+                    }
+                    if(flag){
+                        if (!player.getInventory().add(result)) {
+                            player.drop(result, false);
+                        }
+                    }
+                }
+            }
+            //暴击产生冲击波
+            if (attacker.hasEffect(EffectRegistry.GREAT_STRENGTH.get())) {
+                int amp = attacker.getEffect(EffectRegistry.GREAT_STRENGTH.get()).getAmplifier();
+                if(!level.isClientSide && attacker.getRandom().nextInt(3 + amp) < 1 + amp && attacker instanceof Player player && player.fallDistance > 0.0F && player.getAttackStrengthScale(0.5F) >= 1.0F){
+                    Vec3 entityPosition = entity.position();
+                    BlockPos entityPos = entity.getOnPos();
+                    CameraShakeEntity.cameraShake(level, entityPosition, 15.0F, 0.1F, 0, 15);
+                    entity.playSound(SoundEvents.DRAGON_FIREBALL_EXPLODE, 2.0F, 1.0F);
+                    int standingOnY = Mth.floor(player.getY());
+                    entity.playSound(SoundEvents.DRAGON_FIREBALL_EXPLODE, 2.0F, 1.0F);
+                    spawnShockWaves(entityPos.getX(), entityPos.getZ(), (double)standingOnY, entityPos.getY(), 1.0F, 0, player);
                 }
             }
         }
@@ -338,15 +378,31 @@ public class AttackEvents {
             if(attacker.hasEffect(EffectRegistry.FROST_AVATAR.get())){
                 int amp = attacker.getEffect(EffectRegistry.FROST_AVATAR.get()).getAmplifier();
                 if(attacker.getRandom().nextInt(5 + amp) < 1 + amp && entity.onGround() && !(damage.is(DamageTypes.INDIRECT_MAGIC))){
-                    level.addFreshEntity(new IceSpikeEntity(level, entity.getX(), entity.getOnPos().getY() + 1, entity.getZ(), 0, 0, attacker));
+                    final Vec3 center = new Vec3(entity.getX(), entity.getOnPos().getY() + 1, entity.getZ());
+                    AABB aabb = new AABB(center, center).inflate(1);
+                    int i = 0;
+                    for(IceSpikeEntity ignored : level.getEntitiesOfClass(IceSpikeEntity.class, aabb)) {
+                        i++;
+                    }
+                    if(i < 4){
+                        level.addFreshEntity(new IceSpikeEntity(level, entity.getX(), entity.getOnPos().getY() + 1, entity.getZ(), 0, 0, attacker));
+                    }
                 }
             }
             //生成雷云
             if(attacker.hasEffect(EffectRegistry.LIGHTNING.get())){
                 int amp = attacker.getEffect(EffectRegistry.LIGHTNING.get()).getAmplifier();
                 if(attacker.getRandom().nextInt(5 + amp) < 1 + amp && !(damage.is(DamageTypes.INDIRECT_MAGIC))){
-                    entity.playSound(SoundEvents.LIGHTNING_BOLT_THUNDER, 1.0F, 1.0F);
-                    level.addFreshEntity(new LightningBoltEntity(level, entity.getX(), entity.getOnPos().getY() + 1, entity.getZ(), 0, 0, attacker, 30, (float)(8.0 * (Double) ModConfig.MOB_CONFIG.AxeOfLightningBoltDamageMultiplier.get())));
+                    final Vec3 center = new Vec3(entity.getX(), entity.getOnPos().getY() + 1, entity.getZ());
+                    AABB aabb = new AABB(center, center).inflate(1.5);
+                    int i = 0;
+                    for(LightningBoltEntity ignored : level.getEntitiesOfClass(LightningBoltEntity.class, aabb)) {
+                        i++;
+                    }
+                    if(i < 4){
+                        entity.playSound(SoundEvents.LIGHTNING_BOLT_THUNDER, 1.0F, 1.0F);
+                        level.addFreshEntity(new LightningBoltEntity(level, entity.getX(), entity.getOnPos().getY() + 1, entity.getZ(), 0, 0, attacker, 30, (float)(8.0 * (Double) ModConfig.MOB_CONFIG.AxeOfLightningBoltDamageMultiplier.get())));
+                    }
                 }
             }
             //生成毒云
@@ -361,8 +417,9 @@ public class AttackEvents {
                 level.addFreshEntity(areaeffectcloud);
             }
             //设置蠕虫攻击
-            if(attacker.hasEffect(EffectRegistry.WORM_LEADER.get())){
-                setWormTarget(entity, level);
+            if(attacker.hasEffect(EffectRegistry.WORM_LEADER.get())) {
+                int amp = attacker.getEffect(EffectRegistry.WORM_LEADER.get()).getAmplifier() + 1;
+                setWormTarget(entity, level, 16 + 8 * amp);
             }
             if(entity.hasEffect(EffectRegistry.WORM_LEADER.get())){
                 int amp = entity.getEffect(EffectRegistry.WORM_LEADER.get()).getAmplifier() + 1;
@@ -376,7 +433,12 @@ public class AttackEvents {
                         level.addFreshEntity(spikebugEntity);
                     }
                 }
-                setWormTarget(attacker, level);
+                setWormTarget(attacker, level, 16 + 8 * amp);
+            }
+            //设置末影人攻击
+            if(attacker.hasEffect(EffectRegistry.WARPED_HOSTILITY.get())){
+                int amp = attacker.getEffect(EffectRegistry.WARPED_HOSTILITY.get()).getAmplifier();
+                setEnderManTarget(entity, level, 16 + 8 * amp);
             }
         }
     }
@@ -399,6 +461,14 @@ public class AttackEvents {
         if (event.getEntity().level() instanceof ServerLevel level) {
             LivingEntity entity = event.getEntity();
             if(event.getSource().getEntity() instanceof LivingEntity attacker){
+
+                if (attacker.getMainHandItem().is(ItemRegistry.VOID_KNIFE.get())) {
+                    for (var stack : event.getDrops()) {
+                        int ans = stack.getItem().getCount() * 2;
+                        stack.getItem().setCount(ans);
+                    }
+                }
+
                 ResourceLocation lootId = entity.getLootTable();
                 LootParams ctx = new LootParams.Builder(level)
                         .withParameter(LootContextParams.THIS_ENTITY, entity)
@@ -435,12 +505,50 @@ public class AttackEvents {
         return false;
     }
 
-    public static void setWormTarget(LivingEntity living, Level level){
-        for(SpikebugEntity worm : level.getEntitiesOfClass(SpikebugEntity.class, living.getBoundingBox().inflate(16))) {
+    public static void setWormTarget(LivingEntity living, Level level, int range){
+        for(SpikebugEntity worm : level.getEntitiesOfClass(SpikebugEntity.class, living.getBoundingBox().inflate(range))) {
             if (!living.hasEffect(EffectRegistry.WORM_LEADER.get()) && living.isAlive() && worm != living) {
                 worm.setTarget(living);
             }
         }
+    }
+
+    public static void setEnderManTarget(LivingEntity living, Level level, int range){
+        for(EnderMan man: level.getEntitiesOfClass(EnderMan.class, living.getBoundingBox().inflate(range))) {
+            if (!living.hasEffect(EffectRegistry.WARPED_HOSTILITY.get()) && living.isAlive() && man != living) {
+                man.setTarget(living);
+            }
+        }
+    }
+
+    private static void spawnShockWaves(double x, double z, double minY, double maxY, float rotation, int delay, Player player) {
+        BlockPos blockpos = new BlockPos((int)x, (int)maxY, (int)z);
+        boolean flag = false;
+        double d0 = (double)0.0F;
+
+        do {
+            BlockPos blockpos1 = blockpos.below();
+            BlockState blockstate = player.level().getBlockState(blockpos1);
+            if (blockstate.isFaceSturdy(player.level(), blockpos1, Direction.UP)) {
+                if (!player.level().isEmptyBlock(blockpos)) {
+                    BlockState blockstate1 = player.level().getBlockState(blockpos);
+                    VoxelShape voxelshape = blockstate1.getCollisionShape(player.level(), blockpos);
+                    if (!voxelshape.isEmpty()) {
+                        d0 = voxelshape.max(Direction.Axis.Y);
+                    }
+                }
+
+                flag = true;
+                break;
+            }
+
+            blockpos = blockpos.below();
+        } while(blockpos.getY() >= Mth.floor(minY) - 1);
+
+        if (flag) {
+            player.level().addFreshEntity(new ShockwaveSpawner(player.level(), x, (double)blockpos.getY() + d0, z, rotation, delay, player, false));
+        }
+
     }
 }
 

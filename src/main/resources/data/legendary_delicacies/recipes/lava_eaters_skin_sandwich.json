@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "legendary_monsters:lava_eaters_skin"
+    },
+    {
+      "item": "minecraft:crimson_roots"
+    },
+    {
+      "item": "minecraft:warped_roots"
+    },
+    {
+      "item": "minecraft:crimson_fungus"
+    },
+    {
+      "item": "minecraft:warped_fungus"
+    },
+    {
+      "item": "legendary_delicacies:burning_bottle"
+    }
+  ],
+  "result": {
+    "item": "legendary_delicacies:lava_eaters_skin_sandwich",
+    "count": 1
+  }
+}

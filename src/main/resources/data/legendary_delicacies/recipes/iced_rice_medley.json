@@ -12,13 +12,13 @@
       "item": "legendary_delicacies:primal_ice_chunk"
     },
     {
+      "tag": "forge:fruits"
+    },
+    {
       "item": "minecraft:melon_slice"
     },
     {
-      "item": "minecraft:glow_berries"
-    },
-    {
-      "item": "minecraft:chorus_fruit"
+      "tag": "forge:berries"
     },
     {
       "tag": "forge:milk"

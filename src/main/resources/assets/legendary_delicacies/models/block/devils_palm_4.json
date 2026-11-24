@@ -1,0 +1,39 @@
+{
+	"format_version": "1.9.0",
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "legendary_delicacies:block/devils_palm_rib_bottom",
+		"1": "legendary_delicacies:block/devils_palm_rib_side",
+		"2": "legendary_delicacies:block/devils_palm_rib_top",
+		"3": "legendary_delicacies:block/devils_palm_rib_front",
+		"particle": "legendary_delicacies:block/devils_palm_rib_bottom"
+	},
+	"elements": [
+		{
+			"from": [1, 0.025, 1],
+			"to": [15, 7.025, 15],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 6.025, 8]},
+			"faces": {
+				"north": {"uv": [1, 9, 15, 16], "texture": "#3"},
+				"east": {"uv": [1, 9, 15, 16], "texture": "#1"},
+				"south": {"uv": [1, 9, 15, 16], "texture": "#3"},
+				"west": {"uv": [15, 9, 1, 16], "texture": "#1"},
+				"up": {"uv": [1, 1, 15, 15], "texture": "#2"},
+				"down": {"uv": [1, 1, 15, 15], "texture": "#0"}
+			}
+		},
+		{
+			"from": [15, 7.025, 15],
+			"to": [1, 0.025, 1],
+			"rotation": {"angle": 0, "axis": "z", "origin": [8, 6.025, 8]},
+			"faces": {
+				"north": {"uv": [15, 9, 1, 16], "rotation": 180, "texture": "#3"},
+				"east": {"uv": [1, 9, 15, 16], "rotation": 180, "texture": "#1"},
+				"south": {"uv": [15, 9, 1, 16], "rotation": 180, "texture": "#3"},
+				"west": {"uv": [15, 9, 1, 16], "rotation": 180, "texture": "#1"},
+				"up": {"uv": [1, 15, 15, 1], "rotation": 180, "texture": "#0"},
+				"down": {"uv": [1, 15, 15, 1], "rotation": 180, "texture": "#2"}
+			}
+		}
+	]
+}

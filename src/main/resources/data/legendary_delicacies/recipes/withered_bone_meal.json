@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "legendary_monsters:withered_bone"
+    }
+  ],
+  "result": {
+    "item": "legendary_delicacies:withered_bone_meal",
+    "count": 3
+  }
+}

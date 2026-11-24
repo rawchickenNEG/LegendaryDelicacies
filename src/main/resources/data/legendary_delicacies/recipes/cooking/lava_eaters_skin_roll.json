@@ -1,0 +1,35 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 200,
+  "experience": 3.0,
+  "ingredients": [
+    {
+      "item": "minecraft:magma_cream"
+    },
+    {
+      "item": "legendary_delicacies:burning_bottle"
+    },
+    {
+      "item": "legendary_monsters:lava_eaters_skin"
+    },
+    [
+      {
+        "tag": "forge:raw_meat"
+      },
+      {
+        "tag": "forge:raw_fishes"
+      },
+      {
+        "tag": "forge:vegetables"
+      },
+      {
+        "tag": "forge:mushrooms"
+      }
+    ]
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "item": "legendary_delicacies:lava_eaters_skin_roll",
+    "count": 1
+  }
+}

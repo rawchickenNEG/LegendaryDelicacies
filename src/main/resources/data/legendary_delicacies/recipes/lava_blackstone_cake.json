@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "MMM",
+    "SES",
+    "WWW"
+  ],
+  "key": {
+    "M": {
+      "item": "legendary_delicacies:burning_bottle"
+    },
+    "S": {
+      "item": "minecraft:cocoa_beans"
+    },
+    "E": {
+      "tag": "forge:eggs"
+    },
+    "W": {
+      "item": "minecraft:blackstone"
+    }
+  },
+  "result": {
+    "item": "legendary_delicacies:lava_blackstone_cake",
+    "count": 1
+  }
+}

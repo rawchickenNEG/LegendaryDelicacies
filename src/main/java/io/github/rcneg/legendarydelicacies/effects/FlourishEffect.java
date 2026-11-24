@@ -23,8 +23,10 @@ public class FlourishEffect extends MobEffect {
                 if(Math.round(getBlockPosDistance(tmpPos, pos)) <= r){
                     BlockState state = serverLevel.getBlockState(tmpPos);
                     if(state.getBlock() instanceof BonemealableBlock plant){
-                        serverLevel.levelEvent(3009, tmpPos, 0);
-                        plant.performBonemeal(serverLevel, p_19467_.getRandom(), tmpPos, serverLevel.getBlockState(tmpPos));
+                        if (plant.isValidBonemealTarget(serverLevel, tmpPos, serverLevel.getBlockState(tmpPos), true) && plant.isBonemealSuccess(serverLevel, p_19467_.getRandom(), tmpPos, serverLevel.getBlockState(tmpPos))) {
+                            serverLevel.levelEvent(3009, tmpPos, 0);
+                            plant.performBonemeal(serverLevel, p_19467_.getRandom(), tmpPos, serverLevel.getBlockState(tmpPos));
+                        }
                     }
                 }
             }

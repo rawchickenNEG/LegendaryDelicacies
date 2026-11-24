@@ -1,0 +1,34 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "item": "legendary_monsters:withered_horn"
+  },
+  "cookingtime": 200,
+  "experience": 3.0,
+  "ingredients": [
+    [
+      {
+        "item": "minecraft:soul_sand"
+      },
+      {
+        "item": "minecraft:soul_soil"
+      }
+    ],
+    [
+      {
+        "item": "minecraft:glowstone_dust"
+      },
+      {
+        "item": "minecraft:blaze_powder"
+      }
+    ],
+    {
+      "item": "minecraft:ghast_tear"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "item": "legendary_delicacies:abomination_spirits",
+    "count": 1
+  }
+}

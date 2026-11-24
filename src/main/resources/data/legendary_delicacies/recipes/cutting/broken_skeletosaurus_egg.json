@@ -1,0 +1,30 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "legendary_monsters:skeletosaurus_egg"
+    }
+  ],
+  "result": [
+    {
+      "item": "legendary_delicacies:broken_skeletosaurus_egg"
+    },
+    {
+      "chance": 0.65,
+      "item": "legendary_delicacies:dinosaur_bone_meal"
+    },
+    {
+      "chance": 0.65,
+      "item": "legendary_delicacies:dinosaur_bone_meal"
+    }
+  ],
+  "tool": [
+    {
+      "type": "farmersdelight:tool_action",
+      "action": "pickaxe_dig"
+    },
+    {
+      "tag": "minecraft:pickaxes"
+    }
+  ]
+}

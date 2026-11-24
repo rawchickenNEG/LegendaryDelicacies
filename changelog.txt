@@ -1,3 +1,24 @@
+-1.1.3
+    Add block interaction for Withered Bone Meal and Dinosaur Bone Meal.
+    Fix Burning Bottle cannot be obtained by lava eater attack issue.
+    Fix Burning Bottle tooltip issue.
+    Fix new feast blocks have no loot table issue.
+-1.1.2
+    Add Withered Abomination, Lava Eater, Skeletosaurus and Warped Fungussus foods and effects.
+    Add Void Knife.
+    Add Abyssal Stew and Abyssal Heart into default blacklist for increase production.
+    AnnihilationStoveBlacklist will also work on Ancient Cauldron.
+    Add Lightning Bottle converting by Electricity Strike.
+    Add more acceptable damage type for obtaining Lightning Bottle.
+    Change Annihilation Eye Pie recipe.
+    Change some item descriptions.
+    Change back Fission Dipping and Annihilation Sauce Eyes Rod recipe.
+    Change Iced Rice Medley recipe.
+    Change some effects color.
+    Optimize effect removing events.
+    Fix Oasis In The Dust return glass bottle issue.
+    Frost Avatar and Lightning Strike will not summon too much ice spikes and lightning bolt when there are too many of them.
+    Fix Flourish Effect crashing game bug when effect on cocoa bean plants.
 -1.1.1
     Change Bloody Mark effect.
     Change effect editing drinks, now they will keep effect visual properties.

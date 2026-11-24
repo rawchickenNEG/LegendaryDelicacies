@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "legendary_delicacies:item/tear_sauced_lava_eaters_leg"
+  }
+}

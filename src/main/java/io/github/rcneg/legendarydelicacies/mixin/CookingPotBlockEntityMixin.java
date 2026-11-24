@@ -73,7 +73,7 @@ public class CookingPotBlockEntityMixin {
             //荒古锅倍产(对厨锅)
             if(potBlock.is(BlockRegistry.ANCIENT_CAULDRON.get())){
                 if(stoveBlock.is(LMDTags.PRIMITIVE_HEAT_SOURCES)){
-                    if(Config.ANCIENT_POT_DOUBLE.get()){
+                    if(Config.ANCIENT_POT_DOUBLE.get() && !Config.stoveBlacklistItems.contains(result.getItem())){
                         result.grow(originalStack.getCount());
                     }
                 }else{
